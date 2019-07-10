@@ -40,6 +40,16 @@
 
 # Pages
 
-## [Commission Setup Page](page-commission-setup.md)
+## [Commission Setup](page-commission-setup.md)
 
-## [Commission Ledger Entries Page](page-commission-ledger-entries.md)
+## [Commission Group](page-commission-group.md)
+
+## [Commission Rate](page-commission-rates.md)
+
+## [Commission Journals](page-commission-journal.md)
+
+## [Commission Ledger Entries](page-commission-ledger-entries.md)
+
+# Reports
+
+## [Commission](report-commission.md)
