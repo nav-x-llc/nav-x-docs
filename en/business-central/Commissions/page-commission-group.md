@@ -5,5 +5,5 @@ Commission groups can be used to define the one commission structure and apply i
 The **Customer Commission Groups** can be defined on the customer in the field **Commission Group** on the **General** tab. To create a new commission group, fill out the relevant fields. Hover over the field to see a short description.
 
 ## See Also
+
 - [Register New Customers](https://docs.microsoft.com/en-us/dynamics365/business-central/sales-how-register-new-customers)
-- 

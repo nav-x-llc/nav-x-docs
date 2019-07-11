@@ -220,6 +220,7 @@ article h4 {
     border-left: none;
     border-right: none;
     padding: 15px 0px 15px 5px;
+	z-index: 2;
 }
 
 .toc-filter {
@@ -511,4 +512,73 @@ ul.select-locale {
     ul.select-locale > li {
         width: 19%;
     }
+}
+
+.is-size-7 {
+	font-size: 13px !important;
+}
+
+.is-block {
+	display: block !important;
+}
+
+.has-padding-left-small {
+	padding-left: 0.5rem !important;
+}
+
+.has-padding-right-small {
+	padding-right: 0.5rem !important;
+}
+
+.has-text-primary {
+	color: hsla(206, 100%, 25%, 1) !important;
+}
+
+.has-margin-none {
+	margin: 0 !important;
+}
+
+.autocomplete-suggestions {
+	max-width: 500px;
+	list-style-type: none;
+	cursor: default;
+}
+
+.autocomplete-suggestions {
+	position: absolute;
+	z-index: 1;
+	max-height: 15rem;
+	min-width: 100%;
+	padding: 0;
+	border: 1px solid #ddd;
+	box-shadow: 0px 1.6px 3.6px 0px hsla(0, 0%, 0%, 0.132), 0px 0.3px 0.9px 0px hsla(0, 0%, 0%, 0.108);
+	background-color: white;
+}
+
+.is-vertically-scrollable {
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.autocomplete-suggestion {
+	display: block;
+	border: 1px solid transparent;
+	outline: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.autocomplete-suggestions.is-active-descendant,
+.autocomplete-suggestions:hover {
+	background-color: hsla(0, 0%, 95%, 1);
+	border: 1px solid #ddd;
+}
+
+.position-is-relative {
+    position: relative;
+}
+
+.back {
+    z-index: 0;
 }

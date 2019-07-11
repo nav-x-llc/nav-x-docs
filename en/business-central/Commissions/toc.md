@@ -52,4 +52,4 @@
 
 # Reports
 
-## [Commission](report-commission.md)
+## [Commissions by Salesperson](report-commission.md)
