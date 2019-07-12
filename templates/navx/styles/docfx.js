@@ -534,7 +534,7 @@ $(function () {
               
               function hideSearchBox() {
                   if ($('#suggestsearch-listbox').hasClass(show)) {
-                      $('#sugestsearch-listbox').removeClass(show).addClass(hide);
+                      $('#suggestsearch-listbox').removeClass(show).addClass(hide);
                       $('#sidefilter').addClass(back);
                   }
               };
@@ -557,7 +557,6 @@ $(function () {
               }
           }
         });
-
 		$('#suggestsearch').click(function() {
 			if ($('#suggestsearch-listbox').hasClass(show)) {
 				searchFilter = '';
@@ -582,6 +581,13 @@ $(function () {
 					$('.hide-when-search').hide();
 					$('#search-results').show();
 				}
+			}
+		});
+		$('#toc_filter_input').focusout(function (e) {
+			if ($('#suggestsearch-listbox').hasClass(show)) {
+				$('#suggestsearch-listbox').removeClass(show).addClass(hide);
+				$('#sidefilter').addClass(back);
+				$(this).val('');
 			}
 		});
       }

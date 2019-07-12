@@ -229,8 +229,9 @@ article h4 {
 }
 
 .toc-filter>input {
-    border: 2px solid #ddd;
+    border: 1px solid #ddd;
     border-radius: 20px;
+	height: 34px;
 }
 
 .toc-filter>.filter-icon {
@@ -247,6 +248,7 @@ article h4 {
 .sidetoc {
     background-color: #fff;
     border: none;
+	margin: 1px 0;
 }
 
 .toc .nav > li.active.tree-item > .expand-stub::before, 
@@ -581,4 +583,16 @@ ul.select-locale {
 
 .back {
     z-index: 0;
+}
+
+.input:focus {
+	box-shadow: 0px 0px 0px 0.12rem hsla(206, 100%, 35%, 1);
+	outline: none !important;
+    border-color: hsla(206,100%,35%,1);
+	outline-offset: 0px !important;
+	margin-bottom: 2px !important;
+}
+
+.input:hover {
+	border-color: hsla(206,100%,35%,1);
 }
