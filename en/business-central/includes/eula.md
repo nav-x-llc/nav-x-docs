@@ -1,0 +1,1 @@
+When you start the Assisted Setup wizard for the first time, the NAV-X End User License Agreement is displayed. Please read the license terms carefully and, if you agree to the terms, please accept them by clicking on **Accept**. If you do not agree to the license terms, please choose **Decline** and then uninstall the app from your tenant.

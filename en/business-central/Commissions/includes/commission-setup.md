@@ -79,3 +79,4 @@ NAV-X Commissions includes a product tour that can be used in your sandbox envir
 - [Learn more about using date formulas](https://docs.microsoft.com/en-us/dynamics365/business-central/ui-enter-date-ranges#using-date-formulas)
 - [Personalize your user interface](https://docs.microsoft.com/en-us/dynamics365/business-central/ui-personalization-user)
 - [Working with Dimensions](https://docs.microsoft.com/en-us/dynamics365/business-central/finance-dimensions)
+- [Learn more about using date formulas](https://docs.microsoft.com/en-us/dynamics365/business-central/ui-enter-date-ranges#using-date-formulas)

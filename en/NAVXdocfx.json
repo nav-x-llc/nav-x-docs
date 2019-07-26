@@ -1,5 +1,8 @@
 {
   "build": {
+    "sitemap": {
+        "baseUrl": "https://docs.nav-x.com/en/"
+    },
     "content": [
       {
         "files": [
@@ -23,9 +26,12 @@
       },
       {
           "files": [
-              "business-central/commissions/**.md"          ],
+              "business-central/commissions/**.md",
+              "business-central/credit-management/**.md"
+          ],
           "exclude": [
-              "business-central/commissions/toc.md"
+              "business-central/commissions/toc.md",
+              "business-central/credit-management/toc.md"
           ]
       }
     ],

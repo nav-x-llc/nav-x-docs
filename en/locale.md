@@ -18,5 +18,4 @@
 
 <ul li="locale-list" class="select-locale select-locale-content">
   <li><a title="English" href="" locale="en">English</a></li>
-  <li><a title="English" href="" locale="de">Deutsch</a></li>
 </ul>

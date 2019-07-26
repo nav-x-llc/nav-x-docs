@@ -12,7 +12,13 @@
     <div id="wrapper">
       <header>
         {{^_disableNavbar}}
-        {{>partials/navbar}}
+          {{^_disableToc}}
+            {{>partials/navbar}}
+          {{/_disableToc}}
+          {{#_disableToc}}
+            {{>partials/logo}}
+            {{>partials/navbar}}
+          {{/_disableToc}}
         {{/_disableNavbar}}
         {{^_disableBreadcrumb}}
         {{>partials/breadcrumb}}

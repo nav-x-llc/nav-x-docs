@@ -26,7 +26,7 @@
 
 ## [Process Sales Documents](how-to-process-sales-documents.md)
 
-## [Promotional Commissions](how-to-process-promotional-commissions.md)
+<!-- ## [Promotional Commissions](how-to-process-promotional-commissions.md)
 
 ## [Month End Process](how-to-month-end-process.md)
 
@@ -37,6 +37,7 @@
 ## [Import Commissions](how-to-import-commissions.md)
 
 ## [Product Tour](how-to-product-tour.md)
+-->
 
 # Pages
 
@@ -46,10 +47,14 @@
 
 ## [Commission Rate](page-commission-rates.md)
 
+## [Salesperson Split](page-commission-salesperson-split.md)
+
 ## [Commission Journals](page-commission-journal.md)
 
 ## [Commission Ledger Entries](page-commission-ledger-entries.md)
 
+<!--
 # Reports
 
 ## [Commissions by Salesperson](report-commission.md)
+-->

@@ -12,9 +12,9 @@ Permissions for the app must be setup before the commission setup is started to 
 
 When you are on the role center and have not completed the setup for the NAV-X Commissions app, you will see a notification asking "Do you want to get started with NAV-X Commissions?". Select **Click here to run the setup** to start the Assisted Setup wizard. Alternatively, you can also choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Assisted Setup**, and then choose the related link.
 
-When you start the Assisted Setup wizard for the first time, the NAV-X End User License Agreement is displayed. Please read the license terms carefully and, if you agree to the terms, please accept them by clicking on **Accept**. If you do not agree to the license terms, please choose **Decline** and then uninstall the app from your tenant.
+[!include[eula](../includes/eula.md)]
 
-The wizard opens the first step, which displays a welcome text. You can move forward by clicking on “Next”. he next step allows you to configure the date that is used to select the commissions rates. You can define date sensitive rates that are valid for a certain time period only. This is done in the **Commission Effective Date**, which can have the following values. Hover over a field to read a short description.
+The wizard opens the first step, which displays a welcome text. You can move forward by clicking on “Next”. The next step allows you to configure the date that is used to select the commissions rates. You can define date sensitive rates that are valid for a certain time period only. This is done in the **Commission Effective Date**, which can have the following values. Hover over a field to read a short description.
 
 |                   |                                                                                                   |
 |-------------------|---------------------------------------------------------------------------------------------------|
@@ -39,8 +39,8 @@ The next step of the Assisted Setup allows you to define the rules when commissi
 
 On the next step of the wizard, you can define, if you will have different commission rates for an initial purchase a customer makes and for all subsequent purchases. You can define the commission base by selecting the appropriate option for **Calculate Commissions on** in the following step. Additionally, you can define a restriction and setup a **Minimum Gross Profit % for Commissions** to prevent salespeople from reducing the prices below a certain threshold. 
 
-[!IMPORTANT]
-This setting will only prevent salespeople from receiving commissions for a sales with a gross profit below the **Minimum Gross Profit % for Commissions**, but it will not prevent the actual sale. You can setup different workflow or approval rules in Business Central to accommodate this feature.
+> [!IMPORTANT]
+> This setting will only prevent salespeople from receiving commissions for a sales with a gross profit below the **Minimum Gross Profit % for Commissions**, but it will not prevent the actual sale. You can setup different workflow or approval rules in Business Central to accommodate this feature.
 
 ### To integrate the General Ledger
 
