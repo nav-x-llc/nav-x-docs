@@ -16,12 +16,14 @@ When you are on the role center and have not completed the setup for the NAV-X C
 
 The wizard opens the first step, which displays a welcome text. You can move forward by clicking on “Next”. The next step allows you to configure the date that is used to select the commissions rates. You can define date sensitive rates that are valid for a certain time period only. This is done in the **Commission Effective Date**, which can have the following values. Hover over a field to read a short description.
 
-|                   |                                                                                                   |
-|-------------------|---------------------------------------------------------------------------------------------------|
-| **Date Entered**  | The work date the sales transaction is entered                                                    |
-| **Order Date**    | The date the order was placed. This is the **Order Date** on the sales document                   |
-| **Shipment Date** | The date the order will be shipped. This is based on the **Shipment Date** on the sales document  |
-| **Invoice Date**  | The date the document will be posted. This is based on the **Posting Date** on the sales document |
+|                   |                                                                                                                                      |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| **Date Entered**  | The work date the sales transaction is entered                                                                                       |
+| **Order Date**    | The date the order was placed. This is the **Order Date** on the sales document                                                      |
+| **Shipment Date** | The date the order will be shipped. This is based on the **Shipment Date** on the sales document                                     |
+| **Invoice Date**  | The date the document will be posted. This is based on the **Posting Date** on the sales document                                    |
+| **Due Date**      | The commission rates will be determined based on the **Due Date** of the document.                                                   |
+| **Date Paid**     | The commissions rates will be determined based on the actual date the invoice is paid. Initially, the due date will be used to determine the commission rates, which then will be adjusted to different rates when the invoice is paid. This can only be used when **Commission Payable On** is set to **Cash Receipt**. |
 
 ### To set Commission Rules
 
@@ -30,6 +32,7 @@ The next step of the Assisted Setup allows you to define the rules when commissi
 |                                                    |                                                                                                    |
 |----------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | **Commission Payable On**                          | You can define different settings based on when commissions become payable to the salespeople.<br><br>- **Order Entry**: As soon as sales document is entered<br>- **Shipment**: When the shipment is posted, the shipped portion of the document will have payable commissions<br>- **Invoice**: When the invoice is posted, the commission on the invoice amount becomes payable.<br>- **Cash Receipt**:The commission for the paid amount of an invoice becomes payable. |
+| **Invoice Paid Adjust. Reason Code**               | If the **Commission Effective Date** is set to **Date Paid**, you must enter a reason code that will be used to post the adjusting **Commission Ledger Entries** required to adjust the commissions to the rates effective when the invoice is paid. |
 | **Process only fully paid invoices**               | Only fully paid invoices will make commissions payable.                                            |
 | **Exclude Past Due invoices**                      | If an invoice is paid late, the invoice will not produce commissions, even if it is paid eventually. |
 | **Exclude Customers with Past Due invoices**       | When a customer has an invoice that is past due, no commission will be paid for this customer. It will be paid when no invoices are past due anymore. |
@@ -37,7 +40,7 @@ The next step of the Assisted Setup allows you to define the rules when commissi
 | **Exclude Customers if Past Due is more than (%)** | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
 | **Exclude Credit Memos from Commissions**          | You can select, if you want to include or exclude credit memos from commission calculations. If credit memos are included, negative commissions will be calculated on credit memos and these commissions will be charged back to the salesperson. Credit memos lower the salesperson’s commissions in the month that they are posted. |
 
-On the next step of the wizard, you can define, if you will have different commission rates for an initial purchase a customer makes and for all subsequent purchases. You can define the commission base by selecting the appropriate option for **Calculate Commissions on** in the following step. Additionally, you can define a restriction and setup a **Minimum Gross Profit % for Commissions** to prevent salespeople from reducing the prices below a certain threshold. 
+On the next step of the wizard, you can define, if you will have different commission rates for an initial purchase a customer makes and for all subsequent purchases. You can define the commission base by selecting the appropriate option for **Calculate Commissions on** in the following step. Additionally, you can define a restriction and setup a **Minimum Gross Profit % for Commissions** to prevent salespeople from reducing the prices below a certain threshold.
 
 > [!IMPORTANT]
 > This setting will only prevent salespeople from receiving commissions for a sales with a gross profit below the **Minimum Gross Profit % for Commissions**, but it will not prevent the actual sale. You can setup different workflow or approval rules in Business Central to accommodate this feature.
@@ -70,7 +73,7 @@ Each user can see their own commissions, based on the **Salespers./Purch. Code**
 
 You can always make those changes later as defined in the [additional setups](additional-setups.md).
 
-You can define for each Item, Resource, G/L Account, and Item Charge, if one is commissionable or not. Initially, a new item, for instance, is not commissionable. You can change this at the time you are [importing commissions](how-to-import-commissions.md) or you can also define how all of your existing records are configured. This will be implemented at the end of the wizard. With these last setups, you are done. As long as you configured everything: you are ready to process commissions. Please follow our How-to’s on the left to learn how to perform the different tasks.
+You can define for each Item, Resource, G/L Account, and Item Charge, if one is commissionable or not. Initially, a new item, for instance, is not commissionable. You can change this at the time you are [importing commissions](how-to-import-commissions.md) or you can also define how all of your existing records are configured. This will be implemented at the end of the wizard. With these last setups, you are done. As long as you configured everything: you are ready to process commissions. Please follow our How-To’s on the left to learn how to perform the different tasks.
 
 ## See Also
 

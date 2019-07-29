@@ -26,9 +26,12 @@
 
 ## [Process Sales Documents](how-to-process-sales-documents.md)
 
-<!-- ## [Promotional Commissions](how-to-process-promotional-commissions.md)
+## [Promotional Commissions](how-to-process-promotional-commissions.md)
 
+<!-- 
 ## [Month End Process](how-to-month-end-process.md)
+
+## [Manager Commissions](how-to-manager-commission.md)
 
 ## [Review Commission Reports](how-to-review-commission-reports.md)
 
@@ -47,14 +50,38 @@
 
 ## [Commission Rate](page-commission-rates.md)
 
+<!--
+## [Sales Commission](page-sales-commission.md)
+
+## [Posted Sales Commission](page-posted-sales-commission.html)
+
+## [Associated Salespeople](page-associated-salespeople.md)
+
+## [Manager Amounts](page-manager-amounts.md)
+-->
+
 ## [Salesperson Split](page-commission-salesperson-split.md)
 
+## [Posted Salesperson Split](page-posted-salesperson-split.md)
+
 ## [Commission Journals](page-commission-journal.md)
+
+<!--
+## [Commission Registers](page-commission-register.html)
+-->
 
 ## [Commission Ledger Entries](page-commission-ledger-entries.md)
 
 <!--
+## [Reduced Days Overdue Commissions](page-reduced-days-overdue.md)
+
+## [Salesperson Groups](page-salesperson-group.md)
+
 # Reports
 
 ## [Commissions by Salesperson](report-commission.md)
+
+# Developer
+
+## [Power BI](power-bi.md)
 -->

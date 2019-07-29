@@ -23,6 +23,7 @@ We describe the entire process of setting up NAV-X Commissions to start commissi
 Whether you have just completed the initial setup or are processing commissions for a while already, you can find a series of articles describing the main processes in our **How To** section. You can find details on
 
 - [How To Process Sales Documents](how-to-process-sales-documents.md)
+- [How To Process Promotional Commissions](how-to-process-promotional-commissions.md)
 
 We are expanding this section periodically.
 
