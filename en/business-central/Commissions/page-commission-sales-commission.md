@@ -1,16 +1,15 @@
 # Page Sales Commission
 
-The **Sales Commission** page dispalys commission information for the current sales transaction. The **General** fast tab shows information about the customer and ship-to address as well as the total **Commissionable Amount**, and the **Commission Amount**.
+The **Sales Commission** page displays commission information for the current sales transaction. It can be accessed from the sales document by selecting the action **Commissions** (*Navigate > Document > Commissions*). The **General** fast tab shows information about the customer and ship-to address as well as the total **Commissionable Amount**, and the **Commission Amount**. If you are a commission manager, you can see commissions for all salespeople and also make changes to those commissions. If you are not a commission manager, you can only see your own commissions.
 
-|                           |                                                                                                                              |
-|---------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| **Salesperson Code**      | The salesperson that is receiving commission.                                                                                |
-| **Salesperson Name**      | The name of the salesperson. This field is not editable.                                                                     |
-| **Commission Rate**       | The commission percentage. The commission is calculated with the following formula: **Commission Amount** = **Commissionable Amount** * **Commission Rate** |
-| **Amount Type**           | The Amount Type defines, if the commission is calculated as a percentage or if it represents a fixed amount.                 |
-| **Base %**                | The Base % is defined by the Salesperson Split. It defines the amount of the total Commissionable Amount is used to calculate the commissions. |
-| **Commissionable Amount** | The commissionable amount is calculated differently whether the commissions are calculated based on Gross Profit or the Sales Amount or the Quantity. Depending on the salesperson split configuration, the commissionable is a percentage of the total amount. |
-| **Commission Amount**     | The Commission Amount shows the amount that will be paid to the specific salesperson.                                        |
-| **Document Line Type**    | The Document Line Type shows the type on the sales line that this commission is calculated for.                              |
-| **Doc. Line Type No.**    | The Doc. Line Type No. defines the details for the sales line that the commission is calculated for.                         |
-| **System Created**        | If the commission has been calculated automatically, this field will contain a check mark. If not, the commission has been entered or changed manually. |
+[!include[sales-commission-fields](includes/sales-commission-fields.md)]
+
+## Manual Commissions
+
+You can make changes to the system calculated commissions by overwriting one of the values, such as the commission rate or the commission amount. Whenever you change a system calculated commission, the field **System Created** will be unchecked to identify that this is a commission that will not be updated when you select the **Calculate Commissions** action on the sales document.
+
+In addition to updating existing commissions, you can also create new commissions. You can enter a new line and define any commission for any salesperson. This is important, if you want to give commission to a certain salesperson as an exception.
+
+## See Also
+
+- [Setting up Commission Rates](commission-rate-setup.md)

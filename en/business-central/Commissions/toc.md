@@ -50,25 +50,21 @@
 
 ## [Commission Rate](page-commission-rates.md)
 
-<!--
-## [Sales Commission](page-sales-commission.md)
+## [Sales Commission](page-commission-sales-commission.md)
 
-## [Posted Sales Commission](page-posted-sales-commission.html)
+## [Posted Sales Commission](page-posted-sales-commission.md)
 
 ## [Associated Salespeople](page-associated-salespeople.md)
 
-## [Manager Amounts](page-manager-amounts.md)
--->
+## [Manager Commission](page-manager-amounts.md)
 
 ## [Salesperson Split](page-commission-salesperson-split.md)
 
-## [Posted Salesperson Split](page-posted-salesperson-split.md)
+## [Posted Salesperson Split](page-posted-commission-salesperson-split.md)
 
 ## [Commission Journals](page-commission-journal.md)
 
-<!--
-## [Commission Registers](page-commission-register.html)
--->
+## [Commission Registers](page-commission-register.md)
 
 ## [Commission Ledger Entries](page-commission-ledger-entries.md)
 
