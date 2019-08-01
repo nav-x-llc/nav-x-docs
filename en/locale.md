@@ -1,3 +1,7 @@
+---
+canonical_url: https://doc.nav-x.com/en/locale.html
+---
+
 <br>
 <div class="select-locale">
   <div class="headline">

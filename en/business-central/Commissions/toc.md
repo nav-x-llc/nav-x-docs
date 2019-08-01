@@ -32,9 +32,11 @@
 ## [Month End Process](how-to-month-end-process.md)
 
 ## [Manager Commissions](how-to-manager-commission.md)
+-->
 
 ## [Review Commission Reports](how-to-review-commission-reports.md)
 
+<!--
 ## [Manually Adjust Commissions](how-to-manually-adjust-commissions.md)
 
 ## [Import Commissions](how-to-import-commissions.md)
@@ -68,18 +70,20 @@
 
 ## [Commission Ledger Entries](page-commission-ledger-entries.md)
 
-<!--
 ## [Reduced Days Overdue Commissions](page-reduced-days-overdue.md)
--->
 
 ## [Salesperson Groups](page-salesperson-group.md)
 
-<!--
 # Reports
 
 ## [Commissions by Salesperson](report-commission.md)
 
+<!--
 # Developer
 
 ## [Power BI](power-bi.md)
+
+## [Custom Rates](develop-custom-rates.md)
+
+# [FAQ] (faq-index.md)
 -->
