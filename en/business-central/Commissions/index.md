@@ -25,6 +25,7 @@ Whether you have just completed the initial setup or are processing commissions 
 - [How To Process Sales Documents](how-to-process-sales-documents.md)
 - [How To Process Promotional Commissions](how-to-process-promotional-commissions.md)
 - [How To Review Commission Reports](how-to-review-commission-reports.md)
+- [How To Import Commissions](how-to-import-commissions.md)
 
 We are expanding this section periodically.
 

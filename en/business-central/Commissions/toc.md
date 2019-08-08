@@ -38,11 +38,11 @@
 
 <!--
 ## [Manually Adjust Commissions](how-to-manually-adjust-commissions.md)
+-->
 
 ## [Import Commissions](how-to-import-commissions.md)
 
 ## [Product Tour](how-to-product-tour.md)
--->
 
 # Pages
 
