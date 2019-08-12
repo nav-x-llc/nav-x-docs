@@ -1,0 +1,3 @@
+The **Commission Setup** can be configured in a way that the system will post entries to the General Ledger at the time a **Commission Ledger Entry** is created. This will create liabilities for your commissions to be paid and will expense those at the proper time. If you have this setup turned on, you do not have to do anything with this at month's end.
+
+However, if you do not want General Ledger Entries created at the time of posting, but want to do that at the end of the month, you can do that as well. The report can be executed by choosing the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Post Commission To G/L**, and follow the related link.

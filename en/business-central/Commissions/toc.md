@@ -28,11 +28,9 @@
 
 ## [Promotional Commissions](how-to-process-promotional-commissions.md)
 
-<!-- 
 ## [Month End Process](how-to-month-end-process.md)
 
 ## [Manager Commissions](how-to-manager-commission.md)
--->
 
 ## [Review Commission Reports](how-to-review-commission-reports.md)
 
@@ -78,12 +76,16 @@
 
 ## [Commissions by Salesperson](report-commission.md)
 
+## [Post Commission to G/L](report-post-commission-to-gl.md)
+
+## [Process Commission](report-process-commission.md)
+
 <!--
 # Developer
 
 ## [Power BI](power-bi.md)
 
 ## [Custom Rates](develop-custom-rates.md)
-
-# [FAQ] (faq-index.md)
 -->
+
+# [FAQ](faq-index.md)

@@ -16,5 +16,5 @@ You can define commissions for sales managers to receive commissions based on th
 
 ## See Also
 
-<!-- - [Working with Manager Commissions](how-to-manager-commission.md) -->
+- [Working with Manager Commissions](how-to-manager-commission.md)
 - [Setting up Salespeople](salesperson-setup.md)

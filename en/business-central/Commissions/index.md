@@ -10,7 +10,7 @@ NAV-X Commission Management supports both the *Essential* and *Premium* edition 
 
 ### Supported Countries
 
-We currently support the following countries: *Canada*, *United Kingdom*, and *United States*
+We currently support the following countries: *Austria*, *Canada*, *France*, *Germany*, *Mexico*, *New Zealand*, *South Africa*, *Span*, *Switzerland*, *United Kingdom*, and *United States*
 
 ## How to start
 
@@ -24,10 +24,15 @@ Whether you have just completed the initial setup or are processing commissions 
 
 - [How To Process Sales Documents](how-to-process-sales-documents.md)
 - [How To Process Promotional Commissions](how-to-process-promotional-commissions.md)
+- [How To Process Month End](how-to-month-end-process.md)
 - [How To Review Commission Reports](how-to-review-commission-reports.md)
 - [How To Import Commissions](how-to-import-commissions.md)
 
 We are expanding this section periodically.
+
+### Frequently Asked Questions
+
+Whenever we get questions multiple times through our support, we will be enhancing our FAQ. Next time, when you have a question, go and visit our [FAQ](faq-index.md) first to see, if you can find an answer there.
 
 ## If have questions, but can't find the answer
 

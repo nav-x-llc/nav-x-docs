@@ -75,6 +75,10 @@ You can always make those changes later as defined in the [additional setups](ad
 
 You can define for each Item, Resource, G/L Account, and Item Charge, if one is commissionable or not. Initially, a new item, for instance, is not commissionable. You can change this at the time you are [importing commissions](how-to-import-commissions.md) or you can also define how all of your existing records are configured. This will be implemented at the end of the wizard. With these last setups, you are done. As long as you configured everything: you are ready to process commissions. Please follow our How-To’s on the left to learn how to perform the different tasks.
 
+> [!IMPORTANT]
+> If you have a large number of items, Resources, G/L Accounts, or Item Charges, this process can take a while. It can take several hours, if you have several tens of thousands of records.
+> During this process, several tables are locked in the system and therefore system might not be available for other users. It is recommended to perform this task outside of normal business hours.
+
 ## See Also
 
 - [Additional Setups](additional-setups.md)
