@@ -19,5 +19,4 @@ You can use the action **Commission Ledger** to display a list of all **Commissi
 ## See Also
 
 - [Commission Ledger Entries](page-commission-ledger-entries.md)
-
-<!-- - [How to manually adjust commissions](how-to-manually-adjust-commissions.md) -->
+- [How to manually adjust commissions](how-to-manually-adjust-commissions.md)

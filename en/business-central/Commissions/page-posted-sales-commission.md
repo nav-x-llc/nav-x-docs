@@ -10,7 +10,4 @@ The **Sales Commission** page displays commission information for the current sa
 ## See Also
 
 - [Setting up Commission Rates](commission-rate-setup.md)
-
-<!--
 - [Adjusting Commissions](how-to-manually-adjust-commissions.md)
--->

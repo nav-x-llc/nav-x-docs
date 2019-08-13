@@ -9,7 +9,7 @@
         <a id="#top">Back to top</a>
       </span>
       <span>
-        <a class="locale" href="{{_basePath}}{{_langCode}}/locale?target={{_basePath}}{{_langCode}}/{{_path}}">{{_langName}}</a>
+        <a class="locale" href="/{{_langCode}}/locale?target={{_basePath}}{{_langCode}}/{{_path}}">{{_langName}}</a>
       </span
     </div>
   </div>

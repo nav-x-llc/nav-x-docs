@@ -34,9 +34,7 @@
 
 ## [Review Commission Reports](how-to-review-commission-reports.md)
 
-<!--
 ## [Manually Adjust Commissions](how-to-manually-adjust-commissions.md)
--->
 
 ## [Import Commissions](how-to-import-commissions.md)
 
