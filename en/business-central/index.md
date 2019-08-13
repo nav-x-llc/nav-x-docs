@@ -13,6 +13,7 @@ We at NAV-X have worked hard to provide you with well designed and easy to use p
 |                       |                                                                                                                                  |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | **Commissions**       | - [Getting Started](Commissions/getting-started.md)<br>- [Permission Setups](Commissions/permission-setups.md)<br>- [Salesperson Setup](Commissions/salesperson-setup.md)<br>- [Commission Rate Setup](Commissions/commission-rate-setup.md)<br>- [How to import Commissions](Commissions/how-to-import-commissions.md)<br>- [How to process a Sales Document](Commissions/how-to-process-sales-documents.md)<br>- [Month End Process](Commissions/how-to-month-end-process.md) |
+| **Credit Card**       | - [Getting Started](creditcard/getting-started.md) |
 | **Credit Management** | - [Getting Started](Credit-Management/getting-started.md)<br>- [Permission Setups](Credit-management/permission-setups.md)<br>- [How To Process Sales Orders](Credit-Management/how-to-process-sales-orders.md)<br>- [How To Approve Sales Orders](Credit-Management/how-to-approve-sales-orders.md) |
 
 ## Support

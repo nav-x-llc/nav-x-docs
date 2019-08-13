@@ -10,7 +10,11 @@ Microsoft Dynamics 365 Business Central Credit Management allows you to manage y
 
 ## Commission Management
 
-Microsoft Dynamics 365 Business Central Commission Management allows you calculate and process commissions for your salespeople or manage royalty payments with the click of a button. If you require assistance or need setup instructions, please visit our documentation section specific to our [Commissions Management](business-central/commissions/index.md) solution.
+Microsoft Dynamics 365 Business Central Commission Management allows you to calculate and process commissions for your salespeople or manage royalty payments with the click of a button. If you require assistance or need setup instructions, please visit our documentation section specific to our [Commissions Management](business-central/commissions/index.md) solution.
+
+## Credit Card / Payment Processing
+
+Microsoft Dynamics 365 Business Central Credit Card allows you to manage your customers' credit cards and easily accept credit card payments. No matter, if customers pay through your website, in person in a store, or in the back office via phone or the integrated customer payment portal, you have full visibility of all your customers' credit card payments. If you require assistance or need setup instructions, please visit our documentation section specific to our [Credit Card](business-central/creditcard/index.md) solution.
 
 ## I have questions, but can't find the answer
 
