@@ -5,6 +5,7 @@
 - [Where do I find valid test credit card numbers?](faq-index.md#where-do-i-find-valid-test-credit-card-numbers)
 - [How do I settle a batch?](faq-index.md#how-do-i-settle-a-batch)
 - [Transferring Credit Card Data from your old system](faq-index.md#transferring-credit-card-data-from-your-old-system)
+- [What to do when I create a new sandbox with data from the live system?](faq-index.md#what-to-do-when-i-create-a-new-sandbox-with-data-from-the-live-system)
 
 ## Payments
 
@@ -41,6 +42,15 @@ Once you have the Excel spreadsheet, you will have to fill in the following fiel
 | **Connect Customer No.** | This is the customer number of the EBizConnect portal. Your gateway support will be able to assist you in retrieving a list of these customer numbers. |
 
 Once this is configured, you can re-import the configuration package into Business Central. Once you have imported the data, you can apply it to the database. Then the periodic activities defined in the job queue entries in Business Central will start downloading the credit card information for all customers that have been defined in the table. If you have any new customers and your customers are starting to add credit cards through the portal, this will also pick up any of the new credit cards on each next run of the scheduled job.
+
+### What to do when I create a new sandbox with data from the live system
+
+It is important to be able to have a sandbox that is using live data. This can be used to replicate errors or other issues and trace down the causes. Or, you can even just use it for training. There are two different ways to prepare a new sandbox for use with Credit Card. You can just check the **Test Mode** field in the **Credit Card Setup**. You then have to log out and log back in to have those changes go into effect.
+
+Sometimes, it is important, however, to actually post transactions to the gateway using the sandbox merchant account. You need to prepare the data for this. Please choose ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Credit Card Purge Data**, and then choose the related link to start the report.
+
+> [!WARNING]
+> This report is dangerous, if executed in the wrong database. It will remove all credit card data from the database. If you are executing this report, you must be sure that you are using the right database and have a backup of the database before you do it.
 
 ## Payment Answers
 

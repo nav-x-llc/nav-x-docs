@@ -2,13 +2,13 @@
 
 ## [Getting Started](getting-started.md)
 
-<!--
 ## [Permission Setups](permission-setups.md)
 
 ## [Additional Setups](additional-setups.md)
 
 ## [Trial Setup](trial-setup.md)
 
+<!--
 ## [Credit Card Setup](credit-card-setup.md)
 
 ## [Merchant Setup](merchant-setup.md)

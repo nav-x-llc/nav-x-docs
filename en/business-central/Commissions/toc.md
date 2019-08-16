@@ -78,12 +78,10 @@
 
 ## [Process Commission](report-process-commission.md)
 
-<!--
 # Developer
 
 ## [Power BI](power-bi.md)
 
 ## [Custom Rates](develop-custom-rates.md)
--->
 
 # [FAQ](faq-index.md)
