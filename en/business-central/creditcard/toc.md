@@ -8,9 +8,9 @@
 
 ## [Trial Setup](trial-setup.md)
 
-<!--
 ## [Credit Card Setup](credit-card-setup.md)
 
+<!--
 ## [Merchant Setup](merchant-setup.md)
 
 ## [Terminals](terminal-setup.md)
@@ -37,8 +37,13 @@
 
 ## [Product Tour](how-to-product-tour.md)
 
+-->
+
 # Pages
 
+## [Credit Card Setup](page-credit-card-setup.md)
+
+<!-->
 ## [Authorize or Charge Credit Card](page-authorize-credit-card.md)
 
 ## [Credit Card Types](page-credit-card-types.md)

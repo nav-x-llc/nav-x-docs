@@ -2,6 +2,10 @@
 
 While the NAV-X Credit Card setup performs most of the setups for you, you might want to understand and review the setups to be able to make changes when needed. All setups described below can be reached by choosing the ![Tell me what you want to do](/images/magnifying-glass.gif) icon and entering the headings below. They can also be accessed from the [Credit Card Setup](credit-card-setup.md) page.
 
+## Currencies
+
+The gateway requires the definition of the **ISO Numeric Code** for each currency used in credit card transactions. Those currencies are used to tell the gateway the currency for the transaction amount.
+
 ## Payment Method Setup
 
 Payment Methods are used by NAV-X Credit Card to determine, if the customer will pay by credit card or a different method of payment. You can find details on [Defining Payment Methods](https://docs.microsoft.com/en-US/dynamics365/business-central/finance-payment-methods) in the Microsoft Documentation.
