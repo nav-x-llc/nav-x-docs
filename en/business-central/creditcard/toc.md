@@ -10,11 +10,11 @@
 
 ## [Credit Card Setup](credit-card-setup.md)
 
-<!--
 ## [Merchant Setup](merchant-setup.md)
 
 ## [Terminals](terminal-setup.md)
 
+<!--
 ## [Job Queue Setup](job-queue-setup.md)
 
 # How To
@@ -31,6 +31,8 @@
 
 ## [Credit Card Refunds](how-to-credit-card-refunds.md)
 
+## [Setting up a Terminal](how-to-setup-terminal.md)
+
 ## [Using Terminals](how-to-using-terminals.md)
 
 ## [Customize Notifications](how-to-customize-notifications.md)
@@ -43,7 +45,7 @@
 
 ## [Credit Card Setup](page-credit-card-setup.md)
 
-<!-->
+<!--
 ## [Authorize or Charge Credit Card](page-authorize-credit-card.md)
 
 ## [Credit Card Types](page-credit-card-types.md)
@@ -51,7 +53,11 @@
 ## [Enter Security Code](page-enter-security-code.md)
 
 ## [Transaction Entries](page-transaction-entries.md)
+-->
 
+## [Terminal](page-terminal.md)
+
+<!--
 # Reports
 
 # Developer
