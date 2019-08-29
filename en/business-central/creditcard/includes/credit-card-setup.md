@@ -10,9 +10,13 @@ Some of the fields described below are not shown by default. You can access thos
 [!include[credit-card-setup-charge-mode](credit-card-setup-charge-mode.md)]
 [!include[credit-card-setup-avs](credit-card-setup-avs.md)]
 | **Validation Amount**                         | If you have **Perform initial validation for new cards** activated, you can define here the amount that is used for the authorization to validate the card. The default amount is 0.05 in the merchant account’s default currency. You can change this amount, but it is recommended to leave this at a small amount. |
-[!include[credit-card-setup-authorization](credit-card-setup-authorization.md)]
 | **Display Error on failed Authorization**<br>**Display Error on failed Charge**<br>**Display Error on failed Sale** | These fields are checked by default to display errors to the user when an authorization, a charge, or a sales transaction fail. If you do not want to have your customer service representatives deal with those errors, you can disable these settings and create workflows to alert users in another team, such as the accounting department about failed transactions. Those users then can take care of the interaction with the customer.<br><br>Learn more  on how to [setup workflows for Credit Card](../setup-workflows.md). |
 | **Data Retention Period**                     | This setting should typically not be changed. It is part of the PCI compliance enhancements to NAV-X Credit Card and allows you to automatically remove any sensitive information from processed credit card transactions to reduce the amount of sensitive data stored in your system. Even though the data is encrypted when setting up encryption, you should still have the system remove data automatically. |
+
+## Authorization
+
+[!include[credit-card-setup-authorization](credit-card-setup-authorization.md)]
+[!include[credit-card-setup-automation-increase](credit-card-setup-automation-increase.md)]
 
 ## Automation
 

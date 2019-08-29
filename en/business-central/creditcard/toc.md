@@ -14,7 +14,6 @@
 
 ## [Terminals](terminal-setup.md)
 
-<!--
 ## [Job Queue Setup](job-queue-setup.md)
 
 # How To
@@ -23,6 +22,7 @@
 
 ## [Enter new Credit Cards](how-to-enter-new-credit-cards.md)
 
+<!--
 ## [Sales Order Processing](how-to-sales-order-processing.md)
 
 ## [Pay Posted Invoices](how-to-pay-posted-invoices.md)
@@ -37,6 +37,8 @@
 
 ## [Customize Notifications](how-to-customize-notifications.md)
 
+## [Customizing Sign up Email](how-to-customize-signup-email.md)
+
 ## [Product Tour](how-to-product-tour.md)
 
 -->
@@ -45,7 +47,10 @@
 
 ## [Credit Card Setup](page-credit-card-setup.md)
 
-<!--
+<!-- 
+## [Credit Card](page-credit-card.md)
+-->
+
 ## [Authorize or Charge Credit Card](page-authorize-credit-card.md)
 
 ## [Credit Card Types](page-credit-card-types.md)
@@ -53,7 +58,6 @@
 ## [Enter Security Code](page-enter-security-code.md)
 
 ## [Transaction Entries](page-transaction-entries.md)
--->
 
 ## [Terminal](page-terminal.md)
 

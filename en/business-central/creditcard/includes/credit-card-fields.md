@@ -1,0 +1,15 @@
+|                                 |                                                                                                                         |
+|---------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| **First Name**                  | The credit card account holder's first name. Please enter the information as provided on the credit card.               |
+| **Last Name**                   | The credit card account holder's last name. Please enter the information as provided on the credit card.                |
+| **Card Number**                 | The credit card number as shown on the credit card. Please enter only numbers. Once the credit card information is tokenized, the credit card number is *masked*, which means that only the last 4 digits are shown. |
+| **Expiration Date**             | Please enter the credit card's expiration date in the form of MM/YYYY where *MM* stands for the two digit month and *YYYY* stands for the 4 digit year.<br><br>You can also enter the expiration date in the form of *MMYY* or *MM/YY*. The system will normalize entry. |
+| **Type**                        | This field is read only. It is automatically filled out after the credit card information has been tokenized and will define, if the card is a Visa or MasterCard or any other of the supported [credit card types](../page-credit-card-types.md). |
+| **Default Card**                | One card per customer can be defined as the **Default Card**, which will automatically be added to all transactions. The actual card used can be changed on a transaction basis. If a card is already defined as default, you will be asked, if the default card should be changed to this new card. |
+| **Blocked**                     | You can block a card, if the card should not be used anymore. This card will not be shown on the list of available cards for this customer anymore. A card will automatically be blocked, if the card is expired. Learn more about the [automated processes](../job-queue-setup.md). |
+| **Bill-to Address**             | Please enter the street of the credit card's billing address. It is defaulted to the customer's address.                |
+| **Bill-to Address 2**           | Please enter the second address line of the credit card's billing address. It is defaulted to the customer's address.   |
+| **Bill-to City**                | Please enter the city of the credit card's billing address. It is defaulted to the customer's address.                  |
+| **Bill-to State**               | Please enter the state of the credit card's billing address. It is defaulted to the customer's address.                 |
+| **Bill-to Zip Code**            | Please enter the zip code of the credit card's billing address. It is defaulted to the customer's address.              |
+| **Bill-to Country/Region Code** | Please enter the country of the credit card's billing address. It is defaulted to the customer's address. If the country is the local country, you do not have to fill it out and can leave it blank. |
