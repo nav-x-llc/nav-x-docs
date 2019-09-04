@@ -22,21 +22,25 @@
 
 ## [Enter new Credit Cards](how-to-enter-new-credit-cards.md)
 
-<!--
 ## [Sales Order Processing](how-to-sales-order-processing.md)
 
 ## [Pay Posted Invoices](how-to-pay-posted-invoices.md)
 
+<!--
 ## [Payment on Account](how-to-payment-on-account.md)
+-->
 
 ## [Credit Card Refunds](how-to-credit-card-refunds.md)
 
+<!--
 ## [Setting up a Terminal](how-to-setup-terminal.md)
+-->
 
 ## [Using Terminals](how-to-using-terminals.md)
 
 ## [Customize Notifications](how-to-customize-notifications.md)
 
+<!--
 ## [Customizing Sign up Email](how-to-customize-signup-email.md)
 
 ## [Product Tour](how-to-product-tour.md)
