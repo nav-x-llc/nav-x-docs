@@ -13,5 +13,7 @@ The credit card page and list have a fact box defined, which shows statistics on
 
 [!include[credit-card-fields](includes/credit-card-fields.md)]
 
+[!include[credit-card-fields](includes/credit-card-billing-address-fields.md)]
+
 > [!NOTE]
 > While it is possible to change the expiration date on a credit card when it expired, it is recommended to block the credit card and enter a new credit card with the new expiration date and the new security code. This then ensures that another validation is performed as well.

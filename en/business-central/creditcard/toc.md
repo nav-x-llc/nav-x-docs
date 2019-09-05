@@ -51,9 +51,7 @@
 
 ## [Credit Card Setup](page-credit-card-setup.md)
 
-<!-- 
 ## [Credit Card](page-credit-card.md)
--->
 
 ## [Authorize or Charge Credit Card](page-authorize-credit-card.md)
 
