@@ -6,7 +6,7 @@ While the NAV-X Commission Management setup performs most of the setups for you,
 
 The **User Setup** should be reviewed or updated for each user working with commissions or entering orders. For each user, who should be able to update commission rates or perform the month end procedures, you have to have a **User Setup** record defined and the field **Commission Manager** checked.
 
-Each salesperson with access to the system should not have this field checked and must have their **Salesp./Purch. Code** defined in the **User Setup**.  NAV-X Commissions restricts access to functionality and data, in addition to permission setups, also with the **User Setup**. If a user is not setup as **Commission Manager**, they only can see their commissions throughout the system. This is done by using the **Salesp./Purch. Code** in the **User Setup** and filter any pages and reports to that value.
+Each salesperson with access to the system should not have this field checked and must have their **Salesp./Purch. Code** defined in the **User Setup**.  NAV-X Commission Management restricts access to functionality and data, in addition to permission setups, also with the **User Setup**. If a user is not setup as **Commission Manager**, they only can see their commissions throughout the system. This is done by using the **Salesp./Purch. Code** in the **User Setup** and filter any pages and reports to that value.
 
 ## Customer Posting Groups
 

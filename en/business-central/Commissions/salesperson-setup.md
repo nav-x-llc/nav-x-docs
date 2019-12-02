@@ -5,7 +5,7 @@
 Before you can calculate and process commissions, you have to complete some basic setups. One of the tasks is to define how salespeople’s commission is calculated and how the individual salesperson gets paid. You can access the Salesperson card choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Salespeople/Purchasers**, and then choose the related link.
 
 [!NOTE]
-The field **Commission %** in the **General** fast tab on the *Salesperson Card* will not be used by NAV-X Commissions. Therefore, this field is automatically hidden. If you have previously defined any values in this field, they will still be there, but not utilized by your new Commission Management System. This is a standard field in Microsoft Dynamics 365 Business Central that only provides very limited functionality.
+The field **Commission %** in the **General** fast tab on the *Salesperson Card* will not be used by NAV-X Commission Management. Therefore, this field is automatically hidden. If you have previously defined any values in this field, they will still be there, but not utilized by your new Commission Management System. This is a standard field in Microsoft Dynamics 365 Business Central that only provides very limited functionality.
 
 |                              |                                                                                                                           |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------|

@@ -24,6 +24,8 @@
 
 # How To
 
+## [Setup default commission splits](how-to-setup-default-commission-splits.md)
+
 ## [Process Sales Documents](how-to-process-sales-documents.md)
 
 ## [Promotional Commissions](how-to-process-promotional-commissions.md)
@@ -78,10 +80,20 @@
 
 ## [Process Commission](report-process-commission.md)
 
+## [Recalculate Sales Document Commissions](report-recalculate-sales-document-commissions.md)
+
+## [Recalculate Posted Sales Document Commissions](report-recalculate-posted-sales-document-commissions.md)
+
 # Developer
 
 ## [Power BI](power-bi.md)
 
 ## [Custom Rates](develop-custom-rates.md)
+
+# Additional
+
+## [Release Notes](release-notes.md)
+
+<!-- ## [Road Map](roadmap.md) -->
 
 # [FAQ](faq-index.md)

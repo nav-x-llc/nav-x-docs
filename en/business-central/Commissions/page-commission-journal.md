@@ -25,7 +25,7 @@ Hover over the individual fields to see a short description.
 | **Document Type**              | Commissions can be associated with specific documents. The **Document Type** defines the type of the document. It can be a posted document or an unposted document, such as a sales order |
 | **Document No.**               | The number of the document that the commission entry will be associated with                                            |
 | **Description**                | The description is a free text field that can be used to define a reason for the adjustment or other notes              |
-| **Commission Rate**            | The commission rate defines the actual percentage that will be used to calculate the commission. Based on the setups,  the **Line Amount** and **Line Cost** are used to define the **Commissionable Amount**. The rate is then applied to the **Commissionable Amount** to calcualte the actual **Commission Amount**. |
+| **Commission Rate**            | The commission rate defines the actual percentage that will be used to calculate the commission. Based on the setups,  the **Line Amount** and **Line Cost** are used to define the **Commissionable Amount**. The rate is then applied to the **Commissionable Amount** to calculate the actual **Commission Amount**. |
 | **Commission Rate Type**       | The commission rate can be defined as a fixed amount or a percentage                                                    |
 | **Base %**                     | The **Base %** is used to define, if the salesperson receives the full commission that is entered in this journal line or only a percentage of it. |
 | **Line Amount**                | The sales amount for the document that is defined. It is used in combination with other fields to determine the **Commissionable Amount**. |
@@ -37,5 +37,5 @@ Hover over the individual fields to see a short description.
 
 ## See Also
 
-- [Commisssion Ledger Entries](page-commission-ledger-entries.md)
+- [Commission Ledger Entries](page-commission-ledger-entries.md)
 - [Specifying Posting Periods](https://docs.microsoft.com/en-us/dynamics365/business-central/finance-how-specify-posting-periods)

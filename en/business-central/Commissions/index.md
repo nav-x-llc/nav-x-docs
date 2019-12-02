@@ -1,6 +1,6 @@
 # Welcome to the Microsoft Dynamics 365 Business Central Commission Management Help
 
-NAV-X Commissions is an app for Dynamics 365 for Business Central that handles all your **Commission Management** needs and can process commission payments automatically. It is fully integrated with Dynamics 365 Business Central.
+NAV-X Commission Management is an app for Dynamics 365 for Business Central that handles all your **Commission Management** needs and can process commission payments automatically. It is fully integrated with Dynamics 365 Business Central.
 
 ## Supported Editions and Countries
 
@@ -16,7 +16,7 @@ We currently support the following countries: *Austria*, *Canada*, *France*, *Ge
 
 ### Getting Started
 
-We describe the entire process of setting up NAV-X Commissions to start commission management quickly. If you just want to get started, please follow our documentation in our [Getting Started](getting-started.md) section.
+We describe the entire process of setting up NAV-X Commission Management to start commission management quickly. If you just want to get started, please follow our documentation in our [Getting Started](getting-started.md) section.
 
 ### How to
 
@@ -34,9 +34,15 @@ We are expanding this section periodically.
 
 Whenever we get questions multiple times through our support, we will be enhancing our FAQ. Next time, when you have a question, go and visit our [FAQ](faq-index.md) first to see, if you can find an answer there.
 
+## What's New
+
+We release new versions of our software from time to time. Those can include fixes of issues that we found and can also include new functionality. If you have NAV-X Commission Management installed already and a new version becomes available, we will inform you directly within Business Central about this. When you log in to Business Central, the system will display a notification that will inform you about the new version and you can also read about the new features there.
+
+If you want to see an overview of the new features by version, you can read more details about it in our [Release Notes](release-notes.md).
+
 ## If have questions, but can't find the answer
 
-Sometimes, you have questions that our documentation doesn't answer. Just contact us through our [Support](htpps://nav-x.com/support/) page. We have a team of experts here to assist you with your questions.
+Sometimes, you have questions that our documentation doesn't answer. Just contact us through our [Support](https://nav-x.com/support/) page. We have a team of experts here to assist you with your questions.
 
 ## I am missing functionality
 

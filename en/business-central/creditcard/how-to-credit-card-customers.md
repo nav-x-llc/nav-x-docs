@@ -16,7 +16,7 @@ If you have an email address defined on the customer card, you can send the cust
 
 The customer will be setup in the portal and an email will be sent to the customer allowing the customer to register at the portal. The customer will need to enter the email address as well as their zip code. Once logged on to the portal, different payment methods can be created. Business Central has an scheduled job running (by default every 60 minutes) to import newly entered credit cards into the system. Once they imported, you can use these cards to authorize and charge orders against.
 
-The email sent to the customer is a Microsoft Word document and can be customized. Learn more about [Customizing Sign up Email](how-to-customize-signup-email.md).
+The email sent to the customer is a Microsoft Word document and can be customized. <!-- Learn more about [Customizing Sign up Email](how-to-customize-signup-email.md). -->
 
 > [!IMPORTANT]
 > It is important that the **Application Method** for the customer is set to **Manual** for any customer that should be able to pay via credit card. This setting is the default for a customer.
@@ -24,4 +24,4 @@ The email sent to the customer is a Microsoft Word document and can be customize
 ## See Also
 
 - [Register New Customers](https://docs.microsoft.com/en-US/dynamics365/financials/sales-how-register-new-customers)
-- [Customizing Sign up Email](how-to-customize-signup-email.md)
+<!-- - [Customizing Sign up Email](how-to-customize-signup-email.md) -->

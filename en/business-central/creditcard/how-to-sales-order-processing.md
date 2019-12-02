@@ -37,7 +37,7 @@ When processing orders for warehouse enabled locations, the process as described
 
 ## Credit Card Terminals
 
-If you have setup at least one terminal as [described](terminal-setup.md), you can also charge credit cards for a sales order. Since this process is the same process for all different sales documents, Learn more about [processing a credit card using a terminal](process-terminals.md).
+If you have setup at least one terminal as [described](terminal-setup.md), you can also charge credit cards for a sales order. Since this process is the same process for all different sales documents, <!-- Learn more about [processing a credit card using a terminal](process-terminals.md). -->
 
 ## Processing Sales Document batches
 

@@ -62,7 +62,15 @@ The **Features** fast tab enables you to disable features that you are not using
 
 ### Process > Auto-Assign Salespeople
 
-When initially setting up your new Commission Management System, you most likely have already salespeople assigned to your customers. NAV-X Commissions allows the definition of an unlimited amount of salespeople responsible for a customer. Therefore, this functionality is provided for you to be able to use the existing salesperson assignment as the default salesperson for your existing customers. A salesperson commission split is defined for each customer with the salesperson defined in the “Salesperson Code” on the Customer Card. The split percentage is defined as 100 %.
+When initially setting up your new Commission Management System, you most likely have already salespeople assigned to your customers. NAV-X Commission Management allows the definition of an unlimited amount of salespeople responsible for a customer. Therefore, this functionality is provided for you to be able to use the existing salesperson assignment as the default salesperson for your existing customers. A salesperson commission split is defined for each customer with the salesperson defined in the “Salesperson Code” on the Customer Card. The split percentage is defined as 100 %.
+
+### Process > Recalculate Sales Document Commissions
+
+After setting up all commission splits and commission rates for your salespeople, you might want to add the commissions to your existing sales documents. You can use this report to calculate commissions for all or a subset of the existing sales documents. [Learn more about recalculating sales document commissions](../report-recalculate-sales-document-commissions.md).
+
+### Process > Recalculate Posted Sales Document Commissions
+
+After setting up all commission splits and commission rates for your salespeople, you might want to add the commissions to your posted sales documents. You can use this report to calculate commissions for all or a subset of the posted sales documents. [Learn more about recalculating posted sales document commissions](../report-recalculate-posted-sales-document-commissions.md).
 
 ### Help > Online Help
 
@@ -70,7 +78,7 @@ You can access this documentation directly from within Business Central.
 
 ### Help > Start Product Tour
 
-NAV-X Commissions includes a product tour that can be used in your sandbox environment to walk through some of the features of NAV-X Commissions. You can start the product tour from here. [Learn more about the Product Tour](../how-to-product-tour.md).
+NAV-X Commission Management includes a product tour that can be used in your sandbox environment to walk through some of the features of NAV-X Commission Management. You can start the product tour from here. [Learn more about the Product Tour](../how-to-product-tour.md).
 
 ## See Also
 
@@ -81,3 +89,5 @@ NAV-X Commissions includes a product tour that can be used in your sandbox envir
 - [Personalize your user interface](https://docs.microsoft.com/en-us/dynamics365/business-central/ui-personalization-user)
 - [Working with Dimensions](https://docs.microsoft.com/en-us/dynamics365/business-central/finance-dimensions)
 - [Learn more about using date formulas](https://docs.microsoft.com/en-us/dynamics365/business-central/ui-enter-date-ranges#using-date-formulas)
+- [Recalculate Sales Document Commissions](../report-recalculate-sales-document-commissions.md)
+- [Recalculate Posted Sales Document Commissions](../report-recalculate-posted-sales-document-commissions.md)

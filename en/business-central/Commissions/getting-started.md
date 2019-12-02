@@ -10,7 +10,7 @@ Permissions for the app must be setup before the commission setup is started to 
 
 ### To start the Setup
 
-When you are on the role center and have not completed the setup for the NAV-X Commissions app, you will see a notification asking "Do you want to get started with NAV-X Commissions?". Select **Click here to run the setup** to start the Assisted Setup wizard. Alternatively, you can also choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Assisted Setup**, and then choose the related link.
+When you are on the role center and have not completed the setup for the NAV-X Commission Management app, you will see a notification asking "Do you want to get started with NAV-X Commission Management?". Select **Click here to run the setup** to start the Assisted Setup wizard. Alternatively, you can also choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Assisted Setup**, and then choose the related link.
 
 [!include[eula](../includes/eula.md)]
 
@@ -61,7 +61,7 @@ By default, commissions are calculated on positive and negative lines on a sales
 
 If a salesperson sold less during a period than the credit memos processed for this salesperson’s customers, the commission amount could be negative at the end of the period. If you do not want to claw back commissions from your salespeople in this scenario, you can activate the field “Prevent Negative Total Commission”.
 
-The NAV-X Commissions app has rich functionality, grouped into different features. If you do not anticipate using some of the features, you can turn those features off. If you plan on using specific features, you can turn those on. This can be changed at any time. Turning a feature off removes the associated actions from the pages and menus and hides fields that only are used in conjunction with these features. This allows a cleaner and simpler user interface to let you focus more on your specific tasks.
+The NAV-X Commission Management app has rich functionality, grouped into different features. If you do not anticipate using some of the features, you can turn those features off. If you plan on using specific features, you can turn those on. This can be changed at any time. Turning a feature off removes the associated actions from the pages and menus and hides fields that only are used in conjunction with these features. This allows a cleaner and simpler user interface to let you focus more on your specific tasks.
 
 ### To send commission reports via email
 
