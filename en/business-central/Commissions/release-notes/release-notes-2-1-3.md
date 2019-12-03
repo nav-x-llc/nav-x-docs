@@ -27,3 +27,7 @@ In the previous version, the report layouts for the different reports included i
 ### When invoice is closed at the time of payment, commission ledger entries have wrong status
 
 If you post a sales document and it is paid via credit card or cash, the invoice is closed at the time of posting. This has been corrected.
+
+## See Also
+
+- [How to update my extensions](../faq-index.md#i-want-to-update-my-version-of-nav-x-commission-management)
