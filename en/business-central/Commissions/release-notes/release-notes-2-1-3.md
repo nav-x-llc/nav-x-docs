@@ -1,4 +1,4 @@
-# Release Notes for Version 2.1.3
+# Release Notes for December Update - Version 2.1.3
 
 ## New Features
 

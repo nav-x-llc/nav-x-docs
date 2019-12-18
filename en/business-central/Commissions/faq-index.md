@@ -3,6 +3,9 @@
 ## General
 
 - [I want to change when my commissions are payable](faq-index.md#i-want-to-change-when-my-commissions-are-payable)
+
+## System
+
 - [I want to update my version of NAV-X Commission Management](faq-index.md#i-want-to-update-my-version-of-nav-x-commission-management)
 
 ### I want to change when my commissions are payable

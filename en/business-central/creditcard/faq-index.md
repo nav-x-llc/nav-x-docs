@@ -16,6 +16,10 @@
 
 - [How can I turn off notifications about successfully authorized cards?](faq-index.md#how-can-i-turn-off-notifications-about-successfully-authorized-cards)
 
+## System
+
+- [I want to update my version of NAV-X Credit Card](faq-index.md#i-want-to-update-my-version-of-nav-x-credit-card)
+
 ## General Answers
 
 ### Where do I find valid test Credit Card numbers
@@ -69,3 +73,15 @@ You can also define the EBizCharge Connect Payment Service on the customer as th
 ### How can I turn off notifications about successfully authorized cards
 
 When you authorize a credit card, you receive a message saying that the authorization was successful. While it is important to know, if an authorization was successful or not, it also requires an additional click to accept the message. You might want to only see errors in case the authorization did not work and otherwise don’t receive any message. This notification as well as others can be turned off on a user by user basis. Learn [How to Customize Notifications](how-to-customize-notifications.md).
+
+## System
+
+### I want to update my version of NAV-X Credit Card
+
+When we release a new version of NAV-X Credit Card, you will want to upgrade to that version. The upgrade does not happen automatically, unless your environment is upgraded to a new major release. This happens in the Spring and Fall of every year. Between those major upgrades, you will need to manually update your extensions.
+
+To update your extensions, you can choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Extensions**, and then choose the related link. Alternatively, you can also select *Setup & Extensions > Extensions* from the **Role Center**. Then find the extension called **Credit Card by NAV-X** and click on **Show More Options**, which is represented by the three dots in the upper right corner of the extension. Select **Uninstall** and follow the instructions.
+
+Once you have uninstalled the extension, please make sure that you are again on the **Extensions** page and select *Manage > Extension Marketplace*. You then can enter **NAV-X Credit Card** in the **Search Microsoft AppSource** box. Click on the **Free Trial** button and follow the prompts. You can monitor the status of the installation from **Extensions** by selecting *Manage > Deployment Status*.
+
+You now have installed the latest version of the extension and can start taking advantage of the latest issue fixes and features.
