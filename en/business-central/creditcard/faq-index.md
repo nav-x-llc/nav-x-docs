@@ -20,6 +20,10 @@
 
 - [I want to update my version of NAV-X Credit Card](faq-index.md#i-want-to-update-my-version-of-nav-x-credit-card)
 
+## Errors
+
+- [The Merchant Credentials are not defined](faq-index.md#the-merchant-credentials-are-not-defined)
+
 ## General Answers
 
 ### Where do I find valid test Credit Card numbers
@@ -74,7 +78,7 @@ You can also define the EBizCharge Connect Payment Service on the customer as th
 
 When you authorize a credit card, you receive a message saying that the authorization was successful. While it is important to know, if an authorization was successful or not, it also requires an additional click to accept the message. You might want to only see errors in case the authorization did not work and otherwise don’t receive any message. This notification as well as others can be turned off on a user by user basis. Learn [How to Customize Notifications](how-to-customize-notifications.md).
 
-## System
+## System Answers
 
 ### I want to update my version of NAV-X Credit Card
 
@@ -85,3 +89,9 @@ To update your extensions, you can choose the ![Tell me what you want to do](/im
 Once you have uninstalled the extension, please make sure that you are again on the **Extensions** page and select *Manage > Extension Marketplace*. You then can enter **NAV-X Credit Card** in the **Search Microsoft AppSource** box. Click on the **Free Trial** button and follow the prompts. You can monitor the status of the installation from **Extensions** by selecting *Manage > Deployment Status*.
 
 You now have installed the latest version of the extension and can start taking advantage of the latest issue fixes and features.
+
+## Error Answers
+
+### The Merchant Credentials are not defined
+
+If you receive the error message "The merchant credentials are not defined" at any time in your process, you must validate that the credentials defined in the system are complete. You can validate and update the merchant credentials in the [Merchant Account Setup](merchant-setup.md#merchant-card).
