@@ -27,8 +27,10 @@ You can start the merchant setup by choosing the ![Tell me what you want to do](
 
 ### Authentication
 
-|                 |                                                                                                                                         |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+The merchant credentials that are required to be entered below have been provided by Century Business Solutions. If you do not have those credentials anymore, you can request them from their support team at <a href="mailto:support@centurybizsolutions.com">support@centurybizsolutions.com</a>.
+
+|                 |                                                                                                                                   |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Security Id** | The **Security Id** is part of the merchant credentials provided to you by your gateway. Please make sure that you enter the complete information. |
 | **User Id**     | The **User Id** is part of the merchant credentials provided to you by your gateway. Please make sure that you enter the complete information. |
 | **Password**    | The **Password** is part of the merchant credentials provided to you by your gateway. Please make sure that you enter the complete information. |

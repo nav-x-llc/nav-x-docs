@@ -2,6 +2,7 @@
 
 Sometimes, you run specific promotions, for instance, you are discounting certain items that are about to be discontinued. In this case, if you are paying commissions based on the sales price, you might actually have issues, since your gross profit for this transaction is lower. You then want to adjust commissions paid for these promotions. This is not only possible for commissions calculated on *Sales*, but also on any of the other possible options.
 
+Please also watch our video describing how to setup and process [tiered commissions on YouTube](https://youtu.be/3kAhofKshAk).
 ## Campaigns
 
 ### Setting up Campaign Commissions
@@ -38,3 +39,4 @@ Based on the **Effective Date** calculation defined on the **Commission Setup**,
 - [Walkthrough: Conducting a Sales Campaign](https://docs.microsoft.com/en-us/dynamics365/business-central/walkthrough-conducting-a-sales-campaign)
 - [Sell Products](https://docs.microsoft.com/en-us/dynamics365/business-central/sales-how-sell-products)
 - [Page Commission Rates](page-commission-rates.md)
+- [Video: Tiered Commissions on YouTube](https://youtu.be/3kAhofKshAk)
