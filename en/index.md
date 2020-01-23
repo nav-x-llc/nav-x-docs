@@ -16,7 +16,7 @@ Microsoft Dynamics 365 Business Central Commission Management allows you to calc
 
 Microsoft Dynamics 365 Business Central Credit Card allows you to manage your customers' credit cards and easily accept credit card payments. No matter, if customers pay through your website, in person in a store, or in the back office via phone or the integrated customer payment portal, you have full visibility of all your customers' credit card payments. If you require assistance or need setup instructions, please visit our documentation section specific to our [Credit Card](business-central/creditcard/index.md) solution.
 
-## Search
+## Search - Free
 
 Microsoft Dynamics 365 Business Central Search allows you to search any data in your Business Central environment from one convenient place. If you require assistance or need setup instructions, please visit our documentation section specific to our [Search](business-central/search/index.md) solution.
 
