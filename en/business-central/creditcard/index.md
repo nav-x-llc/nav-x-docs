@@ -1,6 +1,6 @@
 # Welcome to the Microsoft Dynamics 365 Business Central Credit Card Help
 
-NAV-X Credit Card is an app for Dynamics 365 for Business Central that handles all your **Credit Card Payment** needs and can process your customers' credit card payments easily and automatically. It is fully integrated with Dynamics 365 Business Central.
+NAV-X Credit Card is an app for Dynamics 365 for Business Central that handles all your **ACH and Credit Card Payment** needs and can process your customers' bank account and credit card payments easily and automatically. It is fully integrated with Dynamics 365 Business Central.
 
 ## Supported Editions and Countries
 
@@ -10,17 +10,17 @@ NAV-X Credit Card supports both the *Essential* and *Premium* edition of Microso
 
 ### Supported Countries
 
-We currently support the following countries: *Canada* and *United States*
+We currently support the following countries: *Canada*, *Mexico*, and *United States*
 
 ## How to start
 
 ### Getting Started
 
-We describe the entire process of setting up NAV-X Credit Card to start managing your credit card processing quickly. If you just want to get started, please follow our documentation in our [Getting Started](getting-started.md) section.
+We describe the entire process of setting up NAV-X Credit Card to start managing your ACH and credit card processing quickly. If you just want to get started, please follow our documentation in our [Getting Started](getting-started.md) section.
 
 ### How to
 
-Whether you have just completed the initial setup or are processing credit cards for a while already, you can find a series of articles describing the main processes in our **How To** section.
+Whether you have just completed the initial setup or are processing ACH payments or credit cards for a while already, you can find a series of articles describing the main processes in our **How To** section.
 
 We are expanding this section periodically.
 

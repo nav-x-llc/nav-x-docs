@@ -1,0 +1,7 @@
+|                                 |                                                                                                                                      |
+|---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| **Credit Card Enabled**         | Enables credit card processing. If this setting is disabled, no credit cards can be processed for any transactions.                  |
+| **ACH Enabled**                 | Enables ACH processing. If this setting is disabled, no bank accounts can be charged via ACH.                                        |
+| **Swipe Card**                  | If you are using integrated terminals for *Card Present* transactions, you can enable the support here.                              |
+| **Status Fields**               | The sales and service documents show the status of the credit card transactions. You can see, if Credit Card information is missing, if the order was already authorized or captured directly from the **General** tab on the document. |
+| **Enable Invoice Payment Form** | Enables the ability to show a payment link on posted invoices that are open. This link will allow your customers to pay directly via credit card on a secure payment form hosted on the gateway's systems. |

@@ -1,10 +1,10 @@
-# Authorize or Charge Credit Card Page
+# Authorize or Charge Payment Methods Page
 
-If you have the system set up to authorize and charge transactions, you have different ways of authorizing or charging a card. You can define a credit card on the document and then release the document, which will authorize the credit card that was defined. If you do not have a credit card defined or if you want to charge multiple cards, you can either release the document without having a card defined or you can select the **Authorize Card** action on the ribbon.
+If you have the system set up to authorize and charge transactions, you have different ways of authorizing or charging a payment method. You can define a credit card on the document and then release the document, which will authorize the credit card that was defined. If you do not have a credit card defined or if you want to charge multiple cards, you can either release the document without having a card defined or you can select the **Authorize Card** action on the ribbon.
 
-The **Authorize Credit Card** page will be shown to allow you to enter one or multiple credit cards. If you are charging the credit card, for instance, through the **Charge Card** action on the sales documents, you will see the same page as shown below, but it will be titled **Charge Credit Cards**.
+The **Authorize Credit Card** page will be shown to allow you to enter one or multiple credit cards. If you are charging the credit card, for instance, through the **Charge** action on the sales documents, you will see the same page as shown below, but it will be titled **Charge Credit Cards**. The same page is also used when charging bank accounts. Bank accounts cannot be authorized, however, ACH payments can be processed by charging a bank account.
 
-You can select a credit card from the drop down list in **Card Number** or manually enter credit card information, which then will be tokenized and saved in the system for future use as well. If you only want to enter one credit card, you then just click the **Ok** button and continue. If you want to enter multiple credit cards, please enter the first card information, define the amount to be charged to this card, and click **Add**. Then continue with the next card. You will see multiple cards in the list at the bottom of the screen.
+You can select a bank account or credit card from the drop down list in **Account Number** after selecting the **Account Type** to define, if you want to process an ACH or credit card payment. You can also manually enter bank account or credit card information, which then will be tokenized and saved in the system for future use as well, unless you have deactivated the flag **Tokenize Manual Cards** in the [Credit Card Setup](page-credit-card-setup.md). If you only want to enter one bank account or credit card, you then just click the **Ok** button and continue. If you want to enter multiple payment methods, please enter the first account information, define the amount to be charged to this payment method, and click **Add**. Then continue with the next account. You will see multiple accounts in the list at the bottom of the screen.
 
 ## Fields
 
@@ -12,17 +12,19 @@ You can select a credit card from the drop down list in **Card Number** or manua
 
 |                         |                                                                                                                                 |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| **Card Number**         | You can select an existing credit card from the drop down or you can enter new credit card information. If you select an existing credit card from the drop down, most fields will become non-editable. The only fields editable will then be the **Security Code** and the **Amount to Authorize**. |
-| **First Name**          | Enter the first name of the account holder as it appears on the card. If the account holder has a middle initial on the card, please enter this also in the first name. |
-| **Last Name**           | Enter the last name of the account holder as it appears on the card.                                                            |
-| **Expiration Date**     | Enter the expiration date for this credit card in the form of MM/YY, MMYY, or MM/YYYY.                                          |
-| **Security Code**       | If you are required to enter the security code for the credit card, please enter the three or four digit security code here.    |
-| **Type**                | This field displays the type of the credit card and cannot be changed.                                                          |
+| **Account Type**        | You can select, if you want to process an **ACH** payment or a **Credit Card**.                                                 |
+| **Account Number**      | You can select an existing bank account or credit card from the drop down or you can enter new ACH or credit card information. If you select an existing account from the drop down, most fields will become non-editable. The only fields editable will then be the **Security Code** (for Credit Card) and the **Amount to Authorize**. |
+| **Routing No.**         | Enter the routing number for the bank account. This is only available when the **Account Type** is set to **ACH**.              |
+| **First Name**          | Enter the first name of the account holder. If the account holder has a middle initial, please enter this also in the first name. |
+| **Last Name**           | Enter the last name of the account holder.                                                            |
+| **Expiration Date**     | Enter the expiration date for this credit card in the form of MM/YY, MMYY, or MM/YYYY. This is only available when the **Account Type** is set to **Credit Card** |
+| **Security Code**       | If you are required to enter the security code for the credit card, please enter the three or four digit security code here. This is only available when the **Account Type** is set to **Credit Card** |
+| **Type**                | This field displays the type of the credit card and cannot be changed for credit cards. If the **Account Type** is set to **ACH**, please select, if the account is a **Savings** or **Checking** Account |
 
 ### Transaction Information
 
 |                           |                                                                                                                               |
-|---------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | **Transaction Amount**    | This field displays the amount of the transaction and cannot be changed.                                                        |
 | **Authorized Amount**     | This field displays the amount that is already authorized and cannot be changed.                                                |
 | **Amount entered**        | This field displays the remaining amount to process and cannot be changed.                                                      |

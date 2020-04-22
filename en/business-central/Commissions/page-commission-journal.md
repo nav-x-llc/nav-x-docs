@@ -4,8 +4,8 @@ Commissions are posted to the commission ledger at the time when sales or servic
 
 The information that you enter in a journal is temporary and can be changed while it is in the journal. When you post the journal, the information is transferred to **Commission Ledger Entries**, where it cannot be changed. You can, however, post additional journal entries to further adjust the posted commissions.
 
-[!NOTE]
-The commission journal shows only a limited number of fields on the journal line by default. If you want to see additional fields, you can choose to customize the page.
+> [!NOTE]
+> The commission journal shows only a limited number of fields on the journal line by default. If you want to see additional fields, you can choose to customize the page.
 
 ## Using Journal Templates and Batches
 

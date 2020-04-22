@@ -6,11 +6,19 @@ While the NAV-X Credit Card setup performs most of the setups for you, you might
 
 The gateway requires the definition of the **ISO Numeric Code** for each currency used in credit card transactions. Those currencies are used to tell the gateway the currency for the transaction amount.
 
+## Account Type Setup
+
+Account types are used to define the different credit card types and bank account types that are supported by the system. Currently, it is not possible to add additional account types. Account types will automatically be created when the app is originally installed and configured. The Account Type list can be accessed from the Credit Card Setup under Process. The Credit Card Setup can be found under *Setup & Extensions > Manual Setup*.
+
 ## Payment Method Setup
 
 Payment Methods are used by NAV-X Credit Card to determine, if the customer will pay by credit card or a different method of payment. You can find details on [Defining Payment Methods](https://docs.microsoft.com/en-US/dynamics365/business-central/finance-payment-methods) in the Microsoft Documentation.
 
-NAV-X Credit Card creates automatically a new payment method for you called **CREDITCARD**. This payment method is setup to be used on customer setups and sales or service documents to indicate that the customer pays via credit card. If you want to configure a new payment method in this manner, you cannot define a **Bal. Account No.** and you have to set the field **Payment Type** to **Credit Card**.
+NAV-X Credit Card creates automatically a new payment method for you called **CREDITCARD**. If such a payment method exists already (or one called **CARD**), it will modify the setup to utilize this as a credit card payment. This payment method is setup to be used on customer setups and sales or service documents to indicate that the customer pays via credit card. If you want to configure a new payment method in this manner, you cannot define a **Bal. Account No.** and you have to set the field **Payment Type** to **Credit Card**.
+
+Another payment method is also created automatically called **BANK**. If such a payment method already exists, it will modify the setup to utilize this as a ACH payment. This payment method is setup to be used on customers setups and sales or service documents to indicate that the customer pays via ACH payment. If you want to configure a new payment method in this manner, you cannot define a **Bal. Account No.** and you have to set the field **Payment Type** to **ACH**.
+
+You can also define a default **Payment Terms Code** on each payment method. This payment term will then automatically be added when this payment method is used.
 
 ## Unit of Measure Setup
 
@@ -24,7 +32,7 @@ If you require additional information on how to setup new items, please read [Re
 
 ## Source Code Setup
 
-Source codes are tags on transactions to identify the source of a transaction. For instance, any transaction posted from a sales order has a specific source code attached to identify this source. A source code is also required for credit card transactions. This is done automatically at the time of installation, but you can review and modify the source code. The field for credit card transaction source codes is called “Credit Card Payments” and accessible on the Source Code Setup. You can find this page through the Business Central search.
+Source codes are tags on transactions to identify the source of a transaction. For instance, any transaction posted from a sales order has a specific source code attached to identify this source. A source code is also required for credit card transactions. This is done automatically at the time of installation, but you can review and modify the source code. The field for credit card transaction source codes is called "Credit Card Payments" and accessible on the Source Code Setup. You can find this page through the Business Central search.
 
 ## Commodity Code Setup
 

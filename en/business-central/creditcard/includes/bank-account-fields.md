@@ -1,0 +1,11 @@
+|                            |                                                                                                                                           |
+|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| **First Name**             | The bank account holder's first name.                                                                                                     |
+| **Last Name**              | The bank account holder's last name.                                                                                                      |
+| **Type**                   | Please select, if this bank account is either a checking or savings account.                                                              |
+| **Routing No.**            | The routing number for this bank account. This can be easily retrieved from a voided check. Please enter only numbers. Once the bank account information is tokenized, the routing number is *masked*, which means that only the last 4 digits are shown. |
+| **Account Number**         | The account number for this bank account. This can be easily retrieved from a voided check. Please enter only numbers. Once the bank account information is tokenized, the routing number is *masked*, which means that only the last 4 digits are shown. |
+| **Driver's License No.**   | This field is optional. You can enter the driver's license number of the account holder for additional validation and security.           |
+| **Driver's License State** | This field is optional, but must be filled in, if the **Driver's License No.** is provided.                                               |
+| **Default**                | One payment method per customer can be defined as the **Default**, which will automatically be added to all transactions. The actual payment method used can be changed on a transaction basis. If a payment method is already defined as default, you will be asked, if the default should be changed to this new payment method. |
+| **Blocked**          | You can block a bank account, if the bank account should not be used anymore. This bank account will not be shown on the list of available bank accounts for this customer anymore. |

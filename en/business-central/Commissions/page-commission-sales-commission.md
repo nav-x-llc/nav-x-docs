@@ -1,3 +1,7 @@
+---
+canonical_url: https://docs.nav-x.com/en/business-central/commissions/page-sales-commission.html
+---
+
 # Page Sales Commission
 
 The **Sales Commission** page displays commission information for the current sales transaction. It can be accessed from the sales document by selecting the action **Commissions** (*Navigate > Document > Commissions*). The **General** fast tab shows information about the customer and ship-to address as well as the total **Commissionable Amount**, and the **Commission Amount**. If you are a commission manager, you can see commissions for all salespeople and also make changes to those commissions. If you are not a commission manager, you can only see your own commissions.

@@ -26,17 +26,17 @@ You have access to all blocked credit cards for a customer through the **Credit 
 
 If a credit card is expired, the system will remove the credit card token from the system, since it is not valid anymore. This will happen after the **Data Retention Period** has lapsed for a credit card. If you set the **Data Retention Period** for one or two weeks, you still have the opportunity to update the expired credit cards before they will be deleted and then the card will not be deleted anymore. The **Data Retention Period** can be adjusted in the [Credit Card Setup](credit-card-setup.md).
 
-## Credit Card Payment Import
+## Payment Import
 
 Any payments that have been processes outside of Business Central, such as payments that came in from the portal, are imported into Business Central with this process. Once imported, the payments are automatically posted as payments in Business Central and, if possible, applied to the proper invoices.
 
-This process is configured to run once an hour by default to ensure that credit cards are imported at a reasonable time.
+This process is configured to run once an hour by default to ensure that payments are imported at a reasonable time.
 
-## Credit Card Import
+## Payment Method Import
 
-Customers can enter their credit card information through the EBizCharge Connect portal. This way the customer does not have to provide their information over the phone. This process imports these credit cards from the portal into Microsoft Dynamics 365 Business Central so that they can be used to pay invoices.
+Customers can enter their ACH and credit card information through the EBizCharge Connect portal. This way the customer does not have to provide their information over the phone. This process imports these bank accounts and credit cards from the portal into Microsoft Dynamics 365 Business Central so that they can be used to pay invoices.
 
-This process is configured to run once an hour by default to ensure that credit cards are imported at a reasonable time.
+This process is configured to run once an hour by default to ensure that payment methods are imported at a reasonable time.
 
 ## See Also
 

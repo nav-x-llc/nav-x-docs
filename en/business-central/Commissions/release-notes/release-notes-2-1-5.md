@@ -1,4 +1,4 @@
-# Release Notes for December Patch - Version 2.1.5
+# Release Notes for December 2019 Patch - Version 2.1.5
 
 ## Resolved issues
 
