@@ -16,6 +16,10 @@
 
 ## [Job Queue Setup](job-queue-setup.md)
 
+<!--
+## [Setup Workflows](setup-workflows.md)
+-->
+
 # How To
 
 ## [Credit Card Customers](how-to-credit-card-customers.md)
@@ -31,8 +35,6 @@
 ## [Payment on Account](how-to-payment-on-account.md)
 
 ## [Credit Card Refunds](how-to-credit-card-refunds.md)
-
-## [Setting up a Terminal](how-to-setup-terminal.md)
 
 ## [Using Terminals](how-to-using-terminals.md)
 
@@ -76,6 +78,8 @@
 ## [Credit Card Payment Import](report-credit-card-payment-import.md)
 
 ## [Credit Card Purge Data for Sandbox](report-credit-card-purge-for-sandbox.md)
+
+## [Payment Method Import](report-payment-method-import.md)
 
 ## [Process Posted Sales Invoices Credit Card](report-posted-sales-invoices-credit-card.md)
 

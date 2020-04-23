@@ -6,7 +6,7 @@ Any customer can pay via ACH or credit card at the time of order entry. However,
 
 If a payment method code is selected that has the **Payment Type** set to **ACH** or **Credit Card**, each order requires a bank account or credit card to be selected or entered, before the order can be posted. If the customer wants to pay a specific order via check or cash, you can change the **Payment Method Code** on the individual document.
 
-We are suggesting that you also validate that the **Payment Terms Code** on the customer is set to a term such as **Cash on Delivery** or **Credit Card** or **ACH**, since you would not want to setup payment discounts for customers when they pay via credit card. This can also be automated by utilizing a field on the **Payment Method** to define the **Payment Terms Code** to be used for the specific **Payment Method**. Learn more details about the [Payment Method Setup](additional.setups.md#payment-method-setup).
+We are suggesting that you also validate that the **Payment Terms Code** on the customer is set to a term such as **Cash on Delivery** or **Credit Card** or **ACH**, since you would not want to setup payment discounts for customers when they pay via credit card. This can also be automated by utilizing a field on the **Payment Method** to define the **Payment Terms Code** to be used for the specific **Payment Method**. Learn more details about the [Payment Method Setup](additional-setups.md#payment-method-setup).
 
 Some customers might not want to give you their bank account or credit card information over the phone or email. You can still give those customers the ability to pay their invoices via ACH or credit card. You have two different options to allow customers to pay their invoices via ACH or credit card in case the customer does not want to give you their information over the phone.
 
@@ -24,5 +24,5 @@ The email sent to the customer is a Microsoft Word document and can be customize
 ## See Also
 
 - [Register New Customers](https://docs.microsoft.com/en-US/dynamics365/financials/sales-how-register-new-customers)
-- [Payment Method Setup](additional.setups.md#payment-method-setup)
+- [Payment Method Setup](additional-setups.md#payment-method-setup)
 <!-- - [Customizing Sign up Email](how-to-customize-signup-email.md) -->

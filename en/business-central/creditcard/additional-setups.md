@@ -38,6 +38,10 @@ Source codes are tags on transactions to identify the source of a transaction. F
 
 Commodity codes are required to be used on items. Items will be classified for credit card transactions with PCI level III compliance as described above. The Commodity Code list can be accessed from the Credit Card Setup under Process. The Credit Card Setup can be found under *Setup & Extensions > Manual Setup*.
 
+## User Setup
+
+[!include[credit-card-user-setup.md](includes/credit-card-user-setup.md)]
+
 ## See Also
 
 - [Credit Card Setup](credit-card-setup.md)

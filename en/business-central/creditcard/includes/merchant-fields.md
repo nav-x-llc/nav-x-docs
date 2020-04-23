@@ -43,4 +43,4 @@ Before you can configure emails that are sent from NAV-X Credit Card to your cus
 
 ### Report > Source Keys
 
-Before you can connect one or many terminals, you have to configure source keys for a particular merchant. The API keys and Pins can be requested from the gateway or can also be created directly within the gateway portal. If you require more information how to create or request more source keys, please contact the gateway support. Learn more about [Source Keys](page-credit-card-source-keys.md).
+Before you can connect one or many terminals, you have to configure source keys for a particular merchant. The API keys and Pins can be requested from the gateway or can also be created directly within the gateway portal. If you require more information how to create or request more source keys, please contact the gateway support. Learn more about [Source Keys](../page-credit-card-source-keys.md).

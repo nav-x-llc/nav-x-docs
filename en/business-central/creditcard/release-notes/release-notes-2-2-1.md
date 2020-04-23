@@ -49,7 +49,7 @@ We have started adding shortcuts to our actions. On Sales and Service documents,
 
 ### Pay by Credit Card
 
-We have now added the functionality to show a payment link on posted invoices to the default reports for Business Central. This can be configured by the setting **Enable Invoice Payment Form** in the [Credit Card Setup](../credit-card-setup.md/features)
+We have now added the functionality to show a payment link on posted invoices to the default reports for Business Central. This can be configured by the setting **Enable Invoice Payment Form** in the [Credit Card Setup](../credit-card-setup.md#features)
 
 ## Temporary Bank Accounts and Credit Cards
 

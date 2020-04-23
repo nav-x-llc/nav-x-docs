@@ -120,7 +120,7 @@ Currencies must be validated to ensure that the proper information is configured
 
 ### Additional > Account Types
 
-Account types must be setup for each credit card type as well as bank account type supported. These records are automatically created when the application is originally installed and then setup via a downloaded configuration package. Learn more about [Account Types](../page-account-types.md)
+Account types must be setup for each credit card type as well as bank account type supported. These records are automatically created when the application is originally installed and then setup via a downloaded configuration package. Learn more about [Account Types](../page-credit-card-types.md)
 
 ### Additional > Commodity Codes
 
