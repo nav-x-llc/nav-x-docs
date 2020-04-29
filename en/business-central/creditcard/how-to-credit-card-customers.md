@@ -18,6 +18,19 @@ The customer will be setup in the portal and an email will be sent to the custom
 
 The email sent to the customer is a Microsoft Word document and can be customized. <!-- Learn more about [Customizing Sign up Email](how-to-customize-signup-email.md). -->
 
+## Customer specific setups
+
+The fast tab **Payment Setups** contains different fields that allow a configuration of the credit card functionality customized for each customer. 
+
+|                                 | |
+|---------------------------------|-|
+| **Enable Invoice Payment Form** | When enabled, a link to a payment form will be shown on each open invoice. If the invoices are sent via email to your customers, the customer can directly click on the link, enter their credit card or ACH information, and pay the invoice conveniently online. To enable this functionality for this customer only, set it to **Yes**. If the value is set to the initial value **Blank**, the setup on the Credit Card Setup defines the behavior. If it is set to **No**, the link will not be displayed. |
+| **Upload Invoices to Gateway**  | When enabled, all open invoices will be sent to the customer payment portal. A customer can sign on to the portal and review and pay all open invoices. Once an invoice is paid, the payment details are imported into Business Central and automatically applied to the open invoice. To enable this functionality for this customer only, set it to **Yes**. If the value is set to the initial value **Blank**, the setup on the Credit Card Setup defines the behavior. If it is set to **No**, the invoices will not be uploaded.
+If you set the value to **Yes**, you will be asked, if you want to upload all existing open invoices. |
+| **Send E-Mail Receipts**        | When enabled, receipts of processed transactions will be sent to the customer via email as soon as the transaction is completed. The email receipt layout can be customized in the gateway. To enable this functionality for this customer only, set it to **Yes**. If the value is set to the initial value **Blank**, the setup on the Credit Card Setup defines the behavior. If it is set to **No**, no email receipts will be sent. |
+| **E-Mail Address for Receipts** | If you want to send receipts to your customers via email, you must define the email address for the recipient of the receipt. You can only enter one email address. |
+| **E-Mail Receipt Template**     | The gateway allows you to have multiple different templates for email receipts. The templates can be setup and customized on the gateway. You can select a template for this customer. If you do not select a template, the default template will be used. Learn more about [E-Mail templates](page-credit-card-email-receipts.md) |
+
 > [!IMPORTANT]
 > It is important that the **Application Method** for the customer is set to **Manual** for any customer that should be able to pay via credit card. This setting is the default for a customer.
 
@@ -25,4 +38,5 @@ The email sent to the customer is a Microsoft Word document and can be customize
 
 - [Register New Customers](https://docs.microsoft.com/en-US/dynamics365/financials/sales-how-register-new-customers)
 - [Payment Method Setup](additional-setups.md#payment-method-setup)
+- [E-Mail Templates](page-credit-card-email-receipts.md)
 <!-- - [Customizing Sign up Email](how-to-customize-signup-email.md) -->

@@ -8,11 +8,11 @@ All users require the role *NAV-X LIBRARY* assigned. it will automatically done 
 
 ## Permissions for Credit Card users
 
-Any user who is involved in setting up the credit card functionality as well as entering or posting sales documents and processing credit cards requires additional permissions configured. The permission set *CREDIT CARD* will have to be assigned to those users. This assignment should be done before the credit card setup is started.
+Any user who is involved in setting up the credit card functionality as well as entering or posting sales documents and processing credit cards requires additional permissions configured. The permission set *CREDIT CARD USER* will have to be assigned to those users. This assignment should be done before the credit card setup is started.
 
 ## Permissions for Credit Card administrators
 
-Any user involved in setting up the credit card functionality requires an additional permission set configured. The permission set *CREDIT CARD SETUP* has to be assigned to those users. This assignment should be done before the credit card setup is started.
+Any user involved in setting up the credit card functionality requires an additional permission set configured. The permission set *CREDIT CARD SUPER* has to be assigned to those users. This assignment should be done before the credit card setup is started.
 
 ## See Also
 

@@ -1,4 +1,4 @@
-# Release Notes for March 2020 Update - Version 2.2.1
+# Release Notes for April 2020 Update - Version 2.2.1
 
 > [!NOTE]
 > This version is only available for Microsoft Dynamics 365 Business Central 2020 Wave 1 or later for Business Central SaaS. For Business Central on premise customers, this version can be installed for earlier versions of Business Central as well.

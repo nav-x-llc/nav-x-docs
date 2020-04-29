@@ -69,6 +69,10 @@
 
 ## [Source Keys](page-credit-card-source-keys.md)
 
+## [Report Selections - Credit Card](page-credit-card-report-selections.md)
+
+## [Payment Receipts](page-credit-card-email-receipts.md)
+
 ## [Transaction Entries](page-transaction-entries.md)
 
 ## [Terminal](page-terminal.md)

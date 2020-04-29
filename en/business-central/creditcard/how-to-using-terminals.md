@@ -16,7 +16,7 @@ If the terminal is not connected, you will see the **Terminal Status** set to *O
 
 If the card cannot be swiped or the chip cannot be read, you can also enter the card information manually and then select the action **Process Card**.
 
-Once the transaction is completed and you close the page, the payment will be posted in the system against the customer ledger and applied to the sales document. You can then post the invoice that is then automatically be closed out by the posted credit card payment.
+Once the transaction is completed and you have defined to print receipts, the receipt will automatically be printed. When you close the page, the payment will be posted in the system against the customer ledger and applied to the sales document. You can then post the invoice that is then automatically be closed out by the posted credit card payment.
 
 > [!NOTE]
 > Swiped credit cards processed through this process are not saved for the customer. If you want to save credit cards, please define the credit cards on the customer.

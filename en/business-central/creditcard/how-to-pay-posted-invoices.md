@@ -18,6 +18,10 @@ When you select the action **Charge**, the **Charge Payment Methods** page is di
 > [!NOTE]
 > It is not possible to process partial charges against both bank accounts and credit cards at the same time. If you would want to do this, please process first one of the types and then the next by selecting **Charge** again.
 
+### Print Receipt
+
+It is now possible to print a paper receipt for the invoice for your customers. You can print the receipt from the **Posted Sales Invoices** list as well as from the individual **Posted Sales Invoice** card by choosing the action *Print/Send > Print Receipt*. The print receipt functionality must be activated in the **User Setup** and the report must be defined in the **Report Selections - Credit Card**. Learn more about [User Setup](additional-setups.md#user-setup) and [Report Selections - Credit Card](page-credit-card-report-selections.md).
+
 ## Customer Ledger Entries
 
 Another option is to pay an invoice via ACH or credit card from the customer's account. The customer ledger entries show all transactions for a customer, including all paid and unpaid invoices. If the invoice is still open, the action **Charge** is enabled in the ribbon. When selected, you will see the page **Charge Payment Methods** and you can enter one or more bank account or credit card information to pay the invoice. Learn more about the [Charge Payment Methods page](page-authorize-credit-card.md).
@@ -33,3 +37,5 @@ This will show the **Charge Payment Methods** page. Learn more about the [Charge
 ## See Also
 
 - [Page Charge Payment Methods](page-authorize-credit-card.md)
+- [User Setup](additional-setups.md#user-setup)
+- [Report Selections - Credit Card](page-credit-card-report-selections.md).

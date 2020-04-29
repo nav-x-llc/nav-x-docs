@@ -38,6 +38,11 @@ Before you can configure emails that are sent from NAV-X Credit Card to your cus
 | **New Email Body Report Layout Name** | If you want to customize the wording of the email body for a new customer sign up for the EBizCharge Connect Portal, you can create a new layout for the specific report and update the texts. If you want to use the default body, please do not select any value in this field. |
 | **Email Sender Name**                 | Enter the name that you want to show as the sender in an email that is sent to a customer inviting them to sign up for the customer portal. |
 | **Email Sender Address**              | Enter the email address that you want to use to send the email from to invite customers to the customer portal. This email has to be accessible from the account that is configured in the **SMTP Email Setup**. |
+| **Receipt Name**                      | If you want to send receipts for any transactions to an internal person, you must define the name of the recipient. |
+| **Receipt E-mail**                    | If you want to send receipts for any transactions to an internal person, you must define the e-mail address of the recipient. You can only enter one e-mail address. |
+
+> [!NOTE]
+> It is also possible to define the e-mail receipt setup on the gateway globally. If you have defined this setup on the gateway, please do not define it here or your recipient will receive two receipts for each transaction.
 
 ## Actions
 
