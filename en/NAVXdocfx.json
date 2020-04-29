@@ -1,0 +1,72 @@
+{
+  "build": {
+    "sitemap": {
+        "baseUrl": "https://docs.nav-x.com/en/"
+    },
+    "content": [
+      {
+        "files": [
+            "locale.md",
+            "index.md",
+            "toc.md"
+        ],
+        "exclude": [
+            ".gitignore",
+            "**/obj/**",
+            "obj/**",
+            "README.md",
+            "**/_exported_templates/**"
+        ]
+      },
+      {
+          "files": [
+              "business-central/**.md",
+              "business-central/toc.md"
+          ]
+      },
+      {
+          "files": [
+              "business-central/commissions/**.md",
+              "business-central/credit-management/**.md"
+          ],
+          "exclude": [
+              "business-central/commissions/toc.md",
+              "business-central/credit-management/toc.md"
+          ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          "**/images/**"
+        ]
+      }
+    ],
+    "dest": "../_site",
+    "globalMetadata": {
+        "ROBOTS": "INDEX, FOLLOW",
+        "_appLogoPath": "/images/NAV-X-logo.png",
+        "_appFaviconPath": "/images/navx.ico",
+        "_appTitle": "NAV-X Docs",
+        "_appFooter": "Copyright &copy; 2019 by NAV-X LLC",
+        "_enableSearch": true,
+        "_enableNewTab": false,
+        "_disableContribution": true,
+        "_basePath": "https://docs.nav-x.com/",
+        "_langCode": "en",
+        "_langName": "English"
+    },
+    "fileMetadataFiles": [],
+    "template": [
+        "../templates/navx"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": true,
+    "disableGitFeatures": false,
+    "force": true
+  }
+}

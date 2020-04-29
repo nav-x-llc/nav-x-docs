@@ -1,0 +1,3 @@
+If you do not have a tenant for Microsoft Dynamics 365 Business Central, you can sign up for a [free trial](https://trials.dynamics.com/Dynamics365/Signup/businesscentral).
+
+Once you have completed the sign up and your tenant is up and running, you can add the NAV-X Commission Management app from the [AppSource Marketplace](https://appsource.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.navx|AID.084c63ff-a3ff-4e07-96d3-17170969ca6a|PAPPID.f003e3aa-fc6b-4d1f-abd3-e1eec0aaabaf). If you have questions about the installation process of an app through Microsoft AppSource, you can find more information on [installing apps](https://docs.microsoft.com/en-US/dynamics365/business-central/ui-extensions) on the Microsoft Docs site.

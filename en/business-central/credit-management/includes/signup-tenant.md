@@ -1,0 +1,3 @@
+If you do not have a tenant for Microsoft Dynamics 365 Business Central, you can sign up for a [free trial](https://trials.dynamics.com/Dynamics365/Signup/businesscentral).
+
+Once you have completed the sign up and your tenant is up and running, you can add the NAV-X Credit Management app from the [AppSource Marketplace](https://appsource.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.navx|AID.676f5472-885d-48bc-b5f0-b6327812d279|PAPPID.8b9ad3d7-4653-4ad9-8aec-128a0f07071f?tab=Overview). If you have questions about the installation process of an app through Microsoft AppSource, you can find more information on [installing apps](https://docs.microsoft.com/en-US/dynamics365/business-central/ui-extensions) on the Microsoft Docs site.

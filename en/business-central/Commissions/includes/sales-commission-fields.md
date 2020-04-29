@@ -1,0 +1,13 @@
+|                              |                                                                                                                           |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| **Salesperson Code**         | The salesperson that is receiving commission.                                                                             |
+| **Salesperson Name**         | The name of the salesperson. This field is not editable.                                                                  |
+| **Commission Rate**          | The commission percentage. The commission is calculated with the following formula: **Commission Amount** = **Commissionable Amount** * **Commission Rate** |
+| **Amount Type**              | The Amount Type defines, if the commission is calculated as a percentage or if it represents a fixed amount.              |
+| **Base %**                   | The Base % is defined by the Salesperson Split. It defines the amount of the total Commissionable Amount is used to calculate the commissions. |
+| **Commissionable Amount**    | The commissionable amount is calculated differently whether the commissions are calculated based on Gross Profit or the Sales Amount or the Quantity. Depending on the salesperson split configuration, the commissionable is a percentage of the total amount. |
+| **Commission Amount**        | The Commission Amount shows the amount that will be paid to the specific salesperson.                                     |
+| **Document Line Type**       | The Document Line Type shows the type on the sales line that this commission is calculated for.                           |
+| **Doc. Line Type No.**       | The Doc. Line Type No. defines the details for the sales line that the commission is calculated for.                      |
+| **System Created**           | If the commission has been calculated automatically, this field will contain a check mark. If not, the commission has been entered or changed manually. |
+| **Maximum Commission Limit** | Commissions can be limited for specific salespeople, items, or even for a specific rate within a time period. For instance, you can define that a certain item won't pay more than a certain amount of commissions to all salespeople within a month. If a limit adjusted the commission that should be paid to the salesperson, this field contains a checkmark. |
