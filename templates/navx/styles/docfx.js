@@ -602,6 +602,35 @@ $(function () {
         });
 		$('#toc_filter_input').focusout(function (e) {
             if ($('#suggestsearch-listbox').hasClass(show) && !suggestsearchActive) {
+        });
+		$('#suggestsearch').click(function() {
+			if ($('#suggestsearch-listbox').hasClass(show)) {
+				searchFilter = '';
+				
+				var activeNav = $('#navbar > ul > li.active');
+				if (activeNav.length != 0) {
+					searchFilter = $(activeNav).children('a').attr('title').replace(' ', '/');
+				}
+				
+				searchQuery = $('#toc_filter_input').val();
+				$('#search-query').val(searchQuery);
+				flipContents("hide");
+				$("body").trigger("queryReady");
+				$('#search-results>.search-list').text('Search Results for "' + searchQuery + '"');
+			}
+
+			function flipContents(action) {
+				if (action === "show") {
+					$('.hide-when-search').show();
+					$('#search-results').hide();
+				} else {
+					$('.hide-when-search').hide();
+					$('#search-results').show();
+				}
+			}
+		});
+		$('#toc_filter_input').focusout(function (e) {
+			if ($('#suggestsearch-listbox').hasClass(show)) {
 				$('#suggestsearch-listbox').removeClass(show).addClass(hide);
 				$('#sidefilter').addClass(back);
 				$(this).val('');
