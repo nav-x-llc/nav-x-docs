@@ -45,6 +45,15 @@ The **Reporting** fast tab enables you to configure sending commission reports a
 | **Process By**                                     | - **Salesperson**: No detail is going to be sent. Only one line per salesperson is going to be displayed.<br>- **Document**: One line per document will be displayed on the report, showing totals per document.<br>- **Detail**: Full Details will be shown on the report. A line per line will be displayed with detailed commission information. |
 | **Print Zero Commission Lines**                    | The report can display year to date information about accumulated commission amounts. With this field, you can define what date is used to summarize the commission amounts. |
 | **Aged by**                                        | The report can display year to date information about accumulated commission amounts. With this field, you can define what date is used to summarize the commission amounts.<br><br>- **Commission Date**: The commission date is the posting date of a commission ledger entry.<br>- **Date Payable**: The date a commission is payable depends on the setup when commissions become payable.<br>- **Effective Date**: The effective date is defined based on the commission setup. |
+| **Period End Date**                                | Defines the end date of the period for which the report will be run. |
+| **No. of Periods**                                 | You can define the number of periods that should be included in the report. It is defaulted to one period, but can be more |
+| **Period Length**                                  | The type of the period that the report should be printed for. You can not only define *Days*, *Weeks*, *Months*, *Quarters*, or *Years*, but also for the *Fiscal Year*, or *Accounting Periods*. |
+
+## Commission Processing
+
+|                                                 |                                                                                                       |
+|-------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| **Document No. for Processing Commissions**     | You can define the document number that should be used when posting purchase invoices or other documents when paying commissions to your salespeople. The parameters that can be used are the following:<br><br>- %1 = Day<br>- %2 = Month<br>- %3 = Year<br>- %4 = Month Text |
 
 ## Features
 

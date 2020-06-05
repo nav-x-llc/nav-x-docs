@@ -16,6 +16,9 @@ When you start the **Commissions by Salesperson** report, you will see a request
 | **Print Zero Commission Lines**  | The report can display year to date information about accumulated commission amounts. With this field, you can define what date is used to summarize the commission amounts. |
 | **Aged As Of**                   | Define the ending date of the aging period defined in the field **Aged by**. This aging date will be used to display *Month to Date* as well as *Year to Date* information about the total commission amounts. |
 | **Aged by**                      | The report can display year to date information about accumulated commission amounts. With this field, you can define what date is used to summarize the commission amounts.<br><br>- **Commission Date**: The commission date is the posting date of a commission ledger entry.<br>- **Date Payable**: The date a commission is payable depends on the setup when commissions become payable.<br>- **Effective Date**: The effective date is defined based on the commission setup. |
+| **Period End Date**              | Defines the end date of the period for which the report will be run. |
+| **No. of Periods**               | You can define the number of periods that should be included in the report. It is defaulted to one period, but can be more |
+| **Period Length**                | The type of the period that the report should be printed for. You can not only define *Days*, *Weeks*, *Months*, *Quarters*, or *Years*, but also for the *Fiscal Year*, or *Accounting Periods*. |
 
 ### Salesperson/Purchaser
 

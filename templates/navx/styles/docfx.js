@@ -11,10 +11,11 @@ $(function () {
     var hide = 'hide';
     var back = 'back';
     var util = new utility();
+    var suggestsearchActive = false;
 
     var searchQuery;
 	var searchFilter;
-	
+
     workAroundFixedHeaderForAnchors();
     highlight();
     enableSearch();
@@ -30,7 +31,9 @@ $(function () {
   
     breakText();
     renderTabs();
-  
+
+    updateHideToc();
+
     window.refresh = function (article) {
       // Update markup result
       if (typeof article == 'undefined' || typeof article.content == 'undefined')
@@ -42,8 +45,25 @@ $(function () {
       renderAlerts();
       renderAffix();
       renderTabs();
+
+      updateHideToc();
     }
   
+    function updateHideToc() {
+
+        if (window.location.href.search('hidetoc') > 0) {
+            var elem = document.getElementsByClassName("sidenav hide-when-search is-one-third-tablet is-one-quarter-desktop")
+            if (elem.length > 0) {
+                elem[0].parentNode.removeChild(elem[0]);
+            }
+    
+            var bodyElem = document.getElementsByClassName("article row grid-right")
+            if (bodyElem.length > 0) {
+                bodyElem[0].className = "article row grid"
+            }
+        }
+    }
+
     // Add this event listener when needed
     // window.addEventListener('content-update', contentUpdate);
   
@@ -543,7 +563,7 @@ $(function () {
 				  var activeNav = $('#navbar > ul > li.active');
 				  if (activeNav.length != 0) {
 					  var title = $(activeNav).children('a').attr('title');
-					  var text = $('#suggestsearch').text();
+					  var text = 'Search for "%1" in all %2 documentation';
 					  var search = $('#toc_filter_input').val();
 					  
 					  text = text.replace('%1', search).replace('%2', title);
@@ -556,42 +576,50 @@ $(function () {
                   $('#sidefilter').removeClass(back);
               }
           }
-        });
-		$('#suggestsearch').click(function() {
-			if ($('#suggestsearch-listbox').hasClass(show)) {
-				searchFilter = '';
-				
-				var activeNav = $('#navbar > ul > li.active');
-				if (activeNav.length != 0) {
-					searchFilter = $(activeNav).children('a').attr('title').replace(' ', '/');
-				}
-				
-				searchQuery = $('#toc_filter_input').val();
-				$('#search-query').val(searchQuery);
-				flipContents("hide");
-				$("body").trigger("queryReady");
-				$('#search-results>.search-list').text('Search Results for "' + searchQuery + '"');
-			}
 
-			function flipContents(action) {
-				if (action === "show") {
-					$('.hide-when-search').show();
-					$('#search-results').hide();
-				} else {
-					$('.hide-when-search').hide();
-					$('#search-results').show();
-				}
-			}
-		});
+          $('#suggestsearch').click(function() {
+            console.log('suggestsearch click');
+            if ($('#suggestsearch-listbox').hasClass(show)) {
+                searchFilter = '';
+                
+                var activeNav = $('#navbar > ul > li.active');
+                if (activeNav.length != 0) {
+                    searchFilter = $(activeNav).children('a').attr('title').replace(' ', '/');
+                }
+                
+                searchQuery = $('#toc_filter_input').val();
+                $('#search-query').val(searchQuery);
+                flipContents("hide");
+                $("body").trigger("queryReady");
+                $('#search-results > .search-list').text('Search Results for "' + searchQuery + '"');
+            }
+        });
+        $('#suggestsearch').mouseenter(function() {
+            suggestsearchActive = true;
+        })
+        $('#suggestsearch').mouseleave(function() {
+            suggestsearchActive = false;
+        });
 		$('#toc_filter_input').focusout(function (e) {
-			if ($('#suggestsearch-listbox').hasClass(show)) {
+            if ($('#suggestsearch-listbox').hasClass(show) && !suggestsearchActive) {
 				$('#suggestsearch-listbox').removeClass(show).addClass(hide);
 				$('#sidefilter').addClass(back);
 				$(this).val('');
 			}
 		});
-      }
+      })
   
+        function flipContents(action) {
+            if (action === "show") {
+                $('.hide-when-search').show();
+                $('#search-results').hide();
+            } else {
+                $('.hide-when-search').hide();
+                $('#search-results').show();
+            }
+        }
+      }
+
       function loadToc() {
         var tocPath = $("meta[property='docfx\\:tocrel']").attr("content");
         if (!tocPath) {

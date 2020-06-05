@@ -8,7 +8,11 @@ All users require the role *NAV-X LIBRARY* assigned. it will automatically done 
 
 ## Permissions for Commission users
 
-Any user who is involved in setting up the commission functionality or commission rates as well as entering or posting sales documents and processing commissions requires additional permissions configured. The permission set *COMMISSIONS* will have to be assigned to those users. This assignment should be done before the commission setup is started.
+Any user who is involved in as entering or posting sales documents and processing commissions requires additional permissions configured. The permission set *COMMISSION USER* will have to be assigned to those users. This assignment should be done before the commission setup is started.
+
+## Permissions for Commission administrators
+
+Any user involved in setting up the commission functionality or entering commission rates or processing commissions requires an additional permission set configured. The permission set *COMMISSION SUPER* has to be assigned to those users. This assignment should be done before the commission setup is started.
 
 ## See Also
 

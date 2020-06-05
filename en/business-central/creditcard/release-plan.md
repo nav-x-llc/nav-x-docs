@@ -11,11 +11,11 @@ Our customer requests are a constant source of suggestions for improving the app
 | Feature                                             | Enabled for              | General availability |
 |-----------------------------------------------------|--------------------------|:--------------------:|
 | ACH support                                         | End users, setup         | ![check mark](/images/checkmark.png) |
-| Pay in portal                                       | End users, setup         | May 2020             |
+| Pay in portal                                       | End users, setup         | ![check mark](/images/checkmark.png) |
 | Email pay invoices                                  | End users, setup         |                      |
 | Email pay sales orders                              | End users, setup         |                      |
-| Email receipts                                      | End users, setup         | May 2020             |
-| enhanced Invoice upload to portal                   | End users, automatically | May 2020             |
+| Email receipts                                      | End users, setup         | ![check mark](/images/checkmark.png) |
+| enhanced Invoice upload to portal                   | End users, automatically | ![check mark](/images/checkmark.png) |
 | Default Payment Terms when selecting Payment Method | End users, setup         | ![check mark](/images/checkmark.png) |
 | Email to customers to enter credit cards            | End users, setup         |                      |
 | Conditional skipping of *Additional Authorization*  | End users, setup         |                      |
@@ -40,7 +40,7 @@ Availability of NAV-X Credit Card is expanding regularly and here we describe th
 | Feature                                             | Enabled for              | General availability |
 |-----------------------------------------------------|--------------------------|:--------------------:|
 | Pre-configured setups                               | Partners, End users      |                      |
-| Enhanced, pre-configured permission sets            | End users, automatically | May 2020             |
+| Enhanced, pre-configured permission sets            | End users, automatically | ![check mark](/images/checkmark.png) |
 
 Description of **Enabled for** column values:
 

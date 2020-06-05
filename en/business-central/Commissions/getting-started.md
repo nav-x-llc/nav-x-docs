@@ -73,6 +73,10 @@ Each user can see their own commissions, based on the **Salespers./Purch. Code**
 
 You can always make those changes later as defined in the [additional setups](additional-setups.md).
 
+### To manage salespeople
+
+You can define certain salespeople to be eligible for commissions or excluded. if you exclude a salesperson, you cannot calculate commissions for this person, regardless of the commission rate setups.
+
 You can define for each Item, Resource, G/L Account, and Item Charge, if one is commissionable or not. Initially, a new item, for instance, is not commissionable. You can change this at the time you are [importing commissions](how-to-import-commissions.md) or you can also define how all of your existing records are configured. This will be implemented at the end of the wizard. With these last setups, you are done. As long as you configured everything: you are ready to process commissions. Please follow our How-To’s on the left to learn how to perform the different tasks.
 
 > [!IMPORTANT]
