@@ -62,6 +62,8 @@
 
 ## [Posted Salesperson Split](page-posted-commission-salesperson-split.md)
 
+## [Commission Split Mappings](page-commission-split-mapping.md)
+
 ## [Commission Journals](page-commission-journal.md)
 
 ## [Commission Registers](page-commission-register.md)
