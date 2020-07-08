@@ -55,6 +55,14 @@ The **Reporting** fast tab enables you to configure sending commission reports a
 |-------------------------------------------------|-------------------------------------------------------------------------------------------------------|
 | **Document No. for Processing Commissions**     | You can define the document number that should be used when posting purchase invoices or other documents when paying commissions to your salespeople. The parameters that can be used are the following:<br><br>- %1 = Day<br>- %2 = Month<br>- %3 = Year<br>- %4 = Month Text |
 
+## Performance
+
+|                                                 |                                                                                                       |
+|-------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| **No Calculation During Document Entry**        | If you notice decreased performance during order entry, you can activate this switch. It will then not calculate any commissions automatically anymore during the document entry, but will make the following switches available to activate. If none of these switches are activated, commissions are not automatically calculated and will have to be calculated manually. |
+| **Calculation During Document Release**         | This switch can only be activated, if **No Calculation During Document Entry** is enabled. If this is set, the commissions for the current document are automatically calculated at the time of document release. |
+| **Calculation before Posting**                  | This switch can only be activated, if **No Calculation During Document Entry** is enabled. If this is set, the commissions for the current document are automatically calculated at the time of posting the document. |
+
 ## Features
 
 The **Features** fast tab enables you to disable features that you are not using to show a simplified user interface. You can also always [personalize your user interface](https://docs.microsoft.com/en-us/dynamics365/business-central/ui-personalization-user) to your liking using the standard features provided by Business Central.

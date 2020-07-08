@@ -596,12 +596,13 @@ $(function () {
         });
         $('#suggestsearch').mouseenter(function() {
             suggestsearchActive = true;
-        })
+        });
         $('#suggestsearch').mouseleave(function() {
             suggestsearchActive = false;
         });
 		$('#toc_filter_input').focusout(function (e) {
             if ($('#suggestsearch-listbox').hasClass(show) && !suggestsearchActive) {
+            }
         });
 		$('#suggestsearch').click(function() {
 			if ($('#suggestsearch-listbox').hasClass(show)) {
