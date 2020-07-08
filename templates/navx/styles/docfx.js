@@ -604,6 +604,7 @@ $(function () {
             if ($('#suggestsearch-listbox').hasClass(show) && !suggestsearchActive) {
             }
         });
+        
 		$('#suggestsearch').click(function() {
 			if ($('#suggestsearch-listbox').hasClass(show)) {
 				searchFilter = '';
