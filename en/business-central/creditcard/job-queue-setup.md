@@ -38,8 +38,21 @@ Customers can enter their ACH and credit card information through the EBizCharge
 
 This process is configured to run once an hour by default to ensure that payment methods are imported at a reasonable time.
 
+## Credit Card Data Synchronization
+
+Data from Business Central is synchronized to the gateway on a periodic basis. This allows you to synchronize data with external systems, such as eCommerce portals. Learn more about [Data Synchronization](data-synchronization.md).
+
+This process is configured to run once a day by default.
+
+## Credit Card Order Synchronization
+
+In addition to uploading sales invoices for payment, sales orders can also be uploaded. This process synchronizes the sales orders from Business Central to the gateway and from the gateway back to Business Central.
+
+This process is configured to run once an hour by default to ensure that orders are imported at a reasonable time.
+
 ## See Also
 
 - [Use Job Queues to Schedule Tasks](https://docs.microsoft.com/en-us/dynamics365/business-central/admin-job-queues-schedule-tasks)
 - [Manage Data Encryption](https://docs.microsoft.com/en-US/dynamics365/business-central/admin-manage-data-encryption)
 - [Credit Card Setup](credit-card-setup.md)
+- [Data Synchronization](data-synchronization.md).

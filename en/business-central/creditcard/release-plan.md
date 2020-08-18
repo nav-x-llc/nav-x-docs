@@ -19,6 +19,10 @@ Our customer requests are a constant source of suggestions for improving the app
 | Default Payment Terms when selecting Payment Method | End users, setup         | ![check mark](/images/checkmark.png) |
 | Email to customers to enter credit cards            | End users, setup         |                      |
 | Conditional skipping of *Additional Authorization*  | End users, setup         |                      |
+| Data Synchronization                                | End users, setup         | ![check mark](/images/checkmark.png) |
+| Sales Order upload to portal                        | End users, setup         | ![check mark](/images/checkmark.png) |
+| Inventory Synchronization                           | End users, setup         |                      |
+| Conditional Item Synchronization                    | End users, setup         |                      |
 
 ## Country and regional availability
 
