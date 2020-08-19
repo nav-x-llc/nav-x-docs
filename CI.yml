@@ -37,9 +37,9 @@ stages:
     condition: succeeded()
     inputs:
       credentialsOption: inputs
-      serverUrl: '$(ftpServer)'
-      username: '$(ftpUsername)'
-      password: '$(ftpPassword)'
+      serverUrl: '$(websiteFtpServer)'
+      username: '$(websiteFtpUsername)'
+      password: '$(websiteFtpPassword)'
       rootDirectory: '$(Pipeline.Workspace)\website\'
       filePatterns: '**'
       remoteDirectory: '/opt/bitnami/apps/navxdocs/htdocs'

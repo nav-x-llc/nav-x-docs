@@ -44,7 +44,7 @@ stages:
         targetType: inline
         script: |
           cd en
-          C:\DocFX\docfx build
+          C:\DocFX\docfx.console.2.56.2\tools\docfx.exe build
 
     - task: PowerShell@2
       displayName: 'Copy files into staging directory for English Website'
@@ -52,13 +52,13 @@ stages:
       inputs:
         targetType: inline
         script: |
-          Remove-Item -Path "$(Build.ArtifactStagingDirectory/*" -Recurse
+          Remove-Item -Path "$(Build.ArtifactStagingDirectory)/*" -Recurse
           New-Item -Path "$(Build.ArtifactStagingDirectory)/en" -ItemType Directory -Force
           Copy-Item -Path "$(Build.SourcesDirectory)/_site/images" -Destination "$(Build.ArtifactStagingDirectory)" -Recurse
           Copy-Item -Path "$(Build.SourcesDirectory)/BingSiteAuth.xml" -Destination "$(Build.ArtifactStagingDirectory)"
           Copy-Item -Path "$(Build.SourcesDirectory)/_site/search-stopwords.json" -Destination "$(Build.ArtifactStagingDirectory)"
           Copy-Item -Path "$(Build.SourcesDirectory)/_site/sitemap.xml" -Destination "$(Build.ArtifactStagingDirectory)"
-          Copy-Item -Path "$(Build.SourcesDirectory/_site/" -Destination "$(Build.ArtifactStagingDirectory)/en" -Recurse
+          Copy-Item -Path "$(Build.SourcesDirectory)/_site/*" -Destination "$(Build.ArtifactStagingDirectory)/en" -Recurse
 
     - task: PublishPipelineArtifact@1
       displayName: 'Publish Website as Artifact'
