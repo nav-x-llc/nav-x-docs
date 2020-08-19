@@ -58,7 +58,7 @@ stages:
           Copy-Item -Path "$(Build.SourcesDirectory)/BingSiteAuth.xml" -Destination "$(Build.ArtifactStagingDirectory)"
           Copy-Item -Path "$(Build.SourcesDirectory)/_site/search-stopwords.json" -Destination "$(Build.ArtifactStagingDirectory)"
           Copy-Item -Path "$(Build.SourcesDirectory)/_site/sitemap.xml" -Destination "$(Build.ArtifactStagingDirectory)"
-          Copy-Item -Path "$(Build.SourcesDirectory/_site/" -Destination "$(Build.ArtifactStagingDirectory)/en" -Recurse
+          Copy-Item -Path "$(Build.SourcesDirectory)/_site/" -Destination "$(Build.ArtifactStagingDirectory)/en" -Recurse
 
     - task: PublishPipelineArtifact@1
       displayName: 'Publish Website as Artifact'
