@@ -1,0 +1,68 @@
+name: $(BuildID)
+
+resources:
+- repo: self
+
+variables:
+  build.clean: all
+  platform: x64
+
+trigger: none
+
+pr:
+  branches:
+    include:
+      - master
+
+stages:
+- stage: Build
+  displayName: 'Build Website'
+  jobs:
+  - job: BuildWebsite
+    displayName: 'Build Website'
+    continueOnError: false
+    pool: navxdefault
+    workspace:
+      clean: all
+    steps:
+    - task: NuGetToolInstaller@1
+      inputs:
+        checkLatest: true
+    
+    - task: PowerShell@2
+      displayName: 'Install DocFX'
+      condition: succeeded()
+      inputs:
+        targetType: inline
+        script: |
+          nuget install docfx.console -OutputDirectory C:\DocFX -NoCache -NonInteractive
+    
+    - task: PowerShell@2
+      displayName: 'Build English Web Site'
+      condition: succeeded()
+      inputs:
+        targetType: inline
+        script: |
+          cd en
+          C:\DocFX\docfx build
+
+    - task: PowerShell@2
+      displayName: 'Copy files into staging directory for English Website'
+      condition: succeeded()
+      inputs:
+        targetType: inline
+        script: |
+          Remove-Item -Path "$(Build.ArtifactStagingDirectory/*" -Recurse
+          New-Item -Path "$(Build.ArtifactStagingDirectory)/en" -ItemType Directory -Force
+          Copy-Item -Path "$(Build.SourcesDirectory)/_site/images" -Destination "$(Build.ArtifactStagingDirectory)" -Recurse
+          Copy-Item -Path "$(Build.SourcesDirectory)/BingSiteAuth.xml" -Destination "$(Build.ArtifactStagingDirectory)"
+          Copy-Item -Path "$(Build.SourcesDirectory)/_site/search-stopwords.json" -Destination "$(Build.ArtifactStagingDirectory)"
+          Copy-Item -Path "$(Build.SourcesDirectory)/_site/sitemap.xml" -Destination "$(Build.ArtifactStagingDirectory)"
+          Copy-Item -Path "$(Build.SourcesDirectory/_site/" -Destination "$(Build.ArtifactStagingDirectory)/en" -Recurse
+
+    - task: PublishPipelineArtifact@1
+      displayName: 'Publish Website as Artifact'
+      condition: succeeded()
+      inputs:
+        targetPath: '$(Build.ArtifactStagingDirectory)'
+        artifactName: website
