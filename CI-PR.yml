@@ -52,7 +52,7 @@ stages:
       inputs:
         targetType: inline
         script: |
-          Remove-Item -Path "$(Build.ArtifactStagingDirectory/*" -Recurse
+          Remove-Item -Path "$(Build.ArtifactStagingDirectory)/*" -Recurse
           New-Item -Path "$(Build.ArtifactStagingDirectory)/en" -ItemType Directory -Force
           Copy-Item -Path "$(Build.SourcesDirectory)/_site/images" -Destination "$(Build.ArtifactStagingDirectory)" -Recurse
           Copy-Item -Path "$(Build.SourcesDirectory)/BingSiteAuth.xml" -Destination "$(Build.ArtifactStagingDirectory)"
