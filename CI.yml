@@ -17,33 +17,36 @@ pr: none
 stages:
 - stage: Deploy
   displayName: 'Deploy website'
-  continueOnError: false
-  pool: navxdefault
-  workspace:
-    clean: all
-  steps:
-  - task: DownloadPipelineArtifact@2
-    displayName: 'Download Website Artifact'
-    inputs:
-      buildType: 'specific'
-      project: 'f0d284ed-af49-4b2a-9d2e-01e485482d6e'
-      definition:
-      buildVersionToDownload: 'latest'
-      artifactName: 'website'
-      path: '$(Pipeline.Workspace)\website'
+  jobs:
+  - job: DeployWebsite
+    displayName: 'Deploy Website'
+    continueOnError: false
+    pool: navxdefault
+    workspace:
+      clean: all
+    steps:
+    - task: DownloadPipelineArtifact@2
+      displayName: 'Download Website Artifact'
+      inputs:
+        buildType: 'specific'
+        project: 'f0d284ed-af49-4b2a-9d2e-01e485482d6e'
+        definition:
+        buildVersionToDownload: 'latest'
+        artifactName: 'website'
+        path: '$(Pipeline.Workspace)\website'
 
-  - task: FtpUpload@2
-    displayName: 'Upload of website'
-    condition: succeeded()
-    inputs:
-      credentialsOption: inputs
-      serverUrl: '$(websiteFtpServer)'
-      username: '$(websiteFtpUsername)'
-      password: '$(websiteFtpPassword)'
-      rootDirectory: '$(Pipeline.Workspace)\website\'
-      filePatterns: '**'
-      remoteDirectory: '/opt/bitnami/apps/navxdocs/htdocs'
-      clean: true
-      cleanContents: false
-      preservePaths: true
-      trustSSL: true
+    - task: FtpUpload@2
+      displayName: 'Upload of website'
+      condition: succeeded()
+      inputs:
+        credentialsOption: inputs
+        serverUrl: '$(websiteFtpServer)'
+        username: '$(websiteFtpUsername)'
+        password: '$(websiteFtpPassword)'
+        rootDirectory: '$(Pipeline.Workspace)\website\'
+        filePatterns: '**'
+        remoteDirectory: '/opt/bitnami/apps/navxdocs/htdocs'
+        clean: true
+        cleanContents: false
+        preservePaths: true
+        trustSSL: true
