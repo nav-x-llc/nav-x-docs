@@ -44,7 +44,7 @@ stages:
         targetType: inline
         script: |
           cd en
-          C:\DocFX\docfx build
+          C:\DocFX\docfx.console.2.56.2\tools\docfx.exe build
 
     - task: PowerShell@2
       displayName: 'Copy files into staging directory for English Website'
