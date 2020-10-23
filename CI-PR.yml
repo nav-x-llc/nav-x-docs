@@ -35,7 +35,10 @@ stages:
       inputs:
         targetType: inline
         script: |
+          Remove-Item C:\DocFX\*.* -Recurse -Force
           nuget install docfx.console -OutputDirectory C:\DocFX -NoCache -NonInteractive
+          $docfxpath = (Split-Path (Get-ChildItem C:\DocFX\ -Filter docfx.exe -Recurse).FullName -Parent)
+          $env:Path += $docfxpath
     
     - task: PowerShell@2
       displayName: 'Build English Web Site'
@@ -44,7 +47,7 @@ stages:
         targetType: inline
         script: |
           cd en
-          C:\DocFX\docfx.console.2.56.2\tools\docfx.exe build
+          docfx.exe build
 
     - task: PowerShell@2
       displayName: 'Copy files into staging directory for English Website'
