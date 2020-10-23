@@ -35,18 +35,15 @@ stages:
         artifactName: 'website'
         path: '$(Pipeline.Workspace)\website'
 
-    - task: FtpUpload@2
+    - task: CopyFilesOverSSH@0
       displayName: 'Upload of website'
       condition: succeeded()
       inputs:
-        credentialsOption: inputs
-        serverUrl: '$(websiteFtpServer)'
-        username: '$(websiteFtpUsername)'
-        password: '$(websiteFtpPassword)'
-        rootDirectory: '$(Pipeline.Workspace)\website\'
-        filePatterns: '**'
-        remoteDirectory: '/opt/bitnami/apps/navxdocs/htdocs'
-        clean: true
-        cleanContents: false
-        preservePaths: true
-        trustSSL: true
+        sshEndpoint: NavxDocsWebsite
+        sourceFolder: '$(Pipeline.Workspace)\website\'
+        contents: '**'
+        targetFolder: '/opt/bitnami/apps/navxdocs/htdocs'
+        cleanTargetFolder: false
+        overwrite: true
+        failOnEmptySource: true
+        flattenFolders: false
