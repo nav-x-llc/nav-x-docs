@@ -32,18 +32,40 @@ The next step of the Assisted Setup allows you to define the rules when commissi
 |                                                    |                                                                                                    |
 |----------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | **Commission Payable On**                          | You can define different settings based on when commissions become payable to the salespeople.<br><br>- **Order Entry**: As soon as sales document is entered<br>- **Shipment**: When the shipment is posted, the shipped portion of the document will have payable commissions<br>- **Invoice**: When the invoice is posted, the commission on the invoice amount becomes payable.<br>- **Cash Receipt**:The commission for the paid amount of an invoice becomes payable. |
-| **Invoice Paid Adjust. Reason Code**               | If the **Commission Effective Date** is set to **Date Paid**, you must enter a reason code that will be used to post the adjusting **Commission Ledger Entries** required to adjust the commissions to the rates effective when the invoice is paid. |
 | **Process only fully paid invoices**               | Only fully paid invoices will make commissions payable.                                            |
 | **Exclude Past Due invoices**                      | If an invoice is paid late, the invoice will not produce commissions, even if it is paid eventually. |
 | **Exclude Customers with Past Due invoices**       | When a customer has an invoice that is past due, no commission will be paid for this customer. It will be paid when no invoices are past due anymore. |
 | **Exclude Customers with Past Due invoices for**   | When customers with past due invoices should be excluded, this allows adding a grace period. For instance, *only exclude customers that have a past due invoice that is more than 90 days past due*. |
 | **Exclude Customers if Past Due is more than (%)** | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
 | **Exclude Credit Memos from Commissions**          | You can select, if you want to include or exclude credit memos from commission calculations. If credit memos are included, negative commissions will be calculated on credit memos and these commissions will be charged back to the salesperson. Credit memos lower the salesperson’s commissions in the month that they are posted. |
+| **Include Current Document**                       | If this field is enabled, the next commission tier is reached, when this current document brings the total sales over the commission tier minimum. |
+
+### Reason Codes
+
+The next step of the Assisted Setup provides configuration options for different reason codes used throughout the system. 
+
+|                                                    |                                                                                                    |
+|----------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **Invoice Paid Adjust. Reason Code**               | If the **Commission Effective Date** is set to **Date Paid**, you must enter a reason code that will be used to post the adjusting **Commission Ledger Entries** required to adjust the commissions to the rates effective when the invoice is paid. |
+| **Recalculate Adjust. Reason Code**                | Define the reason code that will be applied to any commission ledger entries when the entry is created due to a recalculation of the commissions using one of the processes in the system. |
+| **Commission Draw Reason Code**                    | When using the commission draw functionality, this reason code is used on commission ledger entries to identify those entries as commission draw commission ledger entries. Read more about [Commission Draws](../how-to-commission-draw.md) |
+
+### Initial Rates
 
 On the next step of the wizard, you can define, if you will have different commission rates for an initial purchase a customer makes and for all subsequent purchases. You can define the commission base by selecting the appropriate option for **Calculate Commissions on** in the following step. Additionally, you can define a restriction and setup a **Minimum Gross Profit % for Commissions** to prevent salespeople from reducing the prices below a certain threshold.
 
 > [!IMPORTANT]
 > This setting will only prevent salespeople from receiving commissions for a sales with a gross profit below the **Minimum Gross Profit % for Commissions**, but it will not prevent the actual sale. You can setup different workflow or approval rules in Business Central to accommodate this feature.
+
+### Commission Calculation
+
+The next step of the wizard allows you to configure the overall commission calculations.
+
+|                                                    |                                                                                                    |
+|----------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **Calculate Commissions on**                       | You can select the basis for the commission calculations. Depending on the value that you select here, the commission rates will be applied to different base amounts. You can define defaults here and then also override this setup on each salesperson.<br><br>- **Gross Profit**: Commissions are calculated on the difference between **Sales Amount** and **Cost**.<br>- **Sales**: Commissions are calculated on the sales amount.<br>- **Quantity**: The commissions are calculated based on the quantity that is sold. This is primarily important for royalty payments. |
+| **Sales Growth Period**                            | Our Commission Management app has the ability to define commission rates based on the growth of sales over time. To define the period length that is used to calculate the sales growth over the different periods, you can define the **Sales Growth Period** as **Day**, **Week**, **Month**, **Quarter**, or **Year**. |
+| **Min. Comm. Gross Profit%**                       | Specifies the minimum gross profit that is required for commissions to be calculated on a single document line. If the gross profit is below the margin, salespeople do not receive commission on the transaction. This can be used to prevent salespeople from "price dumping" to make sales. |
 
 ### To integrate the General Ledger
 
@@ -67,6 +89,10 @@ The NAV-X Commission Management app has rich functionality, grouped into differe
 
 You can automatically send commission reports to your salespeople via email. This way, you do not have to manually send out reports and also do not require your salespeople to log on to the system to review their commissions. If you choose to **Enable Automatic Emailing**, you have to configure the [SMTP Mail Setup](https://docs.microsoft.com/en-us/dynamics365/business-central/admin-how-setup-email). The automatic emailing functionality is processed through a job defined on the job queue. To review and activate the job, please review the [job queue setup](job-queue-setup.md). Hover over the fields to read a short description or review the [Commission Report](report-commission.md) request page settings for further details on the different settings.
 
+### To manage Posting Accounts
+
+In the next step of the wizard, you can select different G/L Accounts for the commission liabilities and commission expenses. When commissions are processed, these accounts are used to post the commissions to the general ledger. One setup can be done per customer posting group. If you want to use different G/L Accounts for different salespeople, you can define this on the individual salesperson's setup card. Read more on [Salesperson setups](salesperson-setup.md).
+
 ### To manage user setups
 
 Each user can see their own commissions, based on the **Salespers./Purch. Code** defined in the **User Setup** page. However, normal users cannot modify commissions or process commissions. Only commission managers have the rights to modify commission rates, process commissions at month end, and see all commissions. This following page will allow you to define the users that are commission managers. Just activate **Commission Manager** for each user that should have those rights.
@@ -76,6 +102,17 @@ You can always make those changes later as defined in the [additional setups](ad
 ### To manage salespeople
 
 You can define certain salespeople to be eligible for commissions or excluded. if you exclude a salesperson, you cannot calculate commissions for this person, regardless of the commission rate setups.
+
+### Document Number for Commission Invoices
+
+Commissions can be paid to salespeople via purchase invoices or sales credit memos as well as some other ways. If you pay a salesperson their commissions via purchase invoice or sales credit memo, you can now define the document number that is used as the **External Document No.** on these documents. The following values are accepted:
+
+- %1: Day
+- %2: Month (numeric)
+- %3: Year (four digit)
+- %4: Month (Name)
+
+For instance, you can define "COMM %4 %3", which will then be translated into "COMM OCTOBER 2020", for instance.
 
 You can define for each Item, Resource, G/L Account, and Item Charge, if one is commissionable or not. Initially, a new item, for instance, is not commissionable. You can change this at the time you are [importing commissions](how-to-import-commissions.md) or you can also define how all of your existing records are configured. This will be implemented at the end of the wizard. With these last setups, you are done. As long as you configured everything: you are ready to process commissions. Please follow our How-To’s on the left to learn how to perform the different tasks.
 
