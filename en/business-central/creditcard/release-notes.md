@@ -5,7 +5,7 @@ We release new versions of our software from time to time. Those can include fix
 The versions are listed below from the newest version to the earliest version. We have not listed any versions that have been published before November 2019.
 
 - [October 2020 - Version 2.2.10](release-notes/release-notes-2-2-10.md)
--
+
 - [August 2020 - Version 2.2.7](release-notes/release-notes-2-2-6.md)
 
 - [June 2020 - Version 2.2.4](release-notes/release-notes-2-2-4.md)
