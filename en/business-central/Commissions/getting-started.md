@@ -48,7 +48,7 @@ The next step of the Assisted Setup provides configuration options for different
 |----------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | **Invoice Paid Adjust. Reason Code**               | If the **Commission Effective Date** is set to **Date Paid**, you must enter a reason code that will be used to post the adjusting **Commission Ledger Entries** required to adjust the commissions to the rates effective when the invoice is paid. |
 | **Recalculate Adjust. Reason Code**                | Define the reason code that will be applied to any commission ledger entries when the entry is created due to a recalculation of the commissions using one of the processes in the system. |
-| **Commission Draw Reason Code**                    | When using the commission draw functionality, this reason code is used on commission ledger entries to identify those entries as commission draw commission ledger entries. Read more about [Commission Draws](../how-to-commission-draw.md) |
+| **Commission Draw Reason Code**                    | When using the commission draw functionality, this reason code is used on commission ledger entries to identify those entries as commission draw commission ledger entries. Read more about [Commission Draws](how-to-commission-draw.md) |
 
 ### Initial Rates
 
