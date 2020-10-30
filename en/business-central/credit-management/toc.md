@@ -17,3 +17,9 @@
 # Pages
 
 ## [Credit Management Setup](page-credit-management-setup.md)
+
+# Additional
+
+## [Release Notes](release-notes.md)
+
+# [FAQ](faq-index.md)

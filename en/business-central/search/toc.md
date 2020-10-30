@@ -44,4 +44,8 @@
 
 ## [Search Tables](page-search-tables.md)
 
+# Additional
+
+## [Release Notes](release-notes.md)
+
 # [FAQ](faq-index.md)
