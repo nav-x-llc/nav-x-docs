@@ -12,6 +12,7 @@
 
 - [An unknown error occurred communicating with the licensing server](faq-index.md#an-unknown-error-occurred-communicating-with-the-licensing-server)
 - [Unable to update tenant](faq-index.md#unable-to-update-tenant)
+- [Unable to see Commission Management functionality](faq-index.md#unable-to-see-commission-management-functionality)
 
 ## General Answers
 
@@ -49,3 +50,22 @@ To determine the *Azure AD Tenant Id*, please go to the question mark on the top
 
 
 Please also [Provide details on the errors](../how-to-debug-service-errors.md) that you are receiving.
+
+### Unable to see Commission Management functionality
+
+There are various reasons why you cannot see the commission management functionality or the commission management setup wizard. We will go through the different reasons why you might be experiencing the issue:
+
+1. You don't have a license
+ Choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **About NAV-X**, and then choose the related link to open the related page. On this page, you will see the different NAV-X apps that you have installed at the bottom under *Our Installed Apps*. Please validate that the **License Type** is set to **Trial** or **Full** and that the **Expiration Date** is in the future.
+
+ If this is not the case, select the NAV-X App in question and drop down next to *Apps* and then select the **App Registration** action to go through the registration of the product. Please ensure that you log out of Business Central and log back in.
+2. You have a license, but the license information is not up to date
+ If you have paid for the subscription, but your license information does not show up in the **About NAV-X** page, please choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **About NAV-X**, and then choose the related link to open the related page. Then select the action **Reset License Information**. If your license then shows up properly, please ensure that you log out and log back in again.
+3. You do not have the correct permissions
+ If you have the proper license and it shows up properly, please validate that your user has the proper permissions defined. Your user should either have the *SUPER* user role or the permissions provided with the app. Learn more about [Permission Setups](permission-setups.md).
+4. You have to sign out and sign back in
+ If you make any changes to the license or the permissions, please ensure that you log out of Business Central and log back in. When logging in, your configuration is refreshed and should then enable the Application Area that is used to show or hide the various fields. If you have not enabled credit card processing in the setup yet, you should now see a notification on the role center asking, if you want to start or complete the setup process. You can also select the Action *Setup & Extensions > Assisted Setup* and scroll down to the **NAV-X** group.
+
+ If you cannot see the setup wizard, please choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Application Area**, and then choose the related link to open the related page. Please search for the application area called *NAV-X Commission Management* and validate that it has a check mark.
+
+If you still have issues, please feel free to [contact us](https://nav-x.com/support/)
