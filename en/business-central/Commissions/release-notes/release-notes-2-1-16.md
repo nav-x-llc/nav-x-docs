@@ -1,4 +1,4 @@
-# Release Notes for January 2021 Update - Version 2.1.16
+# Release Notes for December 2020 Update - Version 2.1.16
 
 ## Resolved Issues
 

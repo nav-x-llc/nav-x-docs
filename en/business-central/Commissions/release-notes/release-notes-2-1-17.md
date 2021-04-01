@@ -1,4 +1,4 @@
-# Release Notes for February 2021 Update - Version 2.1.17
+# Release Notes for January 2021 Update - Version 2.1.17
 
 ## New Features
 

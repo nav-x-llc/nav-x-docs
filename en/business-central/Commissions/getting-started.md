@@ -79,9 +79,9 @@ By selecting **Use only most specific Commission Rates**, you can define differe
 
 If you want to use tiered or *Hockey Stick* commissions, you must select **Create Zero Amount Ledger Entries**. This will create commission ledger entries, even if a salesperson does not receive a commission for a specific sale, but is involved in the sale. This then will be counted towards the total sales amount in a given period.
 
-By default, commissions are calculated on positive and negative lines on a sales transaction, which means that a specific sales transaction could turn into a negative total commission or a commission claw back. If you want to not claw back commissions from your salespeople in this scenario, activate the field “Prevent Negative Commission”. Whenever credit memos are processed, those credit memos result in negative commissions. Even with “Prevent Negative Commission” activated, it does still calculate the commissions for credit memos.
+By default, commissions are calculated on positive and negative lines on a sales transaction, which means that a specific sales transaction could turn into a negative total commission or a commission claw back. If you want to not claw back commissions from your salespeople in this scenario, activate the field **Prevent Negative Commission**. Whenever credit memos are processed, those credit memos result in negative commissions. Even with “Prevent Negative Commission” activated, it does still calculate the commissions for credit memos.
 
-If a salesperson sold less during a period than the credit memos processed for this salesperson’s customers, the commission amount could be negative at the end of the period. If you do not want to claw back commissions from your salespeople in this scenario, you can activate the field “Prevent Negative Total Commission”.
+If a salesperson sold less during a period than the credit memos processed for this salesperson’s customers, the commission amount could be negative at the end of the period. If you do not want to claw back commissions from your salespeople in this scenario, you can activate the field **Prevent Negative Total Commission**.
 
 The NAV-X Commission Management app has rich functionality, grouped into different features. If you do not anticipate using some of the features, you can turn those features off. If you plan on using specific features, you can turn those on. This can be changed at any time. Turning a feature off removes the associated actions from the pages and menus and hides fields that only are used in conjunction with these features. This allows a cleaner and simpler user interface to let you focus more on your specific tasks.
 
@@ -105,7 +105,7 @@ You can define certain salespeople to be eligible for commissions or excluded. i
 
 ### Document Number for Commission Invoices
 
-Commissions can be paid to salespeople via purchase invoices or sales credit memos as well as some other ways. If you pay a salesperson their commissions via purchase invoice or sales credit memo, you can now define the document number that is used as the **External Document No.** on these documents. The following values are accepted:
+Commissions can be paid to salespeople via purchase invoices or sales credit memos as well as some other ways. If you pay a salesperson their commissions via purchase invoice or sales credit memo, you can now define the document number that is used as the **External Document No.** on these documents. This can be done in the field **Document No. for Processing Commissions**. The following values are accepted:
 
 - %1: Day
 - %2: Month (numeric)
@@ -113,6 +113,8 @@ Commissions can be paid to salespeople via purchase invoices or sales credit mem
 - %4: Month (Name)
 
 For instance, you can define "COMM %4 %3", which will then be translated into "COMM OCTOBER 2020", for instance.
+
+Additionally, you can define the **Document No. for Manager Commissions**, which will generate a document number when posting manager commission amounts into the Commission Ledger Entries. This is done on a monthly basis. The same parameters as described above can be used.
 
 You can define for each Item, Resource, G/L Account, and Item Charge, if one is commissionable or not. Initially, a new item, for instance, is not commissionable. You can change this at the time you are [importing commissions](how-to-import-commissions.md) or you can also define how all of your existing records are configured. This will be implemented at the end of the wizard. With these last setups, you are done. As long as you configured everything: you are ready to process commissions. Please follow our How-To’s on the left to learn how to perform the different tasks.
 
