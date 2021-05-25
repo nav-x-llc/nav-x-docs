@@ -82,6 +82,19 @@ The **Features** fast tab enables you to disable features that you are not using
 | **Use Maximum Commission Limits**                              | You can define maximum amounts that will be paid as commission per period. This can limit the commission a salesperson can receive per period based on different filter criteria. If you do not anticipate using this feature, please make sure that this is not checked. |
 | **Use Commission Types**                                       | Commission types are tags on different commission rates to classify commissions. These types are posted to the **Commission Ledger Entries** and can be used for reporting. They do not have any other functionality in the system. |
 | **Use Recalculate Period**                                     | If sales for a specific salesperson reaches the next commission tier, the commission for already posted and possibly paid commissions can be recalculated to increase the commission rates based on the new commission rate for this tier. |
+| **Calculation Commission on General Journal**                  | If you are importing financial transactions from other systems and want to calculate commissions on those transactions, activate this field. |
+
+## General Changes
+
+|                                                                |                                                                                                  |
+|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Display Unit Cost on Sales Order**                           | The unit cost can be displayed on the standard sales order page. This is typically a hidden field. |
+
+## General Journal Commissions
+
+|                                                                |                                                                                                  |
+|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Take Customer from General Journal Line Field**              | Select a field from the **General Journal Line** that will contain the customer to define the salespeople involved in the transactions. |
 
 ## Actions
 
