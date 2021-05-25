@@ -8,11 +8,11 @@ All users require the role *NAV-X LIBRARY* assigned. it will automatically done 
 
 ## Permissions for Credit Management users
 
-Any user who is involved in using the credit management functionality as well as entering or posting sales documents requires additional permissions configured. The permission set *CFCM-ALL* will have to be assigned to those users. This assignment should be done before the credit management setup is started.
+Any user who is involved in using the credit management functionality as well as entering or posting sales documents requires additional permissions configured. The permission set *CREDIT MANAGEMENT* will have to be assigned to those users. This assignment should be done before the credit management setup is started.
 
 ## Permissions for Credit Management setup users
 
-Any user involved in configuring the credit management functionality requires the commission *CFCM-SETUP* assigned. This permission set has to be given to users setting up the functionality in addition to *CFCM-ALL*.
+Any user involved in configuring the credit management functionality requires the commission *CREDIT MANAGEMENT* assigned.
 
 ## See Also
 

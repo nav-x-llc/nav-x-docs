@@ -85,6 +85,10 @@ If a salesperson sold less during a period than the credit memos processed for t
 
 The NAV-X Commission Management app has rich functionality, grouped into different features. If you do not anticipate using some of the features, you can turn those features off. If you plan on using specific features, you can turn those on. This can be changed at any time. Turning a feature off removes the associated actions from the pages and menus and hides fields that only are used in conjunction with these features. This allows a cleaner and simpler user interface to let you focus more on your specific tasks.
 
+### To calculate commissions for Journal Entries
+
+If you are importing financial transactions from other systems and want to calculate commissions on those transactions, you can activate the field **Calculation Commissions on General Journal**. You then will have to define a field within the General Journal Line that will define the customer. This can be done in the field **Take Customer from General Journal Line Field**. The field, for instance the **Description** field, can contain the customer number or a portion of the customer name. The system will search within the customer list to find a match and will take the first customer that matches the information.
+
 ### To send commission reports via email
 
 You can automatically send commission reports to your salespeople via email. This way, you do not have to manually send out reports and also do not require your salespeople to log on to the system to review their commissions. If you choose to **Enable Automatic Emailing**, you have to configure the [SMTP Mail Setup](https://docs.microsoft.com/en-us/dynamics365/business-central/admin-how-setup-email). The automatic emailing functionality is processed through a job defined on the job queue. To review and activate the job, please review the [job queue setup](job-queue-setup.md). Hover over the fields to read a short description or review the [Commission Report](report-commission.md) request page settings for further details on the different settings.
