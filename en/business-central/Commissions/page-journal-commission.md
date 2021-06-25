@@ -1,6 +1,6 @@
 # Page Journal Commission
 
-The **Journal Commission** page displays commission information for the current General Journal transaction. It can be accessed from the Generl Journal by selecting the action **Commissions** (*Page > Commissions*) or (*Line > Commissions*). The page can also be opened from the **General Journal Batch** and then displays the commissions for the entire batch.
+The **Journal Commission** page displays commission information for the current General Journal transaction. It can be accessed from the General Journal by selecting the action **Commissions** (*Page > Commissions*) or (*Line > Commissions*). The page can also be opened from the **General Journal Batch** and then displays the commissions for the entire batch.
 
 The **General** fast tab shows information about the General Journal Line as well as the total **Commissionable Amount**, and the **Commission Amount**. If you are a commission manager, you can see commissions for all salespeople and also make changes to those commissions. If you are not a commission manager, you can only see your own commissions.
 
