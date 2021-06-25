@@ -74,6 +74,8 @@
 
 ## [Salesperson Groups](page-salesperson-group.md)
 
+## [Journal Commissions](page-journal-commission.md)
+
 # Reports
 
 ## [Commissions by Salesperson](report-commission.md)
