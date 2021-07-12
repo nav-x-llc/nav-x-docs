@@ -18,6 +18,21 @@ The **General** fast tab defines the general system behavior and the commission 
 | **Include Current Document**                | If this field is enabled, the next commission tier is reached, when this current document brings the total sales over the commission tier minimum. |
 | **Commission Draw Reason Code**             | When using the commission draw functionality, this reason code is used on commission ledger entries to identify those entries as commission draw commission ledger entries. Read more about [Commission Draws](../how-to-commission-draw.md) |
 
+## Initial Rates
+
+The **Initial Rates** fast tab enables you to define whether the system should allow different commission rates for initial sales to a specific customer.
+
+|                                                    |                                                                                                    |
+|----------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **Initial Rate per Campaign**                      | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
+| **Initial Rate per Ship-to**                       | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
+| **Initial Rate per Salesperson**                   | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
+| **Initial Rate per Entity**                        | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
+| **Initial Rate Starting Date**                     | Defines how the system will calculate the starting date of what constitutes an initial sale. The options are:<br><br>- Document Date: The initial rate time frame starts from the time that the first order/transaction was entered.<br>- Shipment Date: The initial rate timeframe start from the time that the first shipment was sent to the customer.<br>- Invoice Date: The initial rate time frame starts from the date the first invoice was posted. |
+| **Initial Rate Duration**                          | Together with the field **Initial Rate Period** this defines the time frame for the initial sale commissions. If the fields **Initial Rate Starting Date**, **Initial Rate Duration**, and **Initial Rate Period** are empty, only the first sale qualifies for the additional commission rates. |
+| **Initial Rate Period**                            | Together with the field **Initial Rate Period** this defines the time frame for the initial sale commissions. The possible options are:<br><br>- Day<br>- Week<br>- Month<br>- Quarter<br>- Year |
+}
+
 ## Filter Criteria
 
 The **Filter Criteria** fast tab enables you to customize what the system considers a *commissionable document*. Most fields are only available, if you choose **Cash Receipt** as the point in time when commissions will become payable.
@@ -31,11 +46,8 @@ The **Filter Criteria** fast tab enables you to customize what the system consid
 | **Exclude Customers with Past Due invoices for**   | When customers with past due invoices should be excluded, this allows adding a grace period. For instance, *only exclude customers that have a past due invoice that is more than 90 days past due*. |
 | **Exclude Customers if Past Due is more than (%)** | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
 | **Exclude Credit Memos from Commissions**          | You can select, if you want to include or exclude credit memos from commission calculations. If credit memos are included, negative commissions will be calculated on credit memos and these commissions will be charged back to the salesperson. Credit memos lower the salesperson’s commissions in the month that they are posted. |
-| **Sales Growth Period**                            | Our Commission Management app has the ability to define commission rates based on the growth of sales over time. To define the period length that is used to calculate the sales growth over the different periods, you can define the **Sales Growth Period** as **Day**, **Week**, **Month**, **Quarter**, or **Year**. |
-| **Initial Rate per Campaign**                      | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
-| **Initial Rate per Ship-to**                       | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
-| **Initial Rate per Salesperson**                   | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
-| **Initial Rate per Entity**                        | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
+| **Sales Growth Period**                            | Our Commission Management app has the ability to define commission rates based on the growth of sales over time. To define the period length that is used to calculate the sales growth over the different periods, you can define the **Sales Growth Period** as **Day**, 
+**Week**, **Month**, **Quarter**, or **Year**. |
 
 ## Reporting
 
