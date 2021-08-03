@@ -12,9 +12,15 @@
 
 ## [Salesperson Setup](salesperson-setup.md)
 
+## [Customer Setup](customer-setup.md)
+
 ## [Item Setup](item-setup.md)
 
+## [Item Category Setup](item-category-setup.md)
+
 ## [Resource Setup](resource-setup.md)
+
+## [Resource Group Setup](resource-group-setup.md)
 
 ## [G/L Account Setup](gl-account-setup.md)
 
@@ -34,6 +40,8 @@
 
 ## [Manager Commissions](how-to-manager-commission.md)
 
+## [Calculate Commissions on Billable Time](how-to-billable-time.md)
+
 ## [Review Commission Reports](how-to-review-commission-reports.md)
 
 ## [Manually Adjust Commissions](how-to-manually-adjust-commissions.md)
@@ -49,6 +57,8 @@
 ## [Commission Group](page-commission-group.md)
 
 ## [Commission Rate](page-commission-rates.md)
+
+## [Commission Types](page-commission-types.md)
 
 ## [Sales Commission](page-commission-sales-commission.md)
 
