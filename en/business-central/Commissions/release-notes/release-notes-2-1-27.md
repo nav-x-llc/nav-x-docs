@@ -8,7 +8,7 @@ We already had the ability to calculate different commissions for the initial sa
 
 ### Copying of Commission Rates
 
-It is now possible to copy the commission rates from one salesperson to another or from one item to another, for instance. Read more about [copying commissions](../page-commissions-rates.md#actions)
+It is now possible to copy the commission rates from one salesperson to another or from one item to another, for instance. Read more about [copying commissions](../page-commission-rates.md#actions)
 
 ### Commission rate page access from Items
 

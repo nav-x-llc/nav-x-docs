@@ -4,7 +4,7 @@
 
 ### Commission Calculation on General Journal Lines
 
-It is now possible to calculate commissions on transactions in the **General Journal**. When entering journal entries, the commissions are calculated based on the **G/L Accounts** on the journal lines and a defined field that defines the customer that is used. Learn more on [calculating Journal Commissions](../page-journal-commissions.md) and on [setting up Journal Commissions](../commission-setup.md#features).
+It is now possible to calculate commissions on transactions in the **General Journal**. When entering journal entries, the commissions are calculated based on the **G/L Accounts** on the journal lines and a defined field that defines the customer that is used. Learn more on [calculating Journal Commissions](../page-journal-commission.md) and on [setting up Journal Commissions](../commission-setup.md#features).
 
 ### Recalculate Posted Sales Documents
 

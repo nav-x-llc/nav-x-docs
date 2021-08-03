@@ -4,11 +4,11 @@ If you want to pay your sales managers commissions, you can do this in a few dif
 
 ## Defining a sales team
 
-Each sales manager can have a sales team defined. When a sales team is defined, the combined sales of this team will be used to determine the commission that will be paid to the sales manager. You can define a sales team when you choose the action **Associated Salespeople** from the **Salesperson/Purchaser Card** (*Salesperson > Associated Salespeople*). Details about this page can be found on the [Associated Salespeople page](page-associated-salespeople.md).
+Each sales manager can have one or multiple sales teams defined. When a sales team is defined, the combined sales of this team will be used to determine the commission that will be paid to the sales manager. You can define a sales teams a manager is responsible for when you choose the action **Associated Salespeople** from the **Salesperson/Purchaser Card** (*Salesperson > Associated Salespeople*). This allows you to select the individual teams that the manager is responsible for. Each salesperson must be added to a team, before their sales is counted into the sales for a manager.
 
 ## Defining time periods
 
-If you setup tiered commissions for your sales managers, for instance, you want to pay a certain percentage when the sales team sells at least a certain amount in a month, you need to define the time period. This is setup on the **Salesperson Card** in the field **Amount Date Calculation**. You can also define the measurement that you want to use to define the different tiers. You can use the total sales amount in the time period or you can pay different commissions based on the growth of sales period over period. You can find more details about the different available setups on the [Salesperson Setup](salesperson-setup.md).
+If you setup tiered commissions for your sales managers, for instance, you want to pay a certain percentage when the sales team sells at least a certain amount in a month, you need to define the time period. You can define the measurement that you want to use to define the different tiers in the field **Minimum Amount Type** on the **Salesperson Card**. You can use the total sales amount in the time period or you can pay different commissions based on the growth of sales period over period. You can find more details about the different available setups on the [Salesperson Setup](salesperson-setup.md).
 
 ## Defining Commission Rates
 

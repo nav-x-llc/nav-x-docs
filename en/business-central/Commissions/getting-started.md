@@ -37,8 +37,15 @@ The next step of the Assisted Setup allows you to define the rules when commissi
 | **Exclude Customers with Past Due invoices**       | When a customer has an invoice that is past due, no commission will be paid for this customer. It will be paid when no invoices are past due anymore. |
 | **Exclude Customers with Past Due invoices for**   | When customers with past due invoices should be excluded, this allows adding a grace period. For instance, *only exclude customers that have a past due invoice that is more than 90 days past due*. |
 | **Exclude Customers if Past Due is more than (%)** | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
-| **Exclude Credit Memos from Commissions**          | You can select, if you want to include or exclude credit memos from commission calculations. If credit memos are included, negative commissions will be calculated on credit memos and these commissions will be charged back to the salesperson. Credit memos lower the salesperson’s commissions in the month that they are posted. |
 | **Include Current Document**                       | If this field is enabled, the next commission tier is reached, when this current document brings the total sales over the commission tier minimum. |
+
+When you click **Next**, additional setups can be defined that.
+
+|                                                    |                                                                                                    |
+|----------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **Exclude Credit Memos from Commissions**          | You can select, if you want to include or exclude credit memos from commission calculations. If credit memos are included, negative commissions will be calculated on credit memos and these commissions will be charged back to the salesperson. Credit memos lower the salesperson’s commissions in the month that they are posted. |
+| **Do not synchronize Commission Split**     | If this field is enabled, the *Commission Split* will not be copied from the Customer or Ship-to Addresses, but will be defined based on the **Salesperson Code** on the sales document or the **Commission Split Mappings**. Read more about [Commission Split Mappings](page-commission-split-mapping.md). |
+| **Commission Calendar**                     | When commissions are calculated based on *Percentage Billable*, this field defines the calendar used to define the working days in a period. This can also be overwritten on Resources, Resource Groups, Items, or Item Categories. |
 
 ### Reason Codes
 
@@ -52,10 +59,18 @@ The next step of the Assisted Setup provides configuration options for different
 
 ### Initial Rates
 
-On the next step of the wizard, you can define, if you will have different commission rates for an initial purchase a customer makes and for all subsequent purchases. You can define the commission base by selecting the appropriate option for **Calculate Commissions on** in the following step. Additionally, you can define a restriction and setup a **Minimum Gross Profit % for Commissions** to prevent salespeople from reducing the prices below a certain threshold.
+On the next step of the wizard, you can define, if you will have different commission rates for an initial purchase a customer makes and for all subsequent purchases. 
 
-> [!IMPORTANT]
-> This setting will only prevent salespeople from receiving commissions for a sales with a gross profit below the **Minimum Gross Profit % for Commissions**, but it will not prevent the actual sale. You can setup different workflow or approval rules in Business Central to accommodate this feature.
+|                                  |                                                                                                                            |
+|----------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| **Initial Rate per Campaign**    | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
+| **Initial Rate per Ship-to**     | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
+| **Initial Rate per Salesperson** | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
+| **Initial Rate per Entity**      | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
+| **Initial Rate Starting Date**   | Defines how the system will calculate the starting date of what constitutes an initial sale. The options are:<br><br>- Document Date: The initial rate time frame starts from the time that the first order/transaction was entered.<br>- Shipment Date: The initial rate timeframe start from the time that the first shipment was sent to the customer.<br>- Invoice Date: The initial rate time frame starts from the date the first invoice was posted. |
+| **Initial Rate Duration**        | Together with the field **Initial Rate Period** this defines the time frame for the initial sale commissions. If the fields **Initial Rate Starting Date**, **Initial Rate Duration**, and **Initial Rate Period** are empty, only the first sale qualifies for the additional commission rates. |
+| **Initial Rate Period**          | Together with the field **Initial Rate Period** this defines the time frame for the initial sale commissions. The possible options are:<br><br>- Day<br>- Week<br>- Month<br>- Quarter<br>- Year |
+| **Add Initial Commission**       | If this field is enabled, the initial commission defined will be added to the normal commissions rather than it replacing the normal commissions. |
 
 ### Commission Calculation
 
@@ -65,13 +80,14 @@ The next step of the wizard allows you to configure the overall commission calcu
 |----------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | **Calculate Commissions on**                       | You can select the basis for the commission calculations. Depending on the value that you select here, the commission rates will be applied to different base amounts. You can define defaults here and then also override this setup on each salesperson.<br><br>- **Gross Profit**: Commissions are calculated on the difference between **Sales Amount** and **Cost**.<br>- **Sales**: Commissions are calculated on the sales amount.<br>- **Quantity**: The commissions are calculated based on the quantity that is sold. This is primarily important for royalty payments. |
 | **Sales Growth Period**                            | Our Commission Management app has the ability to define commission rates based on the growth of sales over time. To define the period length that is used to calculate the sales growth over the different periods, you can define the **Sales Growth Period** as **Day**, **Week**, **Month**, **Quarter**, or **Year**. |
-| **Min. Comm. Gross Profit%**                       | Specifies the minimum gross profit that is required for commissions to be calculated on a single document line. If the gross profit is below the margin, salespeople do not receive commission on the transaction. This can be used to prevent salespeople from "price dumping" to make sales. |
+| **Minimum Gross Profit % for Commissions**         | Specifies the minimum gross profit that is required for commissions to be calculated on a single document line. If the gross profit is below the margin, salespeople do not receive commission on the transaction. This can be used to prevent salespeople from "price dumping" to make sales. |
+
+> [!IMPORTANT]
+> The setting **Minimum Gross Profit % for Commissions** will only prevent salespeople from receiving commissions for a sales with a gross profit below the **Minimum Gross Profit % for Commissions**, but it will not prevent the actual sale. You can setup different workflow or approval rules in Business Central to accommodate this feature.
 
 ### To integrate the General Ledger
 
 In the next step of the assisted setup, you can define, if you want the system to accrue commissions in general ledger accounts. Select **Automatic Commission Posting to G/L** to start posting commissions against liability and expense accounts when they are created and paid. Without the direct posting of commission transactions to the general ledger, you can still run a [processing report at month’s end](how-to-month-end-process.md#post-cost-to-gl) that will post the commission transactions to the G/L.
-
-Before you move on to the next step, please select **Accounts** in the bottom of the wizard. This will open the *Customer Posting Groups* for you and you can enter a Commission Liability and Expense account for each Customer Posting Group. This is required to be entered before you can post commissions to the G/L. You can consult the Business Central documentation to learn more about [Customer Posting Groups](https://docs.microsoft.com/en-US/dynamics365/business-central/finance-posting-groups).
 
 ### To configure additional settings
 
@@ -79,11 +95,11 @@ By selecting **Use only most specific Commission Rates**, you can define differe
 
 If you want to use tiered or *Hockey Stick* commissions, you must select **Create Zero Amount Ledger Entries**. This will create commission ledger entries, even if a salesperson does not receive a commission for a specific sale, but is involved in the sale. This then will be counted towards the total sales amount in a given period.
 
-By default, commissions are calculated on positive and negative lines on a sales transaction, which means that a specific sales transaction could turn into a negative total commission or a commission claw back. If you want to not claw back commissions from your salespeople in this scenario, activate the field **Prevent Negative Commission**. Whenever credit memos are processed, those credit memos result in negative commissions. Even with “Prevent Negative Commission” activated, it does still calculate the commissions for credit memos.
+By default, commissions are calculated on positive and negative lines on a sales transaction, which means that a specific sales transaction could turn into a negative total commission or a commission claw back. If you want to not claw back commissions from your salespeople in this scenario, activate the field **Prevent Negative Commission** on the next step. Whenever credit memos are processed, those credit memos result in negative commissions. Even with “Prevent Negative Commission” activated, it does still calculate the commissions for credit memos.
 
 If a salesperson sold less during a period than the credit memos processed for this salesperson’s customers, the commission amount could be negative at the end of the period. If you do not want to claw back commissions from your salespeople in this scenario, you can activate the field **Prevent Negative Total Commission**.
 
-The NAV-X Commission Management app has rich functionality, grouped into different features. If you do not anticipate using some of the features, you can turn those features off. If you plan on using specific features, you can turn those on. This can be changed at any time. Turning a feature off removes the associated actions from the pages and menus and hides fields that only are used in conjunction with these features. This allows a cleaner and simpler user interface to let you focus more on your specific tasks.
+The NAV-X Commission Management app has rich functionality, grouped into different features that can be seen on the next two steps. If you do not anticipate using some of the features, you can turn those features off. If you plan on using specific features, you can turn those on. This can be changed at any time. Turning a feature off removes the associated actions from the pages and menus and hides fields that only are used in conjunction with these features. This allows a cleaner and simpler user interface to let you focus more on your specific tasks.
 
 ### To calculate commissions for Journal Entries
 
@@ -130,6 +146,10 @@ You can define for each Item, Resource, G/L Account, and Item Charge, if one is 
 
 - [Additional Setups](additional-setups.md)
 - [Salesperson Setup](salesperson-setup.md)
+- [G/L Account Setup](gl-account-setup.md)
 - [Item Setup](item-setup.md)
+- [Item Category Setup](item-category-setup.md)
+- [Resource Setup](resource-setup.md)
+- [Resource Group Setup](resource-group-setup.md)
 - [Commission Rate Setup](commission-rate-setup.md)
 - [How to process Sales Documents](how-to-process-sales-documents.md)
