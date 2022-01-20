@@ -6,7 +6,7 @@
     <div class="container">
       <span class="pull-right">
         {{{_appFooter}}}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a id="#top">Back to top</a>
+        <a id="back-to-top-footer" href="#top">Back to top</a>
       </span>
       <span>
         <a class="locale" href="/{{_langCode}}/locale?target={{_basePath}}{{_langCode}}/{{_path}}">{{_langName}}</a>
