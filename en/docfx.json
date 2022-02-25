@@ -8,7 +8,7 @@
         "files": [
             "locale.md",
             "index.md",
-            "toc.md"
+            "toc.yml"
         ],
         "exclude": [
             ".gitignore",
@@ -20,8 +20,9 @@
       },
       {
           "files": [
+              "business-central/**.yml",
               "business-central/**.md",
-              "business-central/toc.md"
+              "business-central/toc.yml"
           ]
       },
       {
@@ -32,10 +33,10 @@
               "business-central/search/**.md"
           ],
           "exclude": [
-              "business-central/commissions/toc.md",
-              "business-central/credit-management/toc.md",
-              "business-central/credit-card/toc.md",
-              "business-central/search/toc.md"
+              "business-central/commissions/toc.yml",
+              "business-central/credit-management/toc.yml",
+              "business-central/credit-card/toc.yml",
+              "business-central/search/toc.yml"
           ]
       }
     ],

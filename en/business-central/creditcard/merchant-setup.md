@@ -14,6 +14,8 @@ You can start the merchant setup by choosing the ![Tell me what you want to do](
 
 [!include[merchant-fields](includes/merchant-fields.md)]
 
+## Enter new merchant
+
 ## See Also
 
 - [Assisted Setup](getting-started.md)

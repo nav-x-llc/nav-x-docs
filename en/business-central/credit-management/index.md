@@ -12,6 +12,10 @@ NAV-X Credit Management supports both the *Essential* and *Premium* edition of M
 
 We currently support the following countries: *Canada*, *United Kingdom*, and *United States*
 
+### Supported Languages
+
+We currently support the following languages: *English (Canada), English (Great Britain), English (United States)*
+
 ## How to start
 
 ### Getting Started

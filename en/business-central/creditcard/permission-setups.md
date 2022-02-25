@@ -4,15 +4,15 @@ You can manage users and permissions within Business Central. You need to assign
 
 ## Permissions for all users
 
-All users require the role *NAV-X LIBRARY* assigned. it will automatically done at the time of installation of the app, so all users that exist at this time will have this this role already assigned. However, any new users will require this role to be setup when the user is created.
+All users require the role with the ID *NAVX LIBRARY* and description *NAV-X Library* assigned.
 
 ## Permissions for Credit Card users
 
-Any user who is involved in setting up the credit card functionality as well as entering or posting sales documents and processing credit cards requires additional permissions configured. The permission set *CREDIT CARD USER* will have to be assigned to those users. This assignment should be done before the credit card setup is started.
+Any user who is involved in setting up the credit card functionality as well as entering or posting sales documents and processing credit cards requires additional permissions configured. The permission set *NAVX CREDIT CARD U* and description *NAV-X Credit Card User* will have to be assigned to those users. This assignment should be done before the credit card setup is started.
 
 ## Permissions for Credit Card administrators
 
-Any user involved in setting up the credit card functionality requires an additional permission set configured. The permission set *CREDIT CARD SUPER* has to be assigned to those users. This assignment should be done before the credit card setup is started.
+Any user involved in setting up the credit card functionality requires an additional permission set configured. The permission set *NAVX CREDIT CARD S* and description *NAV-X Credit Card Super* has to be assigned to those users. This assignment should be done before the credit card setup is started.
 
 ## See Also
 

@@ -10,7 +10,11 @@ NAV-X Search supports both the *Essential* and *Premium* edition of Microsoft Dy
 
 ### Supported Countries
 
-We currently support the following countries: *Austria*, *Belgium*, *Canada*, *Denmark*, *Finland*, *France*, *Germany*, *Italy*, *Netherlands*, *Spain*, *Sweden*, *Switzerland*, *United Kingdom*, and *United States*
+We currently support the following countries: *Austria, Belgium, Canada, Denmark, Finland, France, Germany, Italy, Netherlands, Spain, Sweden, Switzerland, United Kingdom, United States*
+
+### Supported Languages
+
+We currently support the following languages: *English (Canada), English (Great Britain), English (United States), German (Austria), German (Germany), German (Switzerland)*
 
 ## How to start
 

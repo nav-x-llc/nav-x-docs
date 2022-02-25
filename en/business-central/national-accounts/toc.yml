@@ -1,0 +1,35 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Additional Setups
+        href: additional-setups.md
+      - name: Trial Setup
+        href: trial-setup.md
+      - name: National Accounts Setup
+        href: national-accounts-setup.md
+  - name: How To
+    items:
+      - name: Create a National Accounts Customer
+        href: how-to-create-national-accounts-customers.md
+  - name: Pages
+    items:
+      - name: National Accounts Customers
+        href: page-national-accounts-customers.md
+      - name: Hierarchies
+        href: page-national-accounts-hierarchies.md
+      - name: National Accounts Setup
+        href: page-national-accounts-setup.md
+  - name: Reports
+    items:
+      - name: National Accounts Statement
+        href: report-national-accounts-statement.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md
