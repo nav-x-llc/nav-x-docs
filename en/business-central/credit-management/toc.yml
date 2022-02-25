@@ -1,0 +1,27 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Additional Setups
+        href: additional-setups.md
+  - name: How To
+    items:
+      - name: Configure Customers
+        href: how-to-configure-customers.md
+      - name: Process Sales Orders
+        href: how-to-process-sales-orders.md
+      - name: Approve Sales Orders
+        href: how-to-approve-sales-orders.md
+  - name: Pages
+    items:
+      - name: Credit Management Setup
+        href: page-credit-management-setup.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md

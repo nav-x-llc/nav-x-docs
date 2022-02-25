@@ -5,7 +5,6 @@ Some of the fields described below are not shown by default. You can access thos
 |                                               |                                                                                                          |
 |-----------------------------------------------|----------------------------------------------------------------------------------------------------------|
 | **Enable Credit Card**                        | Activates the payment processing functionality. You can setup everything until you are ready for processing and then activate this field |
-| **Credit Card Nos.**                          | When you enter new bank accounts or credit cards, an internal unique code is assigned to each card. This code uses this number series. Learn more on [Creating Number Series](https://docs.microsoft.com/en-us/dynamics365/business-central/ui-create-number-series). |
 | **Charge Mode**                               | When processing credit cards, there are two different ways of processing the card. The right one for you to choose depends on your processes and individual requirements.<br><br>- **Authorize and Charge**: You are authorizing a transaction on a credit card, which means that you are placing a hold on the customer's credit card for the order amount. Once you ship and invoice the order, the card will be charged. This guarantees that the customer has enough funds available on their credit card while not charging the card before actually shipping the product. This is the preferred method.<br>- **Sale**: If you have a long period between placing the order and shipping it or if you ship and invoice right after the order is placed, you can also select this option. This will not authorize a card at the time of order entry and will only charge the card when the order is invoiced. This could result in declined cards or insufficient funds at the time of shipping and invoicing.<br><br>When processing ACH transactions, authorizations are not possible and it will always be processed as a **Sale** |
 | **Require Security Code**                     | The security code (also known as CVV code) is the three or four digit code on the back of the card. You can select between the following options.<br><br>- **Always**: The security code is required for every transaction that is performed. If you have the mode set to "Authorize and Charge", the security code is required during the authorization, not during the charge. This is the most secure configuration, but it will require you to have the security code for each card given to you by your customer every time you process a transaction. To maintain PCI Compliance, you are not allowed to store the security code for a card either in a software system or on any other handwritten notes.<br>- **First Authorization per Document**: The first time you are processing a transaction for a specific document (e.g. order), you are required to enter the security code. If you change the authorized amount (e.g. increase the order amount) or process partial invoices and then re-authorize the remaining balance, you are not required to enter the security code.<br>- **First Transaction per Card**: This setup will only require you to enter the security code once per card to validate that the card is valid. If you have activated the setting "Perform initial validation for new cards", the system asks for the security code at the time of entering the credit card and then not anymore.<br>- **Never**: The security code is never required to be entered. This is typically done when the same customer has a lot of recurring orders and charge the credit card. It is the least secure option and should be avoided, if possible. |
 | **Perform initial validation for new cards**  | Check this field, if you want to perform a validation of the credit card, when you enter a new credit card. This will authorize a small transaction on the customer's card and, if the security code is required, you will have to enter the code. If the address verification as well as the card verification in general, you will be alerted and you could choose not to use the card then. The authorization is voided right after the validation.<br>When placing a small authorization on the card, the customer can see a pending charge on their account. This can stay on the customer's account for up to several days.<br><br>This is only performed for Credit Cards, not for Bank Accounts. |
@@ -14,6 +13,13 @@ Some of the fields described below are not shown by default. You can access thos
 | **Data Retention Period**                     | This setting should typically not be changed. It is part of the PCI compliance enhancements to NAV-X Credit Card and allows you to automatically remove any sensitive information from processed credit card transactions to reduce the amount of sensitive data stored in your system. Even though the data is encrypted when setting up encryption, you should still have the system remove data automatically. |
 | **Create Credit Memos for Invoice Refunds**   | If this setting is enabled, a credit memo will be created when a refund for an invoice is processed. This will return any products to inventory. If this setting is disabled, a financial credit is processed instead. |
 | **Tokenize Manual Cards**                     | When activated, bank accounts and cards that are entered on the individual documents, the cards are automatically tokenized and stored for future use. If this setting is disabled, the bank accounts and credit cards are not tokenized or stored. |
+
+## Merchant
+
+|                             |                                                                                                                                    |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| **Default Merchant**        | Please select the default merchant from the list of available merchants. You can also create a new merchant.                       |
+| **Merchant Dimension Code** | You can define different merchants to be used based on a dimension value for each transaction. For instance, you could have a different merchant for Wholesale and for Retail sale. If you want to set up multiple merchants based on a dimension, you would define the dimension to select the right merchant in this field.<br><br>You have to choose a dimension that does not change on a transaction basis, if you want to be able to define credit cards in the system that can be reused. If the merchant information associated with a customer changes, you cannot use the credit cards that have been entered for the merchant used before the change. |
 
 ## Authorization
 
@@ -53,38 +59,10 @@ Some of the fields described below are not shown by default. You can access thos
 
 [!include[credit-card-setup-add-authorization](credit-card-setup-add-authorization.md)]
 
-## Merchant
-
-The information defined in the Merchant fast tab are the values for the primary merchant. If you have multiple merchants, you can either setup the first merchant information here and the remaining merchant information on the merchant setup or define all setups on the merchant setup. Learn more about [Merchant Setups](../merchant-setup.md).
-
-|                             |                                                                                                                             |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| **Merchant Dimension Code** | You can define different merchants to be used based on a dimension value for each transaction. For instance, you could have a different merchant for Wholesale and for Retail sale. If you want to set up multiple merchants based on a dimension, you would define the dimension to select the right merchant in this field.<br><br>You have to choose a dimension that does not change on a transaction basis, if you want to be able to define credit cards in the system that can be reused. If the merchant information associated with a customer changes, you cannot use the credit cards that have been entered for the merchant used before the change. |
-
-## Connection
-
-The Connection fast tab in the Credit Card setup allows you to define the login credentials to your live or sandbox merchant accounts. The information entered here is for your main merchant account. If you have multiple merchants, you can either setup the first merchant information here and the remaining merchant information on the merchant setup or define all setups on the merchant setup. Learn more about [Merchant Setups](../merchant-setup.md).
-
-|                 |                                                                                                                                         |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| **Security Id** | The **Security Id** is part of the merchant credentials provided to you by your gateway. Please make sure that you enter the complete information. |
-| **User Id**     | The **User Id** is part of the merchant credentials provided to you by your gateway. Please make sure that you enter the complete information. |
-| **Password**    | The **Password** is part of the merchant credentials provided to you by your gateway. Please make sure that you enter the complete information. |
-| **Test Mode**   | We have added the ability to run transactions in a **Test Mode**, which will not access the actual gateway, but will always allow credit card transactions to be processed. This is different from using *Sandbox Credentials*, which you can use to access your sandbox on the gateway to test with actual credit card transactions. |
-
-> [!IMPORTANT]
-> We have changed the visibility of credentials to ensure that it is easier to validate what information was entered. You have to ensure that only the proper users have access to those credentials by applying Business Central permissions to those users properly.
-
 ## Posting
-
-The Posting fast tab in the Credit Card setup allows you to define the credit card clearing account for your merchant. A credit card clearing account is used as the balancing account when processing credit card transactions and contains the balance of the "amount due" from the gateway to you. When you receive payments from your credit card gateway, you can transfer the balances from this clearing account to the bank account to properly reconcile credit card payments.
-
-The information entered here is for your main merchant account. If you have multiple merchants, you can either setup the first merchant information here and the remaining merchant information on the merchant setup or define all setups on the merchant setup. Learn more about [Merchant Setups](../merchant-setup.md).
 
 |                              |                                                                                                                            |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| **Credit Card Account Type** | You can define, if you want to use a G/L Account or a Bank Account as the credit card clearing account. It is recommended to set this to "Bank Account", since you have advanced reconciliation features available in native Dynamics 365 Business Central for bank accounts. |
-| **Credit Card Account No.**  | If you selected **G/L Account** in the previous field, you can select a G/L account from the drop down list and if you have selected **Bank Account**, you can select a Bank account from the drop down list. |
 | **Open Credit Allowed**      | If enabled, you will be able to refund invoices to bank accounts or credit cards that originally were not paid via the same payment method. |
 
 > [!IMPORTANT]
@@ -122,6 +100,10 @@ Currencies must be validated to ensure that the proper information is configured
 
 Account types must be setup for each credit card type as well as bank account type supported. These records are automatically created when the application is originally installed and then setup via a downloaded configuration package. Learn more about [Account Types](../page-credit-card-types.md)
 
+### Additional > Source Code Setup
+
+The source code setup defines the origin of transactions in Business Central. Learn more about [Source Code Setup](../additional-setups.md#source-code-setup).
+
 ### Additional > Commodity Codes
 
 Commodity codes are required for credit card transactions to ensure that the transactions are processed using the best rates possible. Learn more about [Commodity Codes](../additional-setups.md#commodity-code-setup)
@@ -133,10 +115,6 @@ Payment methods are used to define how invoices are paid. You must setup at leas
 ### Additional > Units of Measure
 
 Unit of measures have to be configured to be able to be used with credit card transactions. The existing units of measure must be mapped to standard unit of measure codes used by the gateway. Learn More about [Units of Measure](../additional-setups.md#unit-of-measure-setup)
-
-### Additional > Source Code Setup
-
-The source code setup defines the origin of transactions in Business Central. Learn more about [Source Code Setup](../additional-setups.md#source-code-setup).
 
 ### Help > Online Help
 

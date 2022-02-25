@@ -1,0 +1,93 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Additional Setups
+        href: additional-setups.md
+      - name: Trial Setup
+        href: trial-setup.md
+      - name: Credit Card Setup
+        href: credit-card-setup.md
+      - name: Merchant Setup
+        href: merchant-setup.md
+      - name: Terminals
+        href: terminal-setup.md
+      - name: Job Queue Setup
+        href: job-queue-setup.md
+  - name: How To
+    items:
+      - name: Credit Card Customers
+        href: how-to-credit-card-customers.md
+      - name: Enter new Bank Accounts
+        href: how-to-enter-new-bank-accounts.md
+      - name: Enter new Credit Cards
+        href: how-to-enter-new-credit-cards.md
+      - name: Sales Order Processing
+        href: how-to-sales-order-processing.md
+      - name: Pay Posted Invoices
+        href: how-to-pay-posted-invoices.md
+      - name: Payment on Account
+        href: how-to-payment-on-account.md
+      - name: Credit Card Refunds
+        href: how-to-credit-card-refunds.md
+      - name: Using Terminals
+        href: how-to-using-terminals.md
+      - name: Customize Notifications
+        href: how-to-customize-notifications.md
+  - name: Pages
+    items:
+      - name: Credit Card Setup
+        href: page-credit-card-setup.md
+      - name: Credit Card
+        href: page-credit-card.md
+      - name: Authorize or Charge Credit Card
+        href: page-authorize-credit-card.md
+      - name: Account Types
+        href: page-credit-card-types.md
+      - name: Commodities
+        href: page-credit-card-commodity.md
+      - name: Enter Security Code
+        href: page-enter-security-code.md
+      - name: Merchant Setup
+        href: page-credit-card-merchant.md
+      - name: New Terminal Wizard
+        href: page-credit-card-new-terminal-wizard.md
+      - name: Terminal Pairing
+        href: page-credit-card-terminal-pairing.md
+      - name: Source Keys
+        href: page-credit-card-source-keys.md
+      - name: Report Selections - Credit Card
+        href: page-credit-card-report-selections.md
+      - name: Payment Receipts
+        href: page-credit-card-email-receipts.md
+      - name: Transaction Entries
+        href: page-transaction-entries.md
+      - name: Terminal
+        href: page-terminal.md
+  - name: Reports
+    items:
+      - name: Credit Card Payment Import
+        href: report-credit-card-payment-import.md
+      - name: Credit Card Purge Data for Sandbox
+        href: report-credit-card-purge-for-sandbox.md
+      - name: Payment Method Import
+        href: report-payment-method-import.md
+      - name: Process Posted Sales Invoices Credit Card
+        href: report-posted-sales-invoices-credit-card.md
+      - name: Process Sales Document Credit Card Transactions
+        href: report-sales-document-credit-card-transactions.md
+      - name: Validate Credit Card Customer Merchant Mapping
+        href: report-validate-credit-card-customer-merchant-mapping.md
+  - name: Additional
+    items:
+      - name: Shortcuts
+        href: shortcuts.md
+      - name: Release Notes
+        href: release-notes.md
+      - name: Release Plan
+        href: release-plan.md
+  - name: FAQ
+    href: faq-index.md

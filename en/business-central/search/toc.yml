@@ -1,0 +1,39 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Search Setup
+        href: search-setup.md
+  - name: How To
+    items:
+      - name: Search from Role Center
+        href: how-to-search-from-role-center.md
+      - name: Search for Customers
+        href: how-to-search-for-customers.md
+      - name: Search for Vendors
+        href: how-to-search-for-vendors.md
+      - name: Search for Items
+        href: how-to-search-for-items.md
+  - name: Pages
+    items:
+      - name: Advanced Search
+        href: page-advanced-search.md
+      - name: Search Dialog
+        href: page-search-dialog.md
+      - name: Search Document Tables
+        href: page-search-document-tables.md
+      - name: Search Fields
+        href: page-search-fields.md
+      - name: Search Setup
+        href: page-search-setup.md
+      - name: Search Tables
+        href: page-search-tables.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md
