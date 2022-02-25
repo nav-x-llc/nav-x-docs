@@ -12,6 +12,10 @@ NAV-X Credit Card supports both the *Essential* and *Premium* edition of Microso
 
 We currently support the following countries: *Canada*, *Mexico*, and *United States*
 
+### Supported Languages
+
+We currently support the following languages: *English (Canada), English (United States)*
+
 ## How to start
 
 ### Getting Started

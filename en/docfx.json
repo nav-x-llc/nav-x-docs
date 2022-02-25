@@ -8,7 +8,7 @@
         "files": [
             "locale.md",
             "index.md",
-            "toc.md"
+            "toc.yml"
         ],
         "exclude": [
             ".gitignore",
@@ -20,18 +20,23 @@
       },
       {
           "files": [
+              "business-central/**.yml",
               "business-central/**.md",
-              "business-central/toc.md"
+              "business-central/toc.yml"
           ]
       },
       {
           "files": [
               "business-central/commissions/**.md",
-              "business-central/credit-management/**.md"
+              "business-central/credit-management/**.md",
+              "business-central/credit-card/**.md",
+              "business-central/search/**.md"
           ],
           "exclude": [
-              "business-central/commissions/toc.md",
-              "business-central/credit-management/toc.md"
+              "business-central/commissions/toc.yml",
+              "business-central/credit-management/toc.yml",
+              "business-central/credit-card/toc.yml",
+              "business-central/search/toc.yml"
           ]
       }
     ],
@@ -49,7 +54,7 @@
         "_appLogoPath": "/images/NAV-X-logo.png",
         "_appFaviconPath": "/images/navx.ico",
         "_appTitle": "NAV-X Docs",
-        "_appFooter": "Copyright &copy; 2020 by NAV-X LLC",
+        "_appFooter": "Copyright &copy; 2022 by NAV-X LLC",
         "_enableSearch": true,
         "_enableNewTab": false,
         "_disableContribution": true,

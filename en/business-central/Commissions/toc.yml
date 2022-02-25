@@ -1,0 +1,113 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Additional Setups
+        href: additional-setups.md
+      - name: Commission Setup
+        href: commission-setup.md
+      - name: Job Queue Setup
+        href: job-queue-setup.md
+      - name: Salesperson Setup
+        href: salesperson-setup.md
+      - name: Customer Setup
+        href: customer-setup.md
+      - name: Item Setup
+        href: item-setup.md
+      - name: Item Category Setup
+        href: item-category-setup.md
+      - name: Resource Setup
+        href: resource-setup.md
+      - name: Resource Group Setup
+        href: resource-group-setup.md
+      - name: G/L Account Setup
+        href: gl-account-setup.md
+      - name: Item Charge Setup
+        href: item-charge-setup.md
+      - name: Commission Rate Setup
+        href: commission-rate-setup.md
+  - name: How To
+    items:
+      - name: Setup default commission splits
+        href: how-to-setup-default-commission-splits.md
+      - name: Process Sales Documents
+        href: how-to-process-sales-documents.md
+      - name: Promotional Commissions
+        href: how-to-process-promotional-commissions.md
+      - name: Month End Process
+        href: how-to-month-end-process.md
+      - name: Manager Commissions
+        href: how-to-manager-commission.md
+      - name: Calculate Commissions on Billable Time
+        href: how-to-billable-time.md
+      - name: Review Commission Reports
+        href: how-to-review-commission-reports.md
+      - name: Manually Adjust Commissions
+        href: how-to-manually-adjust-commissions.md
+      - name: Import Commissions
+        href: how-to-import-commissions.md
+      - name: Product Tour
+        href: how-to-product-tour.md
+  - name: Pages
+    items:
+      - name: Commission Setup
+        href: page-commission-setup.md
+      - name: Commission Group
+        href: page-commission-group.md
+      - name: Commission Rate
+        href: page-commission-rates.md
+      - name: Commission Types
+        href: page-commission-types.md
+      - name: Sales Commission
+        href: page-commission-sales-commission.md
+      - name: Posted Sales Commission
+        href: page-posted-sales-commission.md
+      - name: Associated Salespeople
+        href: page-associated-salespeople.md
+      - name: Manager Commission
+        href: page-manager-amounts.md
+      - name: Salesperson Split
+        href: page-commission-salesperson-split.md
+      - name: Posted Salesperson Split
+        href: page-posted-commission-salesperson-split.md
+      - name: Commission Split Mappings
+        href: page-commission-split-mapping.md
+      - name: Commission Journals
+        href: page-commission-journal.md
+      - name: Commission Registers
+        href: page-commission-register.md
+      - name: Commission Ledger Entries
+        href: page-commission-ledger-entries.md
+      - name: Reduced Days Overdue Commissions
+        href: page-reduced-days-overdue.md
+      - name: Salesperson Groups
+        href: page-salesperson-group.md
+      - name: Journal Commissions
+        href: page-journal-commission.md
+  - name: Reports
+    items:
+      - name: Commissions by Salesperson
+        href: report-commission.md
+      - name: Post Commission to G/L
+        href: report-post-commission-to-gl.md
+      - name: Process Commission
+        href: report-process-commission.md
+      - name: Recalculate Sales Document Commissions
+        href: report-recalculate-sales-document-commissions.md
+      - name: Recalculate Posted Sales Document Commissions
+        href: report-recalculate-posted-sales-document-commissions.md
+  - name: Developer
+    items:
+      - name: Power BI
+        href: power-bi.md
+      - name: Custom Rates
+        href: develop-custom-rates.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md

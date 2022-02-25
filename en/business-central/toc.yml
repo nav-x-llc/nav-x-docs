@@ -1,0 +1,18 @@
+items:
+  - name: Welcome to NAV-X for Business Central
+    href: index.md
+  - name: NAV-X Commission Management
+    href: commissions/toc.yml
+    topicHref: commissions/index.md
+  - name: NAV-X Credit Card
+    href: creditcard/toc.yml
+    topicHref: creditcard/index.md
+  - name: NAV-X Credit Management
+    href: credit-management/toc.yml
+    topicHref: credit-management/index.md
+  - name: NAV-X National Accounts
+    href: national-accounts/toc.yml
+    topicHref: national-accounts/index.md
+  - name: NAV-X Search
+    href: search/toc.yml
+    topicHref: search/index.md

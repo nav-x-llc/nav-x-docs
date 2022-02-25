@@ -10,7 +10,11 @@ NAV-X Commission Management supports both the *Essential* and *Premium* edition 
 
 ### Supported Countries
 
-We currently support the following countries: *Austria*, *Canada*, *France*, *Germany*, *Mexico*, *New Zealand*, *South Africa*, *Spain*, *Switzerland*, *United Kingdom*, and *United States*
+We currently support the following countries: *Australia, Austria, Belgium, Brazil, Canada, Colombia, Croatia, Czechia, Denmark, Estonia, Finland, France, Germany, Hong Kong SAR, Hungary, Iceland, Indonesia, Ireland, Italy, Japan, Korea, Latvia, Lithuania, Malaysia, Mexico, Netherlands, New Zealand, Norway, Peru, Philippines, Poland, Serbia, Singapore, Slovenia, South Africa, Spain, Sweden, Switzerland, Taiwan, Thailand, UAE, UK, USA, Vietnam*
+
+### Supported Languages
+
+We currently support the following languages: *English (Australia), English (Canada), English (Great Britain), English (United States), German (Austria), German (Germany), German (Switzerland)*
 
 ## How to start
 
