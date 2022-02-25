@@ -1,0 +1,3 @@
+If you do not have a tenant for Microsoft Dynamics 365 Business Central, you can sign up for a [free trial](https://trials.dynamics.com/Dynamics365/Signup/businesscentral).
+
+Once you have completed the sign up and your tenant is up and running, you can add the NAV-X National Accounts app from the [AppSource marketplace](https://appsource.microsoft.com/en-US/product/dynamics-365-for-financials/PUBID.navx%7CAID.1385a535-b738-4a53-b6e0-1bf8c2f555f0%7CPAPPID.afc88ae1-eeb5-403f-b6b1-cbeb5d724f49). If you have questions about the installation process of an app through Microsoft AppSource, you can find more information on [installing apps](https://docs.microsoft.com/en-US/dynamics365/business-central/ui-extensions) on the Microsoft Docs site.
