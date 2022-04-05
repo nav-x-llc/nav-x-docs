@@ -25,5 +25,3 @@ The next step of the Assisted Setup allows you to define whether you want to all
 ## See Also
 
 - [Permission Setups](permission-setups.md)
-- [Merchant Setup](merchant-setup.md)
-- [Setup Bank Accounts](https://docs.microsoft.com/en-US/dynamics365/business-central/bank-how-setup-bank-accounts)

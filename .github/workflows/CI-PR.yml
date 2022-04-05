@@ -1,16 +1,11 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
     types:
       - opened
       - edited
       - reopened
-    branches:
-      - master
 
 jobs:
   build:
@@ -38,7 +33,6 @@ jobs:
 
       - name: "Assemble website"
         run: |
-          dir
           if (!(Test-Path "./website/")) {
               New-Item -Path "./website/" -ItemType Directory -Force
           }
