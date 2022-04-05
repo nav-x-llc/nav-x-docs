@@ -25,7 +25,9 @@ jobs:
 
       - name: "Install DocFX"
         run: |
-          Remove-Item C:\DocFX\*.* -Recurse -Force
+          if (Test-Path "C:\DocFx\" -PathType Container) {
+            Remove-Item C:\DocFX\*.* -Recurse -Force
+          }
           nuget install docfx.console -OutputDirectory C:\DocFX -NoCache -NonInteractive
 
       - name: "Build English Website"
