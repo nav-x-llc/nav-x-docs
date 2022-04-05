@@ -38,16 +38,17 @@ jobs:
 
       - name: "Assemble website"
         run: |
+          dir
           if (!(Test-Path "./website/")) {
               New-Item -Path "./website/" -ItemType Directory -Force
           }
           Remove-Item -Path "./website/*" -Recurse
           New-Item -Path "./website/en" -ItemType Directory -Force
-          Copy-Item -Path "$(Build.SourcesDirectory)/_site/images" -Destination "./website" -Recurse
-          Copy-Item -Path "$(Build.SourcesDirectory)/BingSiteAuth.xml" -Destination "./website"
-          Copy-Item -Path "$(Build.SourcesDirectory)/_site/search-stopwords.json" -Destination "./website"
-          Copy-Item -Path "$(Build.SourcesDirectory)/_site/sitemap.xml" -Destination "./website"
-          Copy-Item -Path "$(Build.SourcesDirectory)/_site/*" -Destination "./website/en" -Recurse
+          Copy-Item -Path "./_site/images" -Destination "./website" -Recurse
+          Copy-Item -Path "./BingSiteAuth.xml" -Destination "./website"
+          Copy-Item -Path "./_site/search-stopwords.json" -Destination "./website"
+          Copy-Item -Path "./_site/sitemap.xml" -Destination "./website"
+          Copy-Item -Path "./_site/*" -Destination "./website/en" -Recurse
 
       - name: "Publish Website as Artifact"
         uses: actions/upload-artifact@v3
