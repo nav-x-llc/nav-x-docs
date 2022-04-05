@@ -1,49 +1,29 @@
-name: $(BuildID)
+name: Deploy
 
-resources:
-- repo: self
-
-variables:
-  build.clean: all
-  platform: x64
-
-trigger:
-  branches:
-    include:
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
       - master
 
-pr: none
-
-stages:
-- stage: Deploy
-  displayName: 'Deploy website'
-  jobs:
-  - job: DeployWebsite
-    displayName: 'Deploy Website'
-    continueOnError: false
-    pool: navxdefault
-    workspace:
-      clean: all
+jobs:
+  deploy:
+    name: "Deploy Website"
+    if: github.event.pull_request_target.merged == true
+    runs-on: windows-latest
     steps:
-    - task: DownloadPipelineArtifact@2
-      displayName: 'Download Website Artifact'
-      inputs:
-        buildType: 'specific'
-        project: 'f0d284ed-af49-4b2a-9d2e-01e485482d6e'
-        definition: 34
-        buildVersionToDownload: 'latest'
-        artifactName: 'website'
-        path: '$(Pipeline.Workspace)\website'
+      - name: "Download artifacts"
+        uses: actions/download-artifact@v3
+        with:
+          name: website
+          path: website
 
-    - task: CopyFilesOverSSH@0
-      displayName: 'Upload of website'
-      condition: succeeded()
-      inputs:
-        sshEndpoint: NavxDocsWebsite
-        sourceFolder: '$(Pipeline.Workspace)\website\'
-        contents: '**'
-        targetFolder: '/opt/bitnami/apps/navxdocs/htdocs'
-        cleanTargetFolder: false
-        overwrite: true
-        failOnEmptySource: true
-        flattenFolders: false
+      - name: "Upload to website"
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: website
+          remote: /opt/bitnami/apps/navxdocs/htdocs
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
