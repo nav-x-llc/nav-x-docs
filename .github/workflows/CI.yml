@@ -8,7 +8,6 @@ on:
 jobs:
   deploy:
     name: "Deploy Website"
-    if: github.event.pull_request_target.merged == true
     runs-on: windows-latest
     steps:
       - name: "Download artifacts"
