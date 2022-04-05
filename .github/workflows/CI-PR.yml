@@ -1,9 +1,6 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
     types:
       - opened
@@ -38,7 +35,6 @@ jobs:
 
       - name: "Assemble website"
         run: |
-          dir
           if (!(Test-Path "./website/")) {
               New-Item -Path "./website/" -ItemType Directory -Force
           }

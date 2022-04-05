@@ -7,7 +7,6 @@
 ## Errors
 
 - [An unknown error occurred communicating with the licensing server](faq-index.md#an-unknown-error-occurred-communicating-with-the-licensing-server)
-- [Unable to update tenant](faq-index.md#unable-to-update-tenant)
 - [Unable to see National Accounts functionality](faq-index.md#unable-to-see-national-accounts-functionality)
 
 ## System Answers

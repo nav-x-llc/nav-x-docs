@@ -16,7 +16,7 @@ When the order amount changes, a new authorization was required, even if the cha
 
 ### Credentials
 
-We have changed the way that we store credit card credentials. We no longer have a separate set for test and for live credentials. The credentials are also shown now so that it is easier to determine, if the credentials were entered correctly. Read more on [setting up Credit Card](../credit-card-setup.md#connection).
+We have changed the way that we store credit card credentials. We no longer have a separate set for test and for live credentials. The credentials are also shown now so that it is easier to determine, if the credentials were entered correctly. Read more on [setting up Credit Card](../credit-card-setup.md).
 
 ### Payment Services
 
