@@ -14,11 +14,11 @@ jobs:
       env:
         HOST: ${{ secrets.HOST }}
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-		SSH_USER: ${{ secrets.SSH_USER }}
+        SSH_USER: ${{ secrets.SSH_USER }}
       run: |
         echo $HOST >> secrets.txt
         echo $SSH_PASSWORD >> secrets.txt
-		echo $SSH_USER >> secrets.txt
+        echo $SSH_USER >> secrets.txt
 
     - name: Run tmate
       uses: mxschmitt/action-tmate@v2
