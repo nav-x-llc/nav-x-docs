@@ -41,6 +41,35 @@ jobs:
           Copy-Item -Path "./_site/search-stopwords.json" -Destination "./website"
           Copy-Item -Path "./_site/sitemap.xml" -Destination "./website"
           Copy-Item -Path "./_site/*" -Destination "./website/en" -Recurse
+
+      - name: "Get Public IP"
+        id: ip
+        uses: haythem/public-ip@1.2
+
+      - name: "Login to Azure"
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CRED }}
+          ename-AZPSSession: true
+
+      - name: "Add public IP to allowed IPs"
+        uses: azure/powershell@v1
+        with:
+          inlineScript:
+            $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq ${{ secrets.HOST }} }
+            $nsg = Get-AzResource -Resourceid (Get-AzNetworkInterface | Where-Object {$_.IpConfigurations.PublicIpAddress.Id -eq $publicIp.Id }).NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
+
+            $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
+
+            if ($ruleExists) {
+                Set-AzNetworkSecurityRuleConfig -Name "github" -Description "github" -Access Allow -Protocol TCP -Direction Inbound -Priority 1 -SourceAddressPrefix ${{ steps.ip.outputs.ipv4 }} -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 22 -NetworkSecurityGroup $nsg
+            }
+            else {
+                $nsg | Add-AzNetworkSecurityRuleConfig -Name "github" -Description "github" -Access Allow -Protocol TCP -Direction Inbound -Priority 1 -SourceAddressPrefix ${{ steps.ip.outputs.ipv4 }} -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 22
+            }
+
+            $nsg | Set-AzNetworkSecurityGroup
+          azPSVersion: "latest"
           
       - name: "Upload to website"
         uses: garygrossgarten/github-action-scp@release
@@ -50,3 +79,17 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
+
+      - name: "Remove public IP from allowed IPs"
+        uses: azure/powershell@v1
+        with:
+          inlineScript:
+            $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq ${{ secrets.HOST }} }
+            $nsg = Get-AzResource -Resourceid (Get-AzNetworkInterface | Where-Object {$_.IpConfigurations.PublicIpAddress.Id -eq $publicIp.Id }).NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
+
+            $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
+            if ($ruleExists) {
+              Remove-AzNetworkSecurityRuleConfig -Name "github" -NetworkSecurityGroup $nsg
+              $nsg | Set-AzNetworkSecurityGroup
+            }
+          azPSVersion: "latest"
