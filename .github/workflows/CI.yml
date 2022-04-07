@@ -50,7 +50,7 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CRED }}
-          ename-AZPSSession: true
+          enable-AzPSSession: true
 
       - name: "Add public IP to allowed IPs"
         uses: azure/powershell@v1
