@@ -13,34 +13,13 @@ jobs:
       - name: "Checkout Repository"
         uses: actions/checkout@v2.4.0
 
-      - name: "Install NuGet"
-        uses: NuGet/setup-nuget@v1.0.5
-
-      - name: "Install DocFX"
-        run: |
-          if (Test-Path "C:\DocFx\" -PathType Container) {
-            Remove-Item C:\DocFX\*.* -Recurse -Force
-          }
-          nuget install docfx.console -OutputDirectory C:\DocFX -NoCache -NonInteractive
-
-      - name: "Build English Website"
-        run: |
-          cd en
-          $docfxpath = (Get-ChildItem C:\DocFX\ -Filter docfx.exe -Recurse).FullName
-          Start-Process -FilePath $docfxpath -ArgumentList build -WorkingDirectory (Get-Location) -NoNewWindow -Wait
-
-      - name: "Assemble website"
-        run: |
-          if (!(Test-Path "./website/")) {
-              New-Item -Path "./website/" -ItemType Directory -Force
-          }
-          Remove-Item -Path "./website/*" -Recurse
-          New-Item -Path "./website/en" -ItemType Directory -Force
-          Copy-Item -Path "./_site/images" -Destination "./website" -Recurse
-          Copy-Item -Path "./BingSiteAuth.xml" -Destination "./website"
-          Copy-Item -Path "./_site/search-stopwords.json" -Destination "./website"
-          Copy-Item -Path "./_site/sitemap.xml" -Destination "./website"
-          Copy-Item -Path "./_site/*" -Destination "./website/en" -Recurse
+      - name: "download website artifact"
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: CI-PR.yml
+          workflow_conclusion: success
+          name: website
+          path: ./website/
 
       - name: "Get Public IP"
         id: ip
@@ -56,7 +35,7 @@ jobs:
         uses: azure/powershell@v1
         with:
           inlineScript:
-            $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq ${{ secrets.HOST }} }
+            $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq ${{ secrets.HOST }} })
             $nsg = Get-AzResource -Resourceid (Get-AzNetworkInterface | Where-Object {$_.IpConfigurations.PublicIpAddress.Id -eq $publicIp.Id }).NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
 
             $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
@@ -74,7 +53,7 @@ jobs:
       - name: "Upload to website"
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: website
+          local: ./website/
           remote: /opt/bitnami/apps/navxdocs/htdocs
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}

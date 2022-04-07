@@ -31,3 +31,24 @@ jobs:
           cd en
           $docfxpath = (Get-ChildItem C:\DocFX\ -Filter docfx.exe -Recurse).FullName
           Start-Process -FilePath $docfxpath -ArgumentList build -WorkingDirectory (Get-Location) -NoNewWindow -Wait
+
+      - name: "Assemble website"
+        run: |
+          if (!(Test-Path "./website/")) {
+              New-Item -Path "./website/" -ItemType Directory -Force
+          }
+          Remove-Item -Path "./website/*" -Recurse
+          New-Item -Path "./website/en" -ItemType Directory -Force
+          Copy-Item -Path "./_site/images" -Destination "./website" -Recurse
+          Copy-Item -Path "./BingSiteAuth.xml" -Destination "./website"
+          Copy-Item -Path "./_site/search-stopwords.json" -Destination "./website"
+          Copy-Item -Path "./_site/sitemap.xml" -Destination "./website"
+          Copy-Item -Path "./_site/*" -Destination "./website/en" -Recurse
+
+      - name: "Upload website artifact"
+        uses: actions/upload-artifact@v3
+        with:
+          name: website
+          path: ./website/
+          retention-days: 3
+        
