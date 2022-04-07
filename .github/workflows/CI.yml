@@ -34,7 +34,7 @@ jobs:
       - name: "Add public IP to allowed IPs"
         uses: azure/powershell@v1
         with:
-          inlineScript:
+          inlineScript: |
             $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq ${{ secrets.HOST }} })
             $nsg = Get-AzResource -Resourceid (Get-AzNetworkInterface | Where-Object {$_.IpConfigurations.PublicIpAddress.Id -eq $publicIp.Id }).NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
 
