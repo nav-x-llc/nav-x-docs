@@ -58,7 +58,7 @@ jobs:
 
             $nsg | Set-AzNetworkSecurityGroup
           azPSVersion: "latest"
-
+          
       - name: "Upload to website"
         uses: garygrossgarten/github-action-scp@release
         with:
