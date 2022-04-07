@@ -36,14 +36,17 @@ jobs:
         with:
           inlineScript: |
             $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq ${{ secrets.HOST }} })
-            Write-Host "Public IP: $publicIp"
+            if ($null -eq $publicIp) {
+                throw "Public not found"
+            }
             $nic = Get-AzNetworkInterface | Where-Object { $_.IpConfigurations.PublicIpAddress.Id -eq $publicIp.Id }
-            Write-Host "Network Interface:"
-            Write-Host $nic
+            if ($null -eq $nic) {
+                throw "Network Interface not found"
+            }
             $nsg = Get-AzResource -ResourceId $nic.NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
-            Write-Host "Network Security Group"
-            Write-Host $nsg
-
+            if ($null -eq $nsg) {
+                throw "Network Security Group not found"
+            }
             $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
 
             if ($ruleExists) {
