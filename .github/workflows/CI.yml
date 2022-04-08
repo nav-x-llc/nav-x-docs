@@ -25,7 +25,6 @@ jobs:
         uses: Creepios/sftp-action@v1.0.3
         with:
           host: '${{ secrets.HOST }}'
-          port: 7394
           username: '${{ secrets.SSH_USER }}'
           password: '${{ secrets.SSH_PASSWORD }}'
           localPath: './website/'
