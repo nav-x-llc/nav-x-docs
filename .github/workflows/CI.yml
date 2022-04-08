@@ -64,7 +64,7 @@ jobs:
           
       - name: "Upload to website"
         run: |
-          Install-Module -Name Posh-SSH
+          Install-Module -Name Posh-SSH -Force
           Import-Module -Name Posh-SSH
 
           $credential = New-Object System.Management.Automation.PSCredential ("${{ secrets.SSH_USER }})", (ConvertTo-SecureString "${{ secrets.SSH_PASSWORD}}" -AsPlainText -Force))
