@@ -20,12 +20,57 @@ jobs:
           workflow_conclusion: success
           name: website
           path: ./website/
+
+      - name: "Login to Azure"
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CRED }}
+          enable-AzPSSession: true
+
+      - name: "Add Network Security Group"
+        uses: azure/powershell@v1
+        with:
+          inlineScript: |
+            $nic = Get-AzNetworkInterface | Where-Object { $_.Name -eq "navx-wp-02365" }
+            if ($null -eq $nic) {
+                throw "Network Interface not found"
+            }
+            $nsg = Get-AzResource -ResourceId $nic.NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
+            if ($null -eq $nsg) {
+                throw "Network Security Group not found"
+            }
+            $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
+            if (!$ruleExists) {
+                $nsg | Add-AzNetworkSecurityRuleConfig -Name "github" -Description "github" -Access Allow -Protocol TCP -Direction Inbound -Priority 100 -SourceAddressPrefix * -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 22 | Out-Null
+            }
+            $nsg | Set-AzNetworkSecurityGroup | Out-Null
+          azPSVersion: "latest"
           
       - name: "Upload to website"
         uses: Creepios/sftp-action@v1.0.3
         with:
           host: '${{ secrets.HOST }}'
+          port: 7394
           username: '${{ secrets.SSH_USER }}'
           password: '${{ secrets.SSH_PASSWORD }}'
           localPath: './website/'
           remotePath: '/opt/bitnami/apps/navxdocs/htdocs/'
+          
+      - name: "Remove public IP from allowed IPs"
+        uses: azure/powershell@v1
+        with:
+          inlineScript: |
+            $nic = Get-AzNetworkInterface | Where-Object { $_.Name -eq "navx-wp-02365" }
+            if ($null -eq $nic) {
+                throw "Network Interface not found"
+            }
+            $nsg = Get-AzResource -ResourceId $nic.NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
+            if ($null -eq $nsg) {
+                throw "Network Security Group not found"
+            }
+            $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
+            if ($ruleExists) {
+              Remove-AzNetworkSecurityRuleConfig -Name "github" -NetworkSecurityGroup $nsg | Out-Null
+              $nsg | Set-AzNetworkSecurityGroup | Out-Null
+            }
+          azPSVersion: "latest"
