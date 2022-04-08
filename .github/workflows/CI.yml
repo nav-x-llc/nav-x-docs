@@ -63,15 +63,17 @@ jobs:
           azPSVersion: "latest"
           
       - name: "Upload to website"
-        uses: Creepios/sftp-action@v1.0.3
-        with:
-          host: '${{ secrets.HOST }}'
-          port: 22
-          username: '${{ secrets.SSH_USER }}'
-          password: '${{ secrets.SSH_PASSWORD }}'
-          localPath: './website/'
-          remotePath: '/opt/bitnami/apps/navxdocs/htdocs/'
+        run: |
+          Install-Module -Name Posh-SSH
+          Import-Module -Name Posh-SSH
 
+          $credential = New-Object System.Management.Automation.PSCredential ("${{ secrests.SSH_USER }})", (ConvertTo-SecureString "${{ secrets.SSH_PASSWORD}}" -AsPlainText -Force))
+          $SFTPSession = New-SFTPSession -ComputerName "${{ secrets.HOST }}" -Credential $credential -Force
+
+          Set-SFTPItem -SFTPSession $SFTPSession -Path './Website/' -Destination '/opt/bitnami/apps/navxdocs/htdocs/'
+
+          Remove-SFTPSession -SFTPSession $SFTPSession
+          
       - name: "Remove public IP from allowed IPs"
         uses: azure/powershell@v1
         with:
