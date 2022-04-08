@@ -50,23 +50,25 @@ jobs:
             $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
 
             if ($ruleExists) {
-                Set-AzNetworkSecurityRuleConfig -Name "github" -Description "github" -Access Allow -Protocol TCP -Direction Inbound -Priority 100 -SourceAddressPrefix ${{ steps.ip.outputs.ipv4 }} -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 22 -NetworkSecurityGroup $nsg
+                Set-AzNetworkSecurityRuleConfig -Name "github" -Description "github" -Access Allow -Protocol TCP -Direction Inbound -Priority 100 -SourceAddressPrefix ${{ steps.ip.outputs.ipv4 }} -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 22 -NetworkSecurityGroup $nsg | Out-Null
             }
             else {
-                $nsg | Add-AzNetworkSecurityRuleConfig -Name "github" -Description "github" -Access Allow -Protocol TCP -Direction Inbound -Priority 100 -SourceAddressPrefix ${{ steps.ip.outputs.ipv4 }} -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 22
+                $nsg | Add-AzNetworkSecurityRuleConfig -Name "github" -Description "github" -Access Allow -Protocol TCP -Direction Inbound -Priority 100 -SourceAddressPrefix ${{ steps.ip.outputs.ipv4 }} -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 22 | Out-Null
             }
 
-            $nsg | Set-AzNetworkSecurityGroup
+            $nsg | Set-AzNetworkSecurityGroup | Out-Null
           azPSVersion: "latest"
           
       - name: "Upload to website"
-        uses: garygrossgarten/github-action-scp@release
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          local: ./website/
-          remote: /opt/bitnami/apps/navxdocs/htdocs
-          host: ${{ secrets.HOST }}
+          server: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          protocol: ftps
+          local-dir: ./website/
+          server-dir: opt/bitnami/apps/navxdocs/htdocs
 
       - name: "Remove public IP from allowed IPs"
         uses: azure/powershell@v1
@@ -87,7 +89,7 @@ jobs:
 
             $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
             if ($ruleExists) {
-              Remove-AzNetworkSecurityRuleConfig -Name "github" -NetworkSecurityGroup $nsg
-              $nsg | Set-AzNetworkSecurityGroup
+              Remove-AzNetworkSecurityRuleConfig -Name "github" -NetworkSecurityGroup $nsg | Out-Null
+              $nsg | Set-AzNetworkSecurityGroup | Out-Null
             }
           azPSVersion: "latest"
