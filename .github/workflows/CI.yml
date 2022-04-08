@@ -57,6 +57,9 @@ jobs:
             }
 
             $nsg | Set-AzNetworkSecurityGroup | Out-Null
+
+            Write-Host "Waiting to give Azure some time to add the network security group"
+            Start-Sleep -Seconds 10
           azPSVersion: "latest"
           
       - name: "Upload to website"
@@ -67,12 +70,12 @@ jobs:
           username: '${{ secrets.SSH_USER }}'
           password: '${{ secrets.SSH_PASSWORD }}'
           localPath: './website/'
-          remotePath: 'opt/bitnami/apps/navxdocs/htdocs/'
+          remotePath: '/opt/bitnami/apps/navxdocs/htdocs/'
 
       - name: "Remove public IP from allowed IPs"
         uses: azure/powershell@v1
         with:
-          inlineScript:
+          inlineScript: |
             $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq "${{ secrets.HOST }}" })
             if ($null -eq $publicIp) {
                 throw "Public not found"
