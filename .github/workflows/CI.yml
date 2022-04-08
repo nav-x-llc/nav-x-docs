@@ -67,7 +67,7 @@ jobs:
           Install-Module -Name Posh-SSH -Force
           Import-Module -Name Posh-SSH
 
-          $credential = New-Object System.Management.Automation.PSCredential ("${{ secrets.SSH_USER }})", (ConvertTo-SecureString "${{ secrets.SSH_PASSWORD}}" -AsPlainText -Force))
+          $credential = New-Object System.Management.Automation.PSCredential ('${{ secrets.SSH_USER }}', (ConvertTo-SecureString '${{ secrets.SSH_PASSWORD }}' -AsPlainText -Force))
           $SFTPSession = New-SFTPSession -ComputerName "${{ secrets.HOST }}" -Credential $credential -Force
 
           Set-SFTPItem -SFTPSession $SFTPSession -Path './Website/' -Destination '/opt/bitnami/apps/navxdocs/htdocs/'
