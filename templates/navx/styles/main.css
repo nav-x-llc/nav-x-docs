@@ -498,7 +498,7 @@ ul.select-locale {
     flex-shrink: 0;
 }
 
-@media screen and (min-width: 768 px) {
+@media screen and (min-width: 768px) {
     ul.select-locale > li {
         width: 32%;
     }
@@ -595,4 +595,93 @@ ul.select-locale {
 
 .input:hover {
 	border-color: hsla(206,100%,35%,1);
+}
+
+.position-relative {
+    position: relative!important;
+    margin-top: 45px;
+}
+
+html *, html :after, html :before {
+    box-sizing: inherit;
+}
+
+.title.is-3 {
+    font-size: 1.75rem;
+}
+
+.box:not(:last-child), .level:not(:last-child), .progress:not(:last-child), .subtitle:not(:last-child), .tabs:not(:last-child), .title:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+.subtitle, .title {
+    word-break: break-word;
+}
+
+.margin-top-sm {
+    margin-block-start: 1.5rem!important;
+}
+
+.alert {
+    word-wrap: break-word;
+    background-color: #f2f2f2;
+    border: 1px solid hsl(0deg 0% 100% / 0%);
+    border-radius: .375rem;
+    color: #171717;
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    outline-color: #171717;
+    padding: 1rem;
+    position: relative;
+    transition: height .5s ease-in, opacity .5s ease-in;
+    word-break: break-word;
+}
+
+.alert>:first-child {
+    margin-top: 0;
+}
+
+.alert>* {
+    max-width: 100%;
+}
+
+.margin-top-xs {
+    margin-block-start: 1rem!important;
+}
+
+.margin-bottom-xxs {
+    margin-block-end: .5rem!important;
+}
+
+.button {
+    background-color: #fff;
+    border-color: #505050!important;
+    border-radius: .125rem;
+    border-width: 1px;
+    color: #171717;
+    font-weight: 600;
+    justify-content: center;
+    padding-block-end: calc(.375em - 1px);
+    padding-block-start:  calc(.375em - 1px);
+    padding-inline-end: .75em;
+    padding-inline-start: .75em;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    border: 1px solid transparent;   
+}
+
+.padding-right-xxs {
+    padding-inline-end: .5rem!important;
+}
+
+p#send-feedback-about {
+    padding: 5px 0px;
 }

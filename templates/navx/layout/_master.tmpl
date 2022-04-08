@@ -46,6 +46,18 @@
             <article class="content wrap" id="_content" data-uid="{{uid}}">
                 {{!body}}
             </article>
+            <section class="feedback-section position-relative" data-bi-name="feedback-section">
+              <h2 id="feedback" class="title is-3 margin-top-sm">Feedback</h2>
+              <div class="alert choose-feedback-type">
+              <p id="send-feedback-about">Submit and view feedback for</p>
+                <div class="choose-feedback-buttons margin-top-xs">
+                  <a class="button feedback-type-product margin-bottom-xxs github-link" aria-label="Send feedback about this page" data-bi-name="create-issue-on-github" 
+                    href="https://github.com/nav-x-llc/nav-x-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.nav-x.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%20Source:%20{{_path}}%0A*%20Language:%20{{_langCode}}">
+                    <span>This page</span>
+                  </a>
+                </div>
+              </div>
+            </section>
           </div>
           {{^_disableAffix}}
           {{>partials/affix}}
