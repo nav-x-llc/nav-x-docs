@@ -68,7 +68,7 @@ jobs:
           port: 22
           protocol: ftps
           local-dir: ./website/
-          server-dir: opt/bitnami/apps/navxdocs/htdocs
+          server-dir: opt/bitnami/apps/navxdocs/htdocs/
 
       - name: "Remove public IP from allowed IPs"
         uses: azure/powershell@v1
