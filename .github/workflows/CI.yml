@@ -60,15 +60,14 @@ jobs:
           azPSVersion: "latest"
           
       - name: "Upload to website"
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: Creepios/sftp-action@v1.0.3
         with:
-          server: ${{ secrets.HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_PASSWORD }}
+          host: '${{ secrets.HOST }}'
           port: 22
-          protocol: ftps
-          local-dir: ./website/
-          server-dir: opt/bitnami/apps/navxdocs/htdocs/
+          username: '${{ secrets.SSH_USER }}'
+          password: '${{ secrets.SSH_PASSWORD }}'
+          localPath: './website/'
+          remotePath: 'opt/bitnami/apps/navxdocs/htdocs/'
 
       - name: "Remove public IP from allowed IPs"
         uses: azure/powershell@v1
