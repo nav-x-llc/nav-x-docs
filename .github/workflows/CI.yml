@@ -35,7 +35,9 @@ jobs:
         uses: azure/powershell@v1
         with:
           inlineScript: |
-            $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq ${{ secrets.HOST }} })
+            $a = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq $env:HOST})
+            Write-Host $a
+            $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq "${{ secrets.HOST }}"" })
             if ($null -eq $publicIp) {
                 throw "Public not found"
             }
