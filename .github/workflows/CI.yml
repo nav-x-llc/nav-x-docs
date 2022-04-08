@@ -20,80 +20,12 @@ jobs:
           workflow_conclusion: success
           name: website
           path: ./website/
-
-      - name: "Get Public IP"
-        id: ip
-        uses: haythem/public-ip@v1.2
-
-      - name: "Login to Azure"
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CRED }}
-          enable-AzPSSession: true
-
-      - name: "Add public IP to allowed IPs"
-        uses: azure/powershell@v1
-        with:
-          inlineScript: |
-            $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq "${{ secrets.HOST }}" })
-            if ($null -eq $publicIp) {
-                throw "Public not found"
-            }
-            $nic = Get-AzNetworkInterface | Where-Object { $_.IpConfigurations.PublicIpAddress.Id -eq $publicIp.Id }
-            if ($null -eq $nic) {
-                throw "Network Interface not found"
-            }
-            $nsg = Get-AzResource -ResourceId $nic.NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
-            if ($null -eq $nsg) {
-                throw "Network Security Group not found"
-            }
-            $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
-
-            if ($ruleExists) {
-                Set-AzNetworkSecurityRuleConfig -Name "github" -Description "github" -Access Allow -Protocol TCP -Direction Inbound -Priority 100 -SourceAddressPrefix ${{ steps.ip.outputs.ipv4 }} -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 22 -NetworkSecurityGroup $nsg | Out-Null
-            }
-            else {
-                $nsg | Add-AzNetworkSecurityRuleConfig -Name "github" -Description "github" -Access Allow -Protocol TCP -Direction Inbound -Priority 100 -SourceAddressPrefix ${{ steps.ip.outputs.ipv4 }} -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 22 | Out-Null
-            }
-
-            $nsg | Set-AzNetworkSecurityGroup | Out-Null
-
-            Write-Host "Waiting to give Azure some time to add the network security group"
-            Start-Sleep -Seconds 10
-          azPSVersion: "latest"
           
       - name: "Upload to website"
-        run: |
-          Install-Module -Name Posh-SSH -Force
-          Import-Module -Name Posh-SSH
-
-          $credential = New-Object System.Management.Automation.PSCredential ('${{ secrets.SSH_USER }}', (ConvertTo-SecureString '${{ secrets.SSH_PASSWORD }}' -AsPlainText -Force))
-          $SFTPSession = New-SFTPSession -ComputerName "${{ secrets.HOST }}" -Credential $credential -Force
-
-          Set-SFTPItem -SFTPSession $SFTPSession -Path './Website/' -Destination '/opt/bitnami/apps/navxdocs/htdocs/'
-
-          Remove-SFTPSession -SFTPSession $SFTPSession
-          
-      - name: "Remove public IP from allowed IPs"
-        uses: azure/powershell@v1
+        uses: Creepios/sftp-action@v1.0.3
         with:
-          inlineScript: |
-            $publicIp = (Get-AzPublicIpAddress | Where-Object {$_.IpAddress -eq "${{ secrets.HOST }}" })
-            if ($null -eq $publicIp) {
-                throw "Public not found"
-            }
-            $nic = Get-AzNetworkInterface | Where-Object { $_.IpConfigurations.PublicIpAddress.Id -eq $publicIp.Id }
-            if ($null -eq $nic) {
-                throw "Network Interface not found"
-            }
-            $nsg = Get-AzResource -ResourceId $nic.NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
-            if ($null -eq $nsg) {
-                throw "Network Security Group not found"
-            }
-
-            $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
-            if ($ruleExists) {
-              Remove-AzNetworkSecurityRuleConfig -Name "github" -NetworkSecurityGroup $nsg | Out-Null
-              $nsg | Set-AzNetworkSecurityGroup | Out-Null
-            }
-          azPSVersion: "latest"
+          host: '${{ secrets.HOST }}'
+          username: '${{ secrets.SSH_USER }}'
+          password: '${{ secrets.SSH_PASSWORD }}'
+          localPath: './website/'
+          remotePath: '/opt/bitnami/apps/navxdocs/htdocs/'
