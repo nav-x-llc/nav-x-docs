@@ -7,6 +7,7 @@
 ## System
 
 - [I want to update my version of NAV-X Commission Management](faq-index.md#i-want-to-update-my-version-of-nav-x-commission-management)
+- [!include[faq-system-questions](../includes/faq-system-questions.md)]
 
 ## Errors
 
@@ -32,6 +33,8 @@ Once you have uninstalled the extension, please make sure that you are again on 
 
 You now have installed the latest version of the extension and can start taking advantage of the latest issue fixes and features.
 
+[!include[faq-system-answers](../includes/faq-system-answers.md)]
+
 ## Errors Answers
 
 ### An unknown error occurred communicating with the licensing server
@@ -47,7 +50,6 @@ Please also [Provide details on the errors](../how-to-debug-service-errors.md) t
 When using a version of our NAV-X Library prior to version 2.0.9 and upgrading to a new Business Central version, you might receive the error "Unable to update tenant". This error is caused by Microsoft changing tenant ids at the time of upgrading to a new Business Central version and our system not being able to determine the new Business Central tenant id. Please open a support ticket with us indicating your Azure Active Directory Tenant ID. We will then be able to update this in our systems.
 
 To determine the *Azure AD Tenant Id*, please go to the question mark on the top right in Business Central and Select **Help & Support**. At the bottom under *Troubleshooting*, you will find the **Azure AD tenant**.
-
 
 Please also [Provide details on the errors](../how-to-debug-service-errors.md) that you are receiving.
 

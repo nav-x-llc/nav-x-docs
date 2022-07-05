@@ -3,6 +3,7 @@
 ## System
 
 - [I want to update my version of NAV-X Search](faq-index.md#i-want-to-update-my-version-of-nav-x-search)
+- [!include[faq-system-questions](../includes/faq-system-questions.md)]
 
 ## System Answers
 
@@ -15,3 +16,5 @@ To update your extensions, you can choose the ![Tell me what you want to do](/im
 Once you have uninstalled the extension, please make sure that you are again on the **Extensions** page and select *Manage > Extension Marketplace*. You then can enter **NAV-X Search** in the **Search Microsoft AppSource** box. Click on the **Free Trial** button and follow the prompts. You can monitor the status of the installation from **Extensions** by selecting *Manage > Deployment Status*.
 
 You now have installed the latest version of the extension and can start taking advantage of the latest issue fixes and features.
+
+[!include[faq-system-answers](../includes/faq-system-answers.md)]
