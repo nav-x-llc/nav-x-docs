@@ -4,6 +4,12 @@ NAV-X provides productivity solutions for Microsoft Dynamics 365 Business Centra
 
 ## Microsoft Dynamics 365 Business Central
 
+## Base Application
+
+The NAV-X Base Application is an app for Dynamics 365 for Business Central that enhances your Business Central experience by adding additional functionality that is useful and not available in standard Business Central. It is fully integrated with Dynamics 365 Business Central.
+
+Navigate to our [NAV-X Base Application](business-central/base/index.md) solution.
+
 ## Commission Management
 
 Microsoft Dynamics 365 Business Central Commission Management allows you to calculate and process commissions for your salespeople or manage royalty payments with the click of a button. If you require assistance or need setup instructions, please visit our documentation section specific to our [Commissions Management](business-central/commissions/index.md) solution.
