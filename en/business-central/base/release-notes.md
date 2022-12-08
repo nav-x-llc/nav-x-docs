@@ -7,3 +7,4 @@ We release new versions of our software from time to time. Those can include fix
 ### Enhancements
 
 - Added **Copy Customer Comments to Sales Documents**
+- Added **Force Default Posting Date on Sales Documents when posting**
