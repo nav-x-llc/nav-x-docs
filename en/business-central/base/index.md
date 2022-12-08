@@ -5,6 +5,7 @@ The NAV-X Base Application is an app for Dynamics 365 for Business Central that 
 ## Added Functionality
 
 - Copy Comments from Customers to Sales Documents
+- Force Default Posting Date on Sales Documents when posting
 
 ## Supported Editions and Countries
 
