@@ -9,6 +9,10 @@ items:
     items:
       - name: Getting Started
         href: comments/getting-started.md
+  - name: Force Posting Date
+    items:
+      - name: Getting Started
+        href: posting-date/getting-started.md
   - name: Release Notes
     href: release-notes.md
   - name: FAQ
