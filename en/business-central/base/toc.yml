@@ -13,6 +13,16 @@ items:
     items:
       - name: Getting Started
         href: posting-date/getting-started.md
+  - name: Cancel Backorders
+    items:
+      - name: Getting Started
+        href: cancel-backorders/getting-started.md
+      - name: How to
+        items:
+          - name: Setup Customers for Backorders
+            href: cancel-backorders/how-to-setup-customers-for-backorders.md
+          - name: Cancel Backorders
+            href: cancel-backorders/how-to-cancel-backorders.md
   - name: Release Notes
     href: release-notes.md
   - name: FAQ
