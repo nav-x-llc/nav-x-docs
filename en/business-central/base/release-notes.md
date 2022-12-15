@@ -8,3 +8,6 @@ We release new versions of our software from time to time. Those can include fix
 
 - Added **Copy Customer Comments to Sales Documents**
 - Added **Force Default Posting Date on Sales Documents when posting**
+- Added **Cancel Backorders**
+- Added **Auto-fill Assigned to User ID**
+- Added **Show Created by/at and Modified by/at fields**
