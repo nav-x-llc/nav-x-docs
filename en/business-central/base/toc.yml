@@ -13,6 +13,14 @@ items:
     items:
       - name: Getting Started
         href: posting-date/getting-started.md
+  - name: Changes to Purchase Documents
+    items:
+      - name: Getting Started
+        href: purchase-changes/getting-started.md
+  - name: Changes to Sales Documents
+    items:
+      - name: Getting Started
+        href: sales-changes/getting-started.md
   - name: Cancel Backorders
     items:
       - name: Getting Started
