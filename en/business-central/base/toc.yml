@@ -21,6 +21,10 @@ items:
     items:
       - name: Getting Started
         href: sales-changes/getting-started.md
+  - name: Changes to Transfer Documents
+    items:
+      - name: Getting Started
+        href: transfer-changes/getting-started.md
   - name: Cancel Backorders
     items:
       - name: Getting Started

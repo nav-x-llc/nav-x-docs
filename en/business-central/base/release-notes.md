@@ -8,6 +8,12 @@ We release new versions of our software from time to time. Those can include fix
 
 - Added **Copy Customer Comments to Sales Documents**
 - Added **Force Default Posting Date on Sales Documents when posting**
-- Added **Cancel Backorders**
-- Added **Auto-fill Assigned to User ID**
-- Added **Show Created by/at and Modified by/at fields**
+- Added **Force Default Posting Date on Purchase Documents when posting**
+- Added **Force Default Posting Date on Transfer Documents when posting**
+- Added **Cancel Back-Orders**
+- Added **Auto-fill Assigned to User ID on Sales Documents**
+- Added **Auto-fill Assigned to User ID on Purchase Documents**
+- Added **Auto-fill Assigned to User ID on Transfer Documents**
+- Added **Show Created by/at and Modified by/at fields on Sales Documents**
+- Added **Show Created by/at and Modified by/at fields on Purchase Documents**
+- Added **Show Created by/at and Modified by/at fields on Transfer Documents**
