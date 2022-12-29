@@ -35,6 +35,16 @@ items:
             href: cancel-backorders/how-to-setup-customers-for-backorders.md
           - name: Cancel Backorders
             href: cancel-backorders/how-to-cancel-backorders.md
+  - name: Sales Release Restrictions
+    items:
+      - name: Getting Started
+        href: sales-release/getting-started.md
+      - name: Page Sales Release Restrictions
+        href: sales-release/page-release-restrictions-sales.md
+      - name: How to
+        items:
+          - name: Apply Restrictions
+            href: sales-release/how-to-apply-restrictions.md
   - name: Release Notes
     href: release-notes.md
   - name: FAQ
