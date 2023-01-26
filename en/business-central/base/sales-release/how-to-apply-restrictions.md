@@ -6,9 +6,9 @@ Restrictions can be defined that will cause the release of a document to fail. T
 
 In the **Release Restrictions (Sales)** page, you can define restrictions for different document types. If you want to define restrictions for the release of a *Sales Order*, you must select *Order* in the **Document Type** field. To restrict the release of a sales order, if no *External Document No.* is defined, you must define the following criteria.
 
-| **Type** | **Field No.**         | **Conditions (Header)** | **Conditions (Line)** | **Validation Type** | **Custom Error Message** |
-|----------|-----------------------|-------------------------|-----------------------|---------------------|--------------------------|
-| Header   | External Document No. |                         |                       | Must Not Be Blank   |                          |
+| **Type** | **Field No.**         | **Conditions (Header)** | **Conditions (Line)** | **Validation Type** | **Custom Error** |
+|----------|-----------------------|-------------------------|-----------------------|---------------------|------------------|
+| Header   | External Document No. |                         |                       | Must Not Be Blank   |                  |
 
 ## Example: Do not release Sales Order, if External Document No. was used within the last month in a Sales Order or Posted Sales Invoice
 
@@ -16,8 +16,8 @@ To prevent the release of a Sales Order, if the **External Document No.** used i
 
 ### Release Restrictions
 
-| **Type** | **Field No.**         | **Conditions (Header)** | **Conditions (Line)** | **Validation Type**                  | **Custom Error Message** |
-|----------|-----------------------|-------------------------|-----------------------|--------------------------------------|--------------------------|
+| **Type** | **Field No.**         | **Conditions (Header)** | **Conditions (Line)** | **Validation Type**                  | **Custom Error** |
+|----------|-----------------------|-------------------------|-----------------------|--------------------------------------|------------------|
 | Header   | External Document No. |                         |                       | Must not exit and field not be empty | The %1 %2 has been used in a different document already. |
 
 ### Release Restriction Lines
