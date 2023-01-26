@@ -13,10 +13,15 @@ The page can be accessed by choosing the ![Tell me what you want to do](/images/
 | **Conditions (Line)**    | If the field is a *header field*, this field is not available. If the field is a *line field*, filter conditions can be entered here and also for the **Condiitons (Header)**. The conditions entered in the look-up are filters that will be applied. For instance, you can define that any item with a specific number must have a specific field filled out. |
 | **Validation Type**      | You can select one of the following values:<br><br>- **Must be Blank**: The field must not have a value defined.<br>- **Must not be Blank**: The field cannot be blank.<br>- **Must be Value**: The field must contain the defined value<br>-**Must not be Value**: The field can have any value other than the value defined in the **Value** field.<br>- **Must not exist**: The value of the field cannot exist in any of the configured tables in the **Value** field. |
 | **Value**                | Define the value that is used as a comparison. This field is only available when the **Validation Type** is either *Must be Value* or *Must not be Value*. If the **Validation Type** is *Must not exist*, different tables and fields can be defined together with filters. |
-| **Custom Error Message** | If the validation fails, a default error message is displayed. If you want to customize your error message, you can define a message here. This will be displayed then instead of the default message. You can use parameters to specify either the field name (%1) or field value (%2). |
+| **Restriction Type**     | Defines when the restriction validation must be done.<br><br>- **Error during Release**: When the sales document is released, this restriction is tested and won't allow the release, if it doesn't pass.<br>- **Error during Entry**: When the data is entered, this restriction is tested and an error is shown, if the restriction fails.<br>- **Warning during Release**: When the sales document is released and the restriction fails, a warning message is shown, which the user can accept and still release the document.<br>- **Warning during Entry**: When the data is entered in the sales document and the restriction is validated, the user will be presented with a warning message, if the restriction fails.
+| **Custom Error**         | If the validation fails, a default error message is displayed. If you want to customize your error message, you can define a message here. This will be displayed then instead of the default message. You can use parameters to specify either the field name (%1) or field value (%2). |
+| **Custom Message*        | If the validation fails and a warning should be displayed, a default warning message is displayed. IF you want to customize this warning message, you can define a message here. This will be displayed then instead of the default message. You can use parameters to specify either the field name (%1) or the field value (%2).
 
 > [!NOTE]
 > For numeric fields, a zero (0) is considered a blank value. For check marks (boolean fields), *No* is considered to be a blank value. If the field is an option field, the first option is considered blank.
+
+> [!IMPORTANT]
+> If you define the **Restriction Type** to be set to warning or error shown during data entry, you must turn on the feature *Auto-save with every field change*. The functionality will not work otherwise until the record is saved when the page is closed or you leave the current record. Learn more about [Feature Management](https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/feature-management).
 
 ## Actions
 
@@ -27,3 +32,4 @@ The **Release Restriction Line** page can be opened to enter different table con
 ## See Also
 
 - [Page Release Restrictions Line](page-release-restrictions-line.md)
+- [Feature Management](https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/feature-management)
