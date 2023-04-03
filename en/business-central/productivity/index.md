@@ -1,17 +1,19 @@
-# Welcome to the Microsoft Dynamics 365 Business Central NAV-X Base Application Help
+# Welcome to the Microsoft Dynamics 365 Business Central Productivity by NAV-X Help
 
-The NAV-X Base Application is an app for Dynamics 365 for Business Central that enhances your Business Central experience by adding additional functionality that is useful and not available in standard Business Central. It is fully integrated with Dynamics 365 Business Central.
+Productivity by NAV-X is an app for Dynamics 365 for Business Central that enhances your Business Central experience by adding additional functionality that is useful and not available in standard Business Central. It is fully integrated with Dynamics 365 Business Central.
 
 ## Added Functionality
 
 - Copy Comments from Customers to Sales Documents
 - Force Default Posting Date on Sales Documents when posting
+- Visibility of creation and last modified timestamps on sales and purchase documents
+- Allow the definition of sales restrictions
 
 ## Supported Editions and Countries
 
 ### Supported Editions
 
-NAV-X Base Application supports both the *Essential* and *Premium* edition of Microsoft Dynamics 365 Business Central.
+Productivity by NAV-X supports both the *Essential* and *Premium* edition of Microsoft Dynamics 365 Business Central.
 
 ### Supported Countries
 
@@ -25,9 +27,12 @@ We currently support the following languages: *English (Canada), English (United
 
 ### Getting Started
 
-We describe the entire process of setting up the available functionality within the NAV-X Base Application to start benefitting quickly. If you just want to get started, please follow our documentation in our **Getting Started** section for the different functionalities:
+We describe the entire process of setting up the available functionality within the Productivity by NAV-X Application to start benefitting quickly. If you just want to get started, please follow our documentation in our **Getting Started** section for the different functionalities:
 
 - Getting Started with [Copy Comments](comments/getting-started.md)
+- Getting Started with [Force Posting Date](posting-date/getting-started.md)
+- Getting Started with [Cancel Back Orders](cancel-backorders/getting-started.md)
+- Getting Started with [Sales Release Restrictions](sales-release/getting-started.md)
 
 ### How to
 
@@ -41,7 +46,7 @@ Whenever we get questions multiple times through our support, we will be enhanci
 
 ## What's New
 
-We release new versions of our software from time to time. Those can include fixes of issues that we found and can also include new functionality. If you have the NAV-X Base Application installed already and a new version becomes available, we will inform you directly within Business Central about this. When you log in to Business Central, the system will display a notification that will inform you about the new version and you can also read about the new features there.
+We release new versions of our software from time to time. Those can include fixes of issues that we found and can also include new functionality. If you have the Productivity by NAV-X Application installed already and a new version becomes available, we will inform you directly within Business Central about this. When you log in to Business Central, the system will display a notification that will inform you about the new version and you can also read about the new features there.
 
 If you want to see an overview of the new features by version, you can read more details about it in our [Release Notes](release-notes.md).
 
