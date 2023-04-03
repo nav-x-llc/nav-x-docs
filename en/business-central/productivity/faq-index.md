@@ -4,27 +4,27 @@
 
 ## System
 
-- [I want to update my version of NAV-X Base Application](faq-index.md#i-want-to-update-my-version-of-nav-x-base-application)
+- [I want to update my version of Productivity by NAV-X](faq-index.md#i-want-to-update-my-version-of-productivity-by-nav-x)
 - [!include[faq-system-questions](../includes/faq-system-questions.md)]
 
 ## Errors
 
 - [An unknown error occurred communicating with the licensing server](faq-index.md#an-unknown-error-occurred-communicating-with-the-licensing-server)
-- [Unable to see NAV-X Base Application functionality](faq-index.md#unable-to-see-nav-x-base-application-functionality)
+- [Unable to see Productivity by NAV-X functionality](faq-index.md#unable-to-see-productivity-by-nav-x-functionality)
 
 ## General Answers
 
 ## System Answers
 
-### I want to update my version of NAV-X Base Application
+### I want to update my version of Productivity by NAV-X
 
-When we release a new version of the NAV-X Base Application, you will want to upgrade to that version. The upgrade does not happen automatically, unless your environment is upgraded to a new major release. This happens in the Spring and Fall of every year. Between those major upgrades, you will need to manually update your extensions.
+When we release a new version of the Productivity by NAV-X Application, you will want to upgrade to that version. The upgrade does not happen automatically, unless your environment is upgraded to a new major release. This happens in the Spring and Fall of every year. Between those major upgrades, you will need to manually update your extensions.
 
 To update your extensions, you can log on to the *Business Central Admin Center* and select your environment. The environment would be either the production environment or one of the sandboxes you have the app installed in. After selecting the proper environment, you can then display all apps that are installed. If you have an app with an update available, it will show there and you can easily update it directly from there. More details are described in the [Microsoft Documentation](https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-manage-apps).
 
-As an alternative, you can also update the app directly from within Business Central. This is a little bit more work, though. To update your extensions, you can choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Extensions**, and then choose the related link. Alternatively, you can also select *Setup & Extensions > Extensions* from the **Role Center**. Then find the extension called **Base Application by NAV-X** and click on **Show More Options**, which is represented by the three dots in the upper right corner of the extension. Select **Uninstall** and follow the instructions.
+As an alternative, you can also update the app directly from within Business Central. This is a little bit more work, though. To update your extensions, you can choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Extensions**, and then choose the related link. Alternatively, you can also select *Setup & Extensions > Extensions* from the **Role Center**. Then find the extension called **Productivity by NAV-X** and click on **Show More Options**, which is represented by the three dots in the upper right corner of the extension. Select **Uninstall** and follow the instructions.
 
-Once you have uninstalled the extension, please make sure that you are again on the **Extensions** page and select *Manage > Extension Marketplace*. You then can enter **NAV-X Base Application** in the **Search Microsoft AppSource** box. Click on the **Free Trial** button and follow the prompts. You can monitor the status of the installation from **Extensions** by selecting *Manage > Deployment Status*.
+Once you have uninstalled the extension, please make sure that you are again on the **Extensions** page and select *Manage > Extension Marketplace*. You then can enter **Productivity by NAV-X** in the **Search Microsoft AppSource** box. Click on the **Free Trial** button and follow the prompts. You can monitor the status of the installation from **Extensions** by selecting *Manage > Deployment Status*.
 
 You now have installed the latest version of the extension and can start taking advantage of the latest issue fixes and features.
 
@@ -40,14 +40,14 @@ To rectify this, you can choose the ![Tell me what you want to do](/images/magni
 
 Please also [Provide details on the errors](../how-to-debug-service-errors.md) that you are receiving.
 
-### Unable to see NAV-X Base Application functionality
+### Unable to see Productivity by NAV-X functionality
 
-There are various reasons why you cannot see the NAV-X Base Application functionality. We will go through the different reasons why you might be experiencing the issue:
+There are various reasons why you cannot see the Productivity by NAV-X functionality. We will go through the different reasons why you might be experiencing the issue:
 
 1. You don't have a license
  Choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **About NAV-X**, and then choose the related link to open the related page. On this page, you will see the different NAV-X apps that you have installed at the bottom under *Our Installed Apps*. Please validate that the **License Type** is set to **Trial** or **Full** and that the **Expiration Date** is in the future.
 
- If this is not the case, select the NAV-X App in question and drop down next to *Apps* and then select the **App Registration** action to go through the registration of the product. Please ensure that you log out of Business Central and log back in.
+ If you do not have a license, your system administrator can validate within the Microsoft Admin Center, if you have a license assigned or if additional licenses are available to be assigned to you. If no additional licenses are available, you can buy extra licenses directly through AppSource.
 2. You have a license, but the license information is not up to date
  If you have paid for the subscription, but your license information does not show up in the **About NAV-X** page, please choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **About NAV-X**, and then choose the related link to open the related page. Then select the action **Reset License Information**. If your license then shows up properly, please ensure that you log out and log back in again.
 3. You do not have the correct permissions

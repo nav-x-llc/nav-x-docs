@@ -4,12 +4,6 @@ NAV-X provides productivity solutions for Microsoft Dynamics 365 Business Centra
 
 ## Microsoft Dynamics 365 Business Central
 
-## Base Application
-
-The NAV-X Base Application is an app for Dynamics 365 for Business Central that enhances your Business Central experience by adding additional functionality that is useful and not available in standard Business Central. It is fully integrated with Dynamics 365 Business Central.
-
-Navigate to our [NAV-X Base Application](business-central/base/index.md) solution.
-
 ## Commission Management
 
 Microsoft Dynamics 365 Business Central Commission Management allows you to calculate and process commissions for your salespeople or manage royalty payments with the click of a button. If you require assistance or need setup instructions, please visit our documentation section specific to our [Commissions Management](business-central/commissions/index.md) solution.
@@ -33,6 +27,12 @@ Navigate to our [Credit Card](business-central/creditcard/index.md) solution.
 National Accounts for Microsoft Dynamics 365 Business Central enables you to manage complex customer relationships for buying groups and other national chains. It allows you to pay invoices for multiple customers at the same time from the National Accounts customer, applying payments and credit memos throughout the entire national accounts structure.
 
 Navigate to our [National Accounts](business-central/national-accounts/index.md) solution.
+
+## Productivity by NAV-X
+
+Productivity by NAV-X is an app for Dynamics 365 for Business Central that enhances your Business Central experience by adding additional functionality that is useful and not available in standard Business Central. It is fully integrated with Dynamics 365 Business Central.
+
+Navigate to our [Productivity by NAV-X](business-central/productivity/index.md) solution.
 
 ## Search - Free
 

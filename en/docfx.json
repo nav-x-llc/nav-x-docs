@@ -27,20 +27,20 @@
       },
       {
           "files": [
-              "business-central/base/**.md",
               "business-central/commissions/**.md",
               "business-central/credit-management/**.md",
               "business-central/credit-card/**.md",
-              "business-central/search/**.md",
-              "business-central/national-accounts/**.md"
+              "business-central/national-accounts/**.md",
+              "business-central/productivity/**.md",
+              "business-central/search/**.md"
           ],
           "exclude": [
-              "business-central/base/toc.yml",
               "business-central/commissions/toc.yml",
               "business-central/credit-management/toc.yml",
               "business-central/credit-card/toc.yml",
-              "business-central/search/toc.yml",
-              "business-central/national-accounts/toc.yml"
+              "business-central/national-accounts/toc.yml",
+              "business-central/productivity/toc.yml",
+              "business-central/search/toc.yml"
           ]
       }
     ],
