@@ -63,10 +63,10 @@ On the next step of the wizard, you can define, if you will have different commi
 
 |                                  |                                                                                                                            |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| **Initial Rate per Campaign**    | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
-| **Initial Rate per Ship-to**     | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
-| **Initial Rate per Salesperson** | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
-| **Initial Rate per Entity**      | Customers with past due invoices will only be excluded, if the amount past due is greater than a percentage of the full outstanding amount. |
+| **Initial Rate per Campaign**    | If an *Initial Rate* is utilized, should each campaign be treated as a separate "initial sale"?.                           |
+| **Initial Rate per Ship-to**     | If an *Initial Rate* is utilized, is the initial rate applied for each initial purchase of an individual ship-to address or only for the customer as a whole? |
+| **Initial Rate per Salesperson** | If an *Initial Rate* is utilized, should each different salesperson's first sale to this customer be treated as an initial sale? |
+| **Initial Rate per Entity**      | If an *Initial Rate* is utilized, should each item (or resource, G/L account) be treated as a separate initial sale?       |
 | **Initial Rate Starting Date**   | Defines how the system will calculate the starting date of what constitutes an initial sale. The options are:<br><br>- Document Date: The initial rate time frame starts from the time that the first order/transaction was entered.<br>- Shipment Date: The initial rate timeframe start from the time that the first shipment was sent to the customer.<br>- Invoice Date: The initial rate time frame starts from the date the first invoice was posted. |
 | **Initial Rate Duration**        | Together with the field **Initial Rate Period** this defines the time frame for the initial sale commissions. If the fields **Initial Rate Starting Date**, **Initial Rate Duration**, and **Initial Rate Period** are empty, only the first sale qualifies for the additional commission rates. |
 | **Initial Rate Period**          | Together with the field **Initial Rate Period** this defines the time frame for the initial sale commissions. The possible options are:<br><br>- Day<br>- Week<br>- Month<br>- Quarter<br>- Year |
