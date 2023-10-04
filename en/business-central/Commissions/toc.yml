@@ -105,6 +105,8 @@ items:
         href: power-bi.md
       - name: Custom Rates
         href: develop-custom-rates.md
+      - name: Custom Fields in Ledger Entries
+        href: develop-custom-fields-in-ledger-entries.md
   - name: Additional
     items:
       - name: Release Notes
