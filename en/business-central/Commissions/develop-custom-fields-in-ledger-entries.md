@@ -21,7 +21,7 @@ Add the new fields to the following to the following tables:
 - NAVX Comm. Journal Line (Table 70020078)
 - NAVX Comm. Ledg. Entry (Table 70020093)
 
-> [NOTE]
+> [!NOTE]
 > Please ensure that the fields you are adding to the tables have the same field number in each of the tables as well as the same type and length.
 
 If you want to display those fields, please also add those to the following pages:
