@@ -40,6 +40,12 @@ Microsoft Dynamics 365 Business Central Search allows you to search any data in 
 
 Navigate to our [Search](business-central/search/index.md) solution.
 
+## Warehouse Productivity by NAV-X
+
+Warehouse Productivity by NAV-X is an app for Dynamics 365 for Business Central that enhances your Business Central experience by adding additional functionality that is useful for users utilitzing Warehouse Management and not available in standard Business Central. It is fully integrated with Dynamics 365 Business Central.
+
+Navigate to our [Warehouse Productivity by NAV-X](business-central/warehouse/index.md) solution.
+
 ## I have questions, but can't find the answer
 
 If you cannot find an answer to your questions online on our documentation, don't worry. We are here for you with our team of experts. Just go to our [Support](https://nav-x.com/support/) page and send us your question. We will get back to you as soon as we can.
