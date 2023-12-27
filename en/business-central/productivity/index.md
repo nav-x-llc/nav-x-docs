@@ -36,7 +36,7 @@ We describe the entire process of setting up the available functionality within 
 
 ### How to
 
-Whether you have just completed the initial setup or are processing commissions for a while already, you can find a series of articles describing the main processes in our **How To** section.
+Whether you have just completed the initial setup or are using the Productivity by NAV-X app for a while already, you can find a series of articles describing the main processes in our **How To** section.
 
 We are expanding this section periodically.
 

@@ -10,7 +10,7 @@ Permissions for the app must be setup before the setup is started to ensure that
 
 ### To start the Setup
 
-You can choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter *Sales & Receivables Setup**, and then choose the related link.
+You can choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Sales & Receivables Setup**, and then choose the related link.
 
 [!include[eula](../../includes/eula-page.md)]
 

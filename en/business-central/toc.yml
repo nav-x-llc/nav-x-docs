@@ -19,3 +19,6 @@ items:
   - name: NAV-X Search
     href: search/toc.yml
     topicHref: search/index.md
+  - name: Warehouse Productivity by NAV-X
+    href: warehouse/toc.yml
+    topicHref: warehouse/index.md

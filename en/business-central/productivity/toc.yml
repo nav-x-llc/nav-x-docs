@@ -39,12 +39,14 @@ items:
     items:
       - name: Getting Started
         href: sales-release/getting-started.md
-      - name: Page Sales Release Restrictions
-        href: sales-release/page-release-restrictions-sales.md
-      - name: Page Sales Release Restrictions Line
-        href: sales-release/page-release-restrictions-line.md
-      - name: Page Sales Release Restrictions Relation
-        href: sales-release/page-release-restrictions-relation.md
+      - name: Pages
+        items:
+        - name: Page Sales Release Restrictions
+          href: sales-release/page-release-restrictions-sales.md
+        - name: Page Sales Release Restrictions Line
+          href: sales-release/page-release-restrictions-line.md
+        - name: Page Sales Release Restrictions Relation
+          href: sales-release/page-release-restrictions-relation.md
       - name: How to
         items:
           - name: Apply Restrictions
