@@ -31,6 +31,9 @@ The **Location** card contains the fast tab *Warehouse Automation*. New fields h
 | **Use same Bin for Put-Away from Pick**           | If enabled, the Bin used in the Put-Away is set to the same Bin the inventory is taken from during the Pick in an automatic transfer order processing. |
 | **Create Bins for Put-Away**                      | If enabled, the Bin is created in the Location and Zone for the Put-Away, if it does not exist yet. |
 
+> [!NOTE]
+> If the option **Use same Bin for Put-Away from Pick** is enabled, you must ensure that the zones in the two locations are the same zone codes. Otherwise, you will not see the desired results as the system will create the zone from the pick in the destination location.
+
 ## See Also
 
 - [Permission Setups](../permission-setups.md)
