@@ -4,6 +4,20 @@ We release new versions of our software from time to time. Those can include fix
 
 The versions are listed below from the newest version to the earliest version. We have not listed any versions that have been published before December 2019.
 
+- [June 2024 Update - Version 2.5.208](release-notes/release-notes-2-5-208.md)
+
+- [June 2024 Update - Version 2.4.202](release-notes/release-notes-2-4-202.md)
+
+- [May 2024 Patch - Version 2.4.200](release-notes/release-notes-2-4-200.md)
+
+- [April 2024 Update - Version 2.4.189](release-notes/release-notes-2-4-189.md)
+
+- [April 2024 Update - Version 2.3.181](release-notes/release-notes-2-3-181.md)
+
+- [April 2024 Patch - Version 2.3.180](release-notes/release-notes-2-3-180.md)
+
+- [March 2024 Patch - Version 2.3.179](release-notes/release-notes-2-3-179.md)
+
 - [March 2024 Patch - Version 2.3.178](release-notes/release-notes-2-3-178.md)
 
 - [March 2024 Update - Version 2.3.176](release-notes/release-notes-2-3-176.md)
@@ -83,6 +97,22 @@ The versions are listed below from the newest version to the earliest version. W
 - [November 2023 Patch - Version 2.3.121](release-notes/release-notes-2-3-121.md)
 
 - [November 2023 Patch - Version 2.3.120](release-notes/release-notes-2-3-120.md)
+
+- [October 2023 Update - Version 2.3.118](release-notes/release-notes-2-3-118.md)
+
+- [September 2023 Patch - Version 2.3.103](release-notes/release-notes-2-3-103.md)
+
+- [August 2023 Patch - Version 2.3.98](release-notes/release-notes-2-3-98.md)
+
+- [July 2023 Update - Version 2.3.91](release-notes/release-notes-2-3-91.md)
+
+- [June 2023 Update - Version 2.3.83](release-notes/release-notes-2-3-83.md)
+
+- [May 2023 Update - Version 2.3.69](release-notes/release-notes-2-3-69.md)
+
+- [March 2023 Patch - Version 2.3.45](release-notes/release-notes-2-3-45.md)
+
+- [February 2023 Patch - Version 2.2.34](release-notes/release-notes-2-2-34.md)
 
 - [August 2021 Update - Version 2.1.28](release-notes/release-notes-2-1-28.md)
 
