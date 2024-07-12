@@ -4,6 +4,8 @@ We release new versions of our software from time to time. Those can include fix
 
 The versions are listed below from the newest version to the earliest version. We have not listed any versions that have been published before December 2019.
 
+- [July 2024 Patch - Version 2.5.218](release-notes/release-notes-2-5-218.md)
+
 - [July 2024 Patch - Version 2.5.214](release-notes/release-notes-2-5-214.md)
 
 - [June 2024 Update - Version 2.5.210](release-notes/release-notes-2-5-210.md)

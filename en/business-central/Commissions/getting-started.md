@@ -41,15 +41,17 @@ The next step of the Assisted Setup allows you to define the rules when commissi
 
 When you click **Next**, additional setups can be defined that.
 
-|                                                    |                                                                                                    |
-|----------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| **Exclude Credit Memos from Commissions**          | You can select, if you want to include or exclude credit memos from commission calculations. If credit memos are included, negative commissions will be calculated on credit memos and these commissions will be charged back to the salesperson. Credit memos lower the salesperson’s commissions in the month that they are posted. |
-| **Do not synchronize Commission Split**     | If this field is enabled, the *Commission Split* will not be copied from the Customer or Ship-to Addresses, but will be defined based on the **Salesperson Code** on the sales document or the **Commission Split Mappings**. Read more about [Commission Split Mappings](page-commission-split-mapping.md). |
-| **Commission Calendar**                     | When commissions are calculated based on *Percentage Billable*, this field defines the calendar used to define the working days in a period. This can also be overwritten on Resources, Resource Groups, Items, or Item Categories. |
+|                                                        |                                                                                                    |
+|--------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **Exclude Credit Memos from Commissions**              | You can select, if you want to include or exclude credit memos from commission calculations. If credit memos are included, negative commissions will be calculated on credit memos and these commissions will be charged back to the salesperson. Credit memos lower the salesperson’s commissions in the month that they are posted. |
+| **Do not synchronize Commission Split**                | If this field is enabled, the *Commission Split* will not be copied from the Customer or Ship-to Addresses, but will be defined based on the **Salesperson Code** on the sales document or the **Commission Split Mappings**. Read more about [Commission Split Mappings](page-commission-split-mapping.md). |
+| **Do not use Commission Splits defined on the header** | If this field is enabled, the *Commission Split* will ony be calculated based on the Commission Splits defined on the document lines. |
+| **Commission Calendar**                                | When commissions are calculated based on *Percentage Billable*, this field defines the calendar used to define the working days in a period. This can also be overwritten on Resources, Resource Groups, Items, or Item Categories. |
+| **Work Date for Resources**                            | When commissions are calculated based on *Percentage Billable*, the date used as the **Commission Effective Date** can be defined in this field. Any date fields from the *Sales Lines* can be picked. |
 
 ### Reason Codes
 
-The next step of the Assisted Setup provides configuration options for different reason codes used throughout the system. 
+The next step of the Assisted Setup provides configuration options for different reason codes used throughout the system.
 
 |                                                    |                                                                                                    |
 |----------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -59,7 +61,7 @@ The next step of the Assisted Setup provides configuration options for different
 
 ### Initial Rates
 
-On the next step of the wizard, you can define, if you will have different commission rates for an initial purchase a customer makes and for all subsequent purchases. 
+On the next step of the wizard, you can define, if you will have different commission rates for an initial purchase a customer makes and for all subsequent purchases.
 
 |                                  |                                                                                                                            |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -93,13 +95,44 @@ In the next step of the assisted setup, you can define, if you want the system t
 
 By selecting **Use only most specific Commission Rates**, you can define different rates on different levels of the hierarchy. The system will always use the most specific rate setup when retrieving the commission rates.
 
-If you want to use tiered or *Hockey Stick* commissions, you must select **Create Zero Amount Ledger Entries**. This will create commission ledger entries, even if a salesperson does not receive a commission for a specific sale, but is involved in the sale. This then will be counted towards the total sales amount in a given period.
+If you want to use tiered or *Hockey Stick* commissions, you must select **Create Zero Amount Ledger Entries**. This will create commission ledger entries, even if a salesperson does not receive a commission for a specific sale, but is involved in the sale. This then will be counted towards the total sales amount in a given period. **Create Zero Amount Ledger Entries for Resources** can be used to define whether commission ledger entries should be created for Resources, even if the resource doesn't receive a commission for the specific work. The resource must be defined on the document.
 
 By default, commissions are calculated on positive and negative lines on a sales transaction, which means that a specific sales transaction could turn into a negative total commission or a commission claw back. If you want to not claw back commissions from your salespeople in this scenario, activate the field **Prevent Negative Commission** on the next step. Whenever credit memos are processed, those credit memos result in negative commissions. Even with “Prevent Negative Commission” activated, it does still calculate the commissions for credit memos.
 
 If a salesperson sold less during a period than the credit memos processed for this salesperson’s customers, the commission amount could be negative at the end of the period. If you do not want to claw back commissions from your salespeople in this scenario, you can activate the field **Prevent Negative Total Commission**.
 
+### To configure Commission Management Features
+
 The NAV-X Commission Management app has rich functionality, grouped into different features that can be seen on the next two steps. If you do not anticipate using some of the features, you can turn those features off. If you plan on using specific features, you can turn those on. This can be changed at any time. Turning a feature off removes the associated actions from the pages and menus and hides fields that only are used in conjunction with these features. This allows a cleaner and simpler user interface to let you focus more on your specific tasks.
+
+|                                                                |                                                                                            |
+|----------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| **Commissions by Campaigns**                                   | You can define different commission rates per sales campaigns that you are running. Only when this campaign is defined on the document, the rate is calculated from the specific rates defined for this campaign. If you do not anticipate using this feature, please make sure that this is not checked. |
+| **Commissions by Managers**                                    | You can define commission calculations for sales managers that receive commission payments based on the performance of their team. You can define different commission rates per sales campaigns that you are running. Only when this campaign is defined on the document, the rate is calculated from the specific rates defined for this campaign. If you do not anticipate using this feature, please make sure that this is not checked. |
+| **Different Commissions for overdue Documents**                | You can define that commissions are reduced for overdue invoices. If a customer does not pay an outstanding invoice on time, you can define different percentages to define how much the commissions are reduced based on the days overdue. If you do not anticipate using this feature, please make sure that this is not checked. |
+| **Different Commissions based on initial sale for a customer** | You can calculate different commissions for the initial sale for a new customer. This can be used to incentivize salespeople to sign up new customers. |
+| **Different Commissions by Dimensions**                        | You can define different commission rates based on the dimension values for global dimensions 1 and 2. If you do not anticipate using this feature, please make sure that this is not checked. |
+| **Use Maximum Commission Limits**                              | You can define maximum amounts that will be paid as commission per period. This can limit the commission a salesperson can receive per period based on different filter criteria. If you do not anticipate using this feature, please make sure that this is not checked. |
+| **Use Commission Types**                                       | Commission types are tags on different commission rates to classify commissions. These types are posted to the **Commission Ledger Entries** and can be used for reporting. They do not have any other functionality in the system. |
+| **Use Recalculate Period**                                     | If sales for a specific salesperson reaches the next commission tier, the commission for already posted and possibly paid commissions can be recalculated to increase the commission rates based on the new commission rate for this tier. |
+| **Use Time Based Commission**                                  | If you are calculating commissions based on hours billed, activate this field |
+| **Allow Commission Payments to Resources**                     | If you are calculating commissions based on hours billed and want to configure resources to be paid for the commissions instead of using salespeople, activate this field |
+| **Include Commissions from all Companies**                     | If the salespeople selling or resources are working for multiple companies within your Business Central environment, you can activate this field to accummulate the sales and worked hours from all companies to apply commission tiers based on the combined numbers. |
+
+### Defaults
+
+You can configure default settings for **Items**, **Resources**, **Item Charges**, and **G/L Accounts**. If you activate any of the fields, the system will configure new Items, Resources, Item Charges, or G/L Accounts marked as **Commissionable**.
+
+### Performance Optimization
+
+Typically, no configuration is needed here. If you have a lot of orders being imported or entered at the same time, you can configure different rules as to when commissions are calculated.
+
+|                                                 |                                                                                                               |
+|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| **Don't calculate commissions on transactions** | This turns off any automatic commission calculation completely. To calculate commissions, you will have to run the **Recalculate Sales Document Commissions** or **Recalculate Posted Sales Document Commissions**. |
+| **No Calculation During Document Entry**        | If you notice decreased performance during order entry, you can activate this switch. It will then not calculate any commissions automatically anymore during the document entry, but will make the following switches available to activate. If none of these switches are activated, commissions are not automatically calculated and will have to be calculated manually. |
+| **Calculation During Document Release**         | This switch can only be activated, if **No Calculation During Document Entry** is enabled. If this is set, the commissions for the current document are automatically calculated at the time of document release. |
+| **Calculation before Posting**                  | This switch can only be activated, if **No Calculation During Document Entry** is enabled. If this is set, the commissions for the current document are automatically calculated at the time of posting the document. |
 
 ### To calculate commissions for Journal Entries
 
@@ -117,6 +150,17 @@ In the next step of the wizard, you can select different G/L Accounts for the co
 
 Each user can see their own commissions, based on the **Salespers./Purch. Code** defined in the **User Setup** page. However, normal users cannot modify commissions or process commissions. Only commission managers have the rights to modify commission rates, process commissions at month end, and see all commissions. This following page will allow you to define the users that are commission managers. Just activate **Commission Manager** for each user that should have those rights.
 
+Additional user configurations can be defined to define what a specific user can see:
+
+|                                       |                                                                                                                        |
+|---------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| **Show All Commissions**              | When a user is not a *Commission Manager*, only their own commissions are shown to the user. If this field is activated, the user can see all commissions |
+| **Hide Costs, Amounts, Gross Profit** | If this field is activated, Costs, Amounts, and Gross Profits are hidden on all Commission Lines, Posted Commission Lines, and also Commission Ledger Entries. |
+| **Hide Commission Amounts**           | If this field is activated, Commission Amounts are hidden on all Commission Lines, Posted Commission Lines, and also Commission Ledger Entries. |
+| **Hide Commission Rates**             | If this field is activated, Commission Rates are hidden on all  Commission Lines, Posted Commission Lines, and also Commission Ledger Entries. |
+| **Edit Commission Ledger Entries**    | If this field is activated, certain fields can be edited on Commission Ledger Entries.                                 |
+| **Edit Commission Splits**            | If this field is activated, **Commission Splits** can be edited.                                                       |
+
 You can always make those changes later as defined in the [additional setups](additional-setups.md).
 
 ### To manage salespeople
@@ -131,10 +175,11 @@ Commissions can be paid to salespeople via purchase invoices or sales credit mem
 - %2: Month (numeric)
 - %3: Year (four digit)
 - %4: Month (Name)
+- %5: Salesperson No.
 
 For instance, you can define "COMM %4 %3", which will then be translated into "COMM OCTOBER 2020", for instance.
 
-Additionally, you can define the **Document No. for Manager Commissions**, which will generate a document number when posting manager commission amounts into the Commission Ledger Entries. This is done on a monthly basis. The same parameters as described above can be used.
+Additionally, you can define the **Document No. for Manager Commissions**, which will generate a document number when posting manager commission amounts into the Commission Ledger Entries. This is done on a monthly basis. The same parameters as described above can be used. For manager commissions, the **Manager Customer Posting Group** also must be defined so that manager commission amounts can be posted to the General Ledger.
 
 You can define for each Item, Resource, G/L Account, and Item Charge, if one is commissionable or not. Initially, a new item, for instance, is not commissionable. You can change this at the time you are [importing commissions](how-to-import-commissions.md) or you can also define how all of your existing records are configured. This will be implemented at the end of the wizard. With these last setups, you are done. As long as you configured everything: you are ready to process commissions. Please follow our How-To’s on the left to learn how to perform the different tasks.
 
