@@ -8,6 +8,17 @@ The **User Setup** should be reviewed or updated for each user working with comm
 
 Each salesperson with access to the system should not have this field checked and must have their **Salesp./Purch. Code** defined in the **User Setup**.  NAV-X Commission Management restricts access to functionality and data, in addition to permission setups, also with the **User Setup**. If a user is not setup as **Commission Manager**, they only can see their commissions throughout the system. This is done by using the **Salesp./Purch. Code** in the **User Setup** and filter any pages and reports to that value.
 
+Additional user configurations can be defined to define what a specific user can see:
+
+|                                       |                                                                                                                        |
+|---------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| **Show All Commissions**              | When a user is not a *Commission Manager*, only their own commissions are shown to the user. If this field is activated, the user can see all commissions |
+| **Hide Costs, Amounts, Gross Profit** | If this field is activated, Costs, Amounts, and Gross Profits are hidden on all Commission Lines, Posted Commission Lines, and also Commission Ledger Entries. |
+| **Hide Commission Amounts**           | If this field is activated, Commission Amounts are hidden on all Commission Lines, Posted Commission Lines, and also Commission Ledger Entries. |
+| **Hide Commission Rates**             | If this field is activated, Commission Rates are hidden on all  Commission Lines, Posted Commission Lines, and also Commission Ledger Entries. |
+| **Edit Commission Ledger Entries**    | If this field is activated, certain fields can be edited on Commission Ledger Entries.                                 |
+| **Edit Commission Splits**            | If this field is activated, **Commission Splits** can be edited.                                                       |
+
 ## Customer Posting Groups
 
 When commissions are calculated and you have defined that the commissions should be accrued in the general ledger, you must define a commission liability and commission expense account. You also need this setup for the processing report to post costs to the General Ledger and to pay commissions at the end of the month.
