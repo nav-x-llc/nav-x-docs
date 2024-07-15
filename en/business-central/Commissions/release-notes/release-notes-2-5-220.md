@@ -1,4 +1,10 @@
-# Release Notes for July 2024 Patch - Version 2.5.218
+# Release Notes for July 2024 Update - Version 2.5.220
+
+## New Features
+
+### Notes on Commission Ledger Entries
+
+A new factbox has been added to the **Commission Ledger Entries** page. You can use the factbox to add notes to each commission ledger entry. This can be useful to define reasons why adjustment have been made to a specific Commission Ledger Entry.
 
 ## Resolved Issues
 
@@ -17,6 +23,10 @@ Document Status is ‘Completely Invoiced’ rather than ‘Completely Paid’ w
 ### Salesperson Edit in Commission Split
 
 When the salesperson is changed in the *Commission Split*, no reversing Commission Ledger Entry is created for the salesperson that has been removed from the split. This has been corrected.
+
+### Date Invoice Paid on Partial Cash Applications
+
+When a partial cash application is posted and any payments are posted after the first payment, the commission ledger entries will all be updated with the same **Date Invoice Paid** as well with the same **Date Payable** instead of using the correct dates from the specific payment. This has been corrected.
 
 ## See Also
 
