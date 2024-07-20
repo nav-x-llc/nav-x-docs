@@ -1,10 +1,14 @@
-# Release Notes for July 2024 Update - Version 2.5.220
+# Release Notes for July 2024 Update - Version 2.5.225
 
 ## New Features
 
 ### Notes on Commission Ledger Entries
 
 A new factbox has been added to the **Commission Ledger Entries** page. You can use the factbox to add notes to each commission ledger entry. This can be useful to define reasons why adjustment have been made to a specific Commission Ledger Entry.
+
+### Automatic emailing of Commission Reports
+
+The functionality has been updated to work with the different possible email accounts that can be setup in Business Central.
 
 ## Resolved Issues
 
@@ -27,6 +31,10 @@ When the salesperson is changed in the *Commission Split*, no reversing Commissi
 ### Date Invoice Paid on Partial Cash Applications
 
 When a partial cash application is posted and any payments are posted after the first payment, the commission ledger entries will all be updated with the same **Date Invoice Paid** as well with the same **Date Payable** instead of using the correct dates from the specific payment. This has been corrected.
+
+### Copy Document for unposted documents
+
+When copying documents from an unposted document, such as a sales order or sales invoice, the commission splits and commission lines have not been copied as well. This has been corrected.
 
 ## See Also
 
