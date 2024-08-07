@@ -1,0 +1,3 @@
+|                          |                                                                                                                                     |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| **Automate Integration** | If you want to run the synchronization automatically in periodic intervals, you can check this field. This will activate the Job Queue Entry for the automatic synchronization. You can customize the synchronization more, for details read [here](../additional-setups.md#job-queue) |

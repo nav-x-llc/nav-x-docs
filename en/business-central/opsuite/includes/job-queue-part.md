@@ -1,0 +1,5 @@
+If you want to run the synchronization between OpSuite™ and Business Central automatically, you must review and activate the **Job Queue Entry** provided by us for this feature. Choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Job Queue Entries**, and then choose the related link.
+
+You will find a **Job Queue Entry** for *Report OpSuite Manual Synchronization* that has the **Status** set to **On Hold**. If you used the **Assisted Setup**, you could have turned on the job queue entry already. Please select this row and then choose the action **Edit**. By default, it is configured to run once a day between 8 pm and midnight in your local timezone. You can review those settings and change them to have the report run during different days and different times. We do recommend not changing the **No. of Minutes between Runs**, since it is not necessary to run this report more than once a day.
+
+Once you have made the appropriate changes, you can **Set Status to Ready**. This action will start running the report now based on your settings and then send out emails automatically.

@@ -28,6 +28,12 @@ National Accounts for Microsoft Dynamics 365 Business Central enables you to man
 
 Navigate to our [National Accounts](business-central/national-accounts/index.md) solution.
 
+## OpSuite™ Integration
+
+The OpSuite Integration by NAV-X enables you to synchronize data between the retail management system OpSuite™ and Microsoft Dynamics 365 Business Central. You can determine different levels of integration; from a financial summary only to a detailed transaction based integration, including inventory details.
+
+Navigate to our [OpSuite™ Integration](business-central/opsuite/index.md) solution.
+
 ## Productivity by NAV-X
 
 Productivity by NAV-X is an app for Dynamics 365 for Business Central that enhances your Business Central experience by adding additional functionality that is useful and not available in standard Business Central. It is fully integrated with Dynamics 365 Business Central.
