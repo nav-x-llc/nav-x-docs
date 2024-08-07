@@ -1,0 +1,4 @@
+|                   |                                                                                                                                      |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| **User Name**     | Please enter the username you are using to log on to OpSuite™.                                                                       |
+| **Password**      | Please enter the password you are using to log on to OpSuite™.                                                                       |

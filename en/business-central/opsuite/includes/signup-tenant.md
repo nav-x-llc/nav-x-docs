@@ -1,0 +1,3 @@
+If you do not have a tenant for Microsoft Dynamics 365 Business Central, you can sign up for a [free trial](https://trials.dynamics.com/Dynamics365/Signup/businesscentral).
+
+Once you have completed the sign up and your tenant is up and running, you can add the NAV-X OpSuite™ Integration app from the [AppSource Marketplace](https://appsource.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.navx|AID.nav-x_warehouse_productivity|PAPPID.eb9dd971-a2f8-4e3e-8a66-067d8606405e). If you have questions about the installation process of an app through Microsoft AppSource, you can find more information on [installing apps](https://docs.microsoft.com/en-US/dynamics365/business-central/ui-extensions) on the Microsoft Docs site.

@@ -1,0 +1,3 @@
+|                                |                                                                                                                               |
+|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| **Financial Integration Nos.** | Please define the number series, which will be used to generated General Journal postings for the financial summary data that is imported from OpSuite™ on a daily basis. |

@@ -1,0 +1,35 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Additional Setups
+        href: additional-setups.md
+      - name: Job Queue Setup
+        href: job-queue-setup.md
+      - name: General Ledger Mapping
+        href: page-gl-map.md
+  - name: How To
+    items:
+      - name: Process financial summary data
+        href: how-to-finance.md
+  - name: Pages
+    items:
+      - name: OpSuite Integration Setup
+        href: page-opsuite-setup.md
+      - name: Finance Journal
+        href: page-finance-journal.md
+      - name: General Ledger Mapping
+        href: page-gl-map.md
+  - name: Reports
+    items:
+      - name: OpSuite Manual Synchronization
+        href: report-manual-synchronization.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md

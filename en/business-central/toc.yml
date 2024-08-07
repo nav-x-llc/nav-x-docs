@@ -1,22 +1,25 @@
 items:
   - name: Welcome to NAV-X for Business Central
     href: index.md
-  - name: NAV-X Commission Management
+  - name: Commission Management
     href: commissions/toc.yml
     topicHref: commissions/index.md
-  - name: NAV-X Credit Card
+  - name: Credit Card
     href: creditcard/toc.yml
     topicHref: creditcard/index.md
-  - name: NAV-X Credit Management
+  - name: Credit Management
     href: credit-management/toc.yml
     topicHref: credit-management/index.md
-  - name: NAV-X National Accounts
+  - name: National Accounts
     href: national-accounts/toc.yml
     topicHref: national-accounts/index.md
+  - name: OpSuite Integration
+    href: opsuite/toc.yml
+    topicHref: opsuite/index.md
   - name: Productivity by NAV-X
     href: productivity/toc.yml
     topicHref: productivity/index.md
-  - name: NAV-X Search
+  - name: Search
     href: search/toc.yml
     topicHref: search/index.md
   - name: Warehouse Productivity by NAV-X
