@@ -44,6 +44,10 @@ Processing of credit memos follows the same steps as the above described order p
 
 Commissions for credit memos will become “payable” as soon as they are posted. They will reduce the salesperson commission for the specific period.
 
+### Return Orders
+
+Return orders can be entered and Commissions will be calculated when return orders are processed. Return order processing follows the same steps as the above described order processing. However, commissions are not calculated until the credit memo is posted as the final result of the commissions depends on the actual quantity returned and the actual transaction the return order is applied to. Those tasks are usually finalized after the inventory has been received back and before the credit memo is posted for the return order.
+
 ## See Also
 
 - [Selling Products](https://docs.microsoft.com/en-us/dynamics365/business-central/sales-how-sell-products)
