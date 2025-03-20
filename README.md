@@ -1,5 +1,5 @@
 
-[![Build](https://github.com/nav-x-llc/nav-x-docs/actions/workflows/CI-PR.yml/badge.svg)](https://github.com/nav-x-llc/nav-x-docs/actions/workflows/CI-PR.yml) [![Deploy](https://github.com/nav-x-llc/nav-x-docs/actions/workflows/CI.yml/badge.svg)](https://github.com/nav-x-llc/nav-x-docs/actions/workflows/CI.yml)
+[![Build](https://github.com/nav-x-llc/nav-x-docs/actions/workflows/CI-PR.yml/badge.svg)](https://github.com/nav-x-llc/nav-x-docs/actions/workflows/CI-PR.yml) [![Deploy](https://github.com/nav-x-llc/nav-x-docs/actions/workflows/main_navxdocs.yml/badge.svg)](https://github.com/nav-x-llc/nav-x-docs/actions/workflows/main_navxdocs.yml)
 
 # Introduction
 

@@ -10,10 +10,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: "Checkout Repository"
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v4
 
       - name: "Install NuGet"
-        uses: NuGet/setup-nuget@v1.0.5
+        uses: NuGet/setup-nuget@v2
 
       - name: "Install DocFX"
         run: |
@@ -40,10 +40,3 @@ jobs:
           Copy-Item -Path "./_site/search-stopwords.json" -Destination "./website"
           Copy-Item -Path "./_site/sitemap.xml" -Destination "./website"
           Copy-Item -Path "./_site/*" -Destination "./website/en" -Recurse
-
-      - name: "Upload website artifact"
-        uses: actions/upload-artifact@v4
-        with:
-          name: website
-          path: ./website/
-          retention-days: 3
