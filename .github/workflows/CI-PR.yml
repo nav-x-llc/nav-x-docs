@@ -44,7 +44,7 @@ jobs:
           Copy-Item -Path "./_site/*" -Destination "./website/en" -Recurse
 
       - name: "Upload website artifact"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: website
           path: ./website/
