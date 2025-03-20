@@ -2,9 +2,9 @@
 
 ## Issues
 
-### Prepayment processing
+### Major Version compatibility
 
-When the credit card setup is configured to not allow partial authorizations and a prepayment invoice is posted from a sales order and the payment method is not credit card or ACH, an error is shown that not enough was authorized. This has been corrected.
+NAV-X Credit Card has been updated to be compatible with the latest version of Business Central.
 
 ## See Also
 
