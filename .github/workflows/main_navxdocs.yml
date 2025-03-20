@@ -7,6 +7,49 @@ on:
   workflow_dispatch:
 
 jobs:
+  build:
+    name: Build website
+    runs-on: windows-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+
+      - name: "Install NuGet"
+        uses: NuGet/setup-nuget@v2
+
+      - name: "Install DocFX"
+        run: |
+          if (Test-Path "C:\DocFx\" -PathType Container) {
+            Remove-Item C:\DocFX\*.* -Recurse -Force
+          }
+          nuget install docfx.console -OutputDirectory C:\DocFX -NoCache -NonInteractive
+
+      - name: "Build English Website"
+        run: |
+          cd en
+          $docfxpath = (Get-ChildItem C:\DocFX\ -Filter docfx.exe -Recurse).FullName
+          Start-Process -FilePath $docfxpath -ArgumentList build -WorkingDirectory (Get-Location) -NoNewWindow -Wait
+
+      - name: "Assemble website"
+        run: |
+          if (!(Test-Path "./website/")) {
+              New-Item -Path "./website/" -ItemType Directory -Force
+          }
+          Remove-Item -Path "./website/*" -Recurse
+          New-Item -Path "./website/en" -ItemType Directory -Force
+          Copy-Item -Path "./_site/images" -Destination "./website" -Recurse
+          Copy-Item -Path "./BingSiteAuth.xml" -Destination "./website"
+          Copy-Item -Path "./_site/search-stopwords.json" -Destination "./website"
+          Copy-Item -Path "./_site/sitemap.xml" -Destination "./website"
+          Copy-Item -Path "./_site/*" -Destination "./website/en" -Recurse
+
+      - name: "Upload website artifact"
+        uses: actions/upload-artifact@v4
+        with:
+          name: website
+          path: ./website/
+          retention-days: 3
+          
   deploy:
     runs-on: windows-latest
     environment:
