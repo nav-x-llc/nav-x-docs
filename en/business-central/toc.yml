@@ -10,6 +10,9 @@ items:
   - name: Credit Management
     href: credit-management/toc.yml
     topicHref: credit-management/index.md
+  - name: Custom Fields
+    href: custom-fields/toc.yml
+    topicHref: custom-fields/index.md
   - name: National Accounts
     href: national-accounts/toc.yml
     topicHref: national-accounts/index.md

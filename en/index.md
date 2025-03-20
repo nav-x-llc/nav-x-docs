@@ -22,6 +22,12 @@ Microsoft Dynamics 365 Business Central Credit Card allows you to manage your cu
 
 Navigate to our [Credit Card](business-central/creditcard/index.md) solution.
 
+## Custom Fields
+
+Microsoft Dynamics 365 Business Central Custom Fields allows you to add and utilize custom fields to various areas within Business Central without any development necessary. You can add new fields to master records and use them on transactions, as well as define validity checks.If you require assistance or need setup instructions, please visit our documentation section specific to our [Custom Fields](business-central/custom-fields/index.md) solution.
+
+Navigate to our [Custom Fields](business-central/custom-fields/index.md) solution.
+
 ## National Accounts Management
 
 National Accounts for Microsoft Dynamics 365 Business Central enables you to manage complex customer relationships for buying groups and other national chains. It allows you to pay invoices for multiple customers at the same time from the National Accounts customer, applying payments and credit memos throughout the entire national accounts structure.

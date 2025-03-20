@@ -1,0 +1,35 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Trial Setup
+        href: trial-setup.md
+  - name: Pages
+    items:
+      - name: Custom Fields Definitions
+        href: page-customfield-definitions.md
+      - name: Custom Fields Copy To
+        href: page-customfield-copy-to.md
+      - name: Custom Fields Report Fields
+        href: page-customfield-report-fields.md
+      - name: Custom Fields Setup
+        href: page-customfield-setup.md
+      - name: Custom Fields Translations
+        href: page-customfield-translations.md
+      - name: Custom Fields Values
+        href: page-customfield-custom-values.md
+      - name: Custom Fields Visibility
+        href: page-customfield-visibility.md
+  - name: Reports
+    items:
+      - name: Sales Order Status
+        href: report-sales-order-status.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md

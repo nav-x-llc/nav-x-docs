@@ -31,19 +31,7 @@ jobs:
         uses: azure/powershell@v1
         with:
           inlineScript: |
-            $nic = Get-AzNetworkInterface | Where-Object { $_.Name -eq "navx-wp-02365" }
-            if ($null -eq $nic) {
-                throw "Network Interface not found"
-            }
-            $nsg = Get-AzResource -ResourceId $nic.NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
-            if ($null -eq $nsg) {
-                throw "Network Security Group not found"
-            }
-            $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
-            if (!$ruleExists) {
-                $nsg | Add-AzNetworkSecurityRuleConfig -Name "github" -Description "github" -Access Allow -Protocol TCP -Direction Inbound -Priority 100 -SourceAddressPrefix * -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 22 | Out-Null
-            }
-            $nsg | Set-AzNetworkSecurityGroup | Out-Null
+            Write-Host "Need to turn on basic authentication"
           azPSVersion: "latest"
           
       - name: "Upload to website"
@@ -53,24 +41,12 @@ jobs:
           port: 22
           username: '${{ secrets.SSH_USER }}'
           password: '${{ secrets.SSH_PASSWORD }}'
-          localPath: './website/'
-          remotePath: '/opt/bitnami/apps/navxdocs/htdocs/'
+          localPath: './site/wwwroot'
+          remotePath: '/site/wwwroot'
           
       - name: "Remove public IP from allowed IPs"
         uses: azure/powershell@v1
         with:
           inlineScript: |
-            $nic = Get-AzNetworkInterface | Where-Object { $_.Name -eq "navx-wp-02365" }
-            if ($null -eq $nic) {
-                throw "Network Interface not found"
-            }
-            $nsg = Get-AzResource -ResourceId $nic.NetworkSecurityGroup.Id | Get-AzNetworkSecurityGroup
-            if ($null -eq $nsg) {
-                throw "Network Security Group not found"
-            }
-            $ruleExists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains("github")
-            if ($ruleExists) {
-              Remove-AzNetworkSecurityRuleConfig -Name "github" -NetworkSecurityGroup $nsg | Out-Null
-              $nsg | Set-AzNetworkSecurityGroup | Out-Null
-            }
+            Write-Host "Need to turn off basic authentication"
           azPSVersion: "latest"
