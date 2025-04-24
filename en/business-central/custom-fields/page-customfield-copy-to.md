@@ -17,7 +17,12 @@ The remaining fields define which tables you want to copy the individual field t
 
 | Copy From Table | Copy To Table |
 |-|-|
+| Customer | Sales Header |
+| Item | Purchase Line |
 | Item | Sales Line |
+| Purchase Header | Purchase Line |
+| Sales Header | Sales Line |
+| Vendor | Sales Header|
 
 ## See Also
 

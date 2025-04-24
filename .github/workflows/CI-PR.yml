@@ -39,4 +39,5 @@ jobs:
           Copy-Item -Path "./BingSiteAuth.xml" -Destination "./website"
           Copy-Item -Path "./_site/search-stopwords.json" -Destination "./website"
           Copy-Item -Path "./_site/sitemap.xml" -Destination "./website"
+          Copy-Item -Path "./_site/web.config" -Destination "./website"
           Copy-Item -Path "./_site/*" -Destination "./website/en" -Recurse

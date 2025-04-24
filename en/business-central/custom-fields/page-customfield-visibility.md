@@ -13,13 +13,6 @@ The following fields are available on the page.
 | Page Caption | The caption of the page in the current language |
 | Visible | Defines whether this field is shown or not |
 
-The following pages are currently supported:
-
-| Table | Page Name | Default Visible |
-|-|-|-|
-| Item<br><br> | Item Card<br>Item List<br><Item Lookup> | yes<br>no |
-| Sales Line | Sales Order Subform | yes |
-
 ## See Also
 
 - [Custom Fields Definitions Page](page-customfield-definitions.md)

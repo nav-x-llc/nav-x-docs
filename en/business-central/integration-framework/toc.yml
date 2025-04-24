@@ -1,0 +1,37 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Trial Setup
+        href: trial-setup.md
+  - name: Pages
+    items:
+      - name: Integration Setup
+        href: page-integration-setup.md
+      - name: Integrations
+        href: page-integrations.md
+      - name: Integration Fields
+        href: page-integration-fields.md
+      - name: Integration Mappings
+        href: page-integration-mappings.md
+      - name: Integration from Business Central
+        href: page-bc-intermediate.md
+      - name: Integration to Business Central
+        href: page-intermediate.md
+      - name: Integration Records
+        href: page-integration-records.md
+      - name: Integration Tables
+        href: page-integration-table.md
+      - name: Integration Table Fields
+        href: page-master-table-fields.md
+      - name: Setup
+        href: page-setup.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md

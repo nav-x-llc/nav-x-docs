@@ -13,6 +13,9 @@ items:
   - name: Custom Fields
     href: custom-fields/toc.yml
     topicHref: custom-fields/index.md
+  - name: Integration Framework
+    href: integration-framework/toc.yml
+    topicHref: integration-framework/index.md
   - name: National Accounts
     href: national-accounts/toc.yml
     topicHref: national-accounts/index.md
