@@ -10,8 +10,13 @@ Here you can setup the custom fields you want to use and where you want to use t
 
 The following tables are currently supported:
 
+- Customer
 - Item
+- Purchase Header
+- Purchase Line
+- Sales Header
 - Sales Line
+- Vendor
 
 ## Supported Field Types
 
@@ -26,6 +31,10 @@ The maximum length is only possible to be configured for Code and Text fields. I
 | Field Type | Field No. | Max. Length |
 |-|-|-|
 | Code | 1 | 20 |
+| Code | 2 | 20 |
+| Code | 3 | 50 |
+| Code | 4 | 50 |
+| Code | 5 | 50 |
 
 ## Actions
 

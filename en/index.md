@@ -28,6 +28,10 @@ Microsoft Dynamics 365 Business Central Custom Fields allows you to add and util
 
 Navigate to our [Custom Fields](business-central/custom-fields/index.md) solution.
 
+## Integration Framework
+
+The NAV-X Integration Framework for Microsoft Dynamics 365 Business Central allows you to import different data into Business Central without development necessary. You can configure new integrations or use the framework as the base for other, custom integrations. If you require assistance or need setup instructions, please visit our documentation section specific to our [Integration Framework](business-central/integration-framework/index.md) solution.
+
 ## National Accounts Management
 
 National Accounts for Microsoft Dynamics 365 Business Central enables you to manage complex customer relationships for buying groups and other national chains. It allows you to pay invoices for multiple customers at the same time from the National Accounts customer, applying payments and credit memos throughout the entire national accounts structure.

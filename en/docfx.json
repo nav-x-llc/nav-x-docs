@@ -38,9 +38,13 @@
               "business-central/commissions/toc.yml",
               "business-central/credit-management/toc.yml",
               "business-central/credit-card/toc.yml",
+              "business-central/custom-fields/toc.yml",
+              "business-central/integration-framework/toc.yml",
               "business-central/national-accounts/toc.yml",
+              "business-central/opsuite/toc.yml",
               "business-central/productivity/toc.yml",
-              "business-central/search/toc.yml"
+              "business-central/search/toc.yml",
+              "business-central/warehouse/toc.yml"
           ]
       }
     ],
@@ -48,7 +52,8 @@
       {
         "files": [
           "images/**",
-          "**/images/**"
+          "**/images/**",
+          "web.config"
         ]
       }
     ],

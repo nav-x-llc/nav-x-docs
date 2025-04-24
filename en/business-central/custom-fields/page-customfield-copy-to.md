@@ -8,16 +8,21 @@ The following fields are available on the page. The fields are non editable.
 
 | Field | Description |
 |-|-|
-| Table | The table the field is configured for |
-| Type | The field type |
-| Field No. | The number of the custom field |
-| Field Name | The name of the field as defined in the *Custom Fields Definitions* |
+| **Table** | The table the field is configured for |
+| **Type** | The field type |
+| **Field No.** | The number of the custom field |
+| **Field Name** | The name of the field as defined in the *Custom Fields Definitions* |
 
 The remaining fields define which tables you want to copy the individual field to. The table below shows the different combinations that fields can be copied to.
 
 | Copy From Table | Copy To Table |
 |-|-|
+| Customer | Sales Header |
+| Item | Purchase Line |
 | Item | Sales Line |
+| Purchase Header | Purchase Line |
+| Sales Header | Sales Line |
+| Vendor | Sales Header|
 
 ## See Also
 
