@@ -14,5 +14,5 @@ The following fields are available on the page.
 
 ## See Also
 
-- [NAV-X Integration Setups Page](page-integration-setups.md)
+- [NAV-X Integration Setups Page](page-integration-setup.md)
 - [NAV-X Integrations to Business Central](page-intermediate.md)

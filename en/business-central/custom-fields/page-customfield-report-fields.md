@@ -8,11 +8,11 @@ The page contains the following fields. The majority of those fields are not edi
 
 | Field | Description |
 |-|-|
-| Report Name | Name of the report we enabled for this functionality |
-| Table | The table the custom field comes from that is enabled for this functionality |
-| Type | The type of the custom field that is enabled for this functionality |
-| Field No. | The field number that is enabled for this functionality |
-| Visible | A checkmark that allows you to turn on or off this field on the report. You must use our layout or a copy of our layout for this functionality to work |
+| **Report Name** | Name of the report we enabled for this functionality |
+| **Table** | The table the custom field comes from that is enabled for this functionality |
+| **Type** | The type of the custom field that is enabled for this functionality |
+| **Field No.** | The field number that is enabled for this functionality |
+| **Visible** | A checkmark that allows you to turn on or off this field on the report. You must use our layout or a copy of our layout for this functionality to work |
 
 ## Report Layouts
 

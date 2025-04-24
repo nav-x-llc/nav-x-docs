@@ -10,7 +10,7 @@ Permissions for the app must be setup before the NAV-X Integration Framework can
 
 Choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **NAV-X Integration Setups**, and then choose the related link.
 
-[!include[eula](includes/eula.md)]
+[!include[eula](../includes/eula.md)]
 
 This setup will allow you to configure general integration behaviors. Read more details about the [NAV-X Integration Setup page](page-integration-setup.md).
 

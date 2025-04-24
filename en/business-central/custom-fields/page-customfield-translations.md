@@ -10,8 +10,8 @@ The following fields are available on the page.
 
 | Field | Description |
 |-|-|
-| Language Code | The language the translation is for. You can select one of the existing languages |
-| Field Caption | The translation for the field in the language shown in the *Language Code* |
+| **Language Code** | The language the translation is for. You can select one of the existing languages |
+| **Field Caption** | The translation for the field in the language shown in the *Language Code* |
 
 ## See Also
 

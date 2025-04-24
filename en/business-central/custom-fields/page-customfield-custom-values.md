@@ -10,8 +10,8 @@ The following fields are available on the page.
 
 | Field | Description |
 |-|-|
-| Value | The code field that will be the allowed value in this field |
-| Description | A description explaining what the code is for |
+| **Value** | The code field that will be the allowed value in this field |
+| **Description** | A description explaining what the code is for |
 
 ## See Also
 
