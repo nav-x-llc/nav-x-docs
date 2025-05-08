@@ -13,6 +13,8 @@ items:
         href: page-customfield-definitions.md
       - name: Custom Fields Copy To
         href: page-customfield-copy-to.md
+      - name: Custom Fields Lookup
+        href: page-customfield-lookup.md
       - name: Custom Fields Report Fields
         href: page-customfield-report-fields.md
       - name: Custom Fields Setup
