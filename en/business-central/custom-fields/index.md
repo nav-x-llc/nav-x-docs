@@ -6,9 +6,11 @@ Custom Fields by NAV-X is an app for Dynamics 365 for Business Central that enha
 
 - Define Custom Fields on Master Records. Currently, the following master records are supported:
   - Customers
+  - Bank Accounts
   - Items
   - Vendors
-- Define Custom Fields on Documents. Currently, the following documents are supported:
+- Define Custom Fields on Documents and Journals. Currently, the following documents are supported:
+  - General Journals
   - All Sales Documents
   - All Purchase Documents
 - Copy Custom Fields from Master records to documents.

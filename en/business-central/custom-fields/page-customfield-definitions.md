@@ -10,7 +10,9 @@ Here you can setup the custom fields you want to use and where you want to use t
 
 The following tables are currently supported:
 
+- Bank Account
 - Customer
+- General Journal
 - Item
 - Purchase Header
 - Purchase Line
@@ -23,6 +25,9 @@ The following tables are currently supported:
 The following field types are currently supported:
 
 - Code
+- Boolean
+- Decimal
+- Text
 
 ## Maximum Length
 
@@ -53,6 +58,12 @@ When you define fields, you can also define that those fields are copied to othe
 | Item | Sales Line |
 
 Please see more details on the [Custom Fields Copy To Page](page-customfield-copy-to.md).
+
+### Custom Lookup action
+
+When you define fields, you can also define that those fields can only have a value from a different table (lookup table). While you can define values for those lookups through the **Values** action, you can also select existing tables within Business Central by defining *Custom Lookups*.
+
+Please see more details on the [Custom Fields Lookup Page](page-customfield-lookup.md).
 
 ### Translations action
 
@@ -96,6 +107,7 @@ Please see more details on the [Custom Fields Report Visibility Page](page-custo
 
 - [Custom Values Page](page-customfield-custom-values.md)
 - [Custom Fields Copy To Page](page-customfield-copy-to.md)
+- [Custom Fields Lookup Page](page-customfield-lookup.md)
 - [Custom Fields Translations Page](page-customfield-translations.md)
 - [Custom Fields Visibility Page](page-customfield-visibility.md)
 - [Custom Fields Report Visibility Page](page-customfield-report-visibility.md)

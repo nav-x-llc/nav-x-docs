@@ -17,12 +17,15 @@ The remaining fields define which tables you want to copy the individual field t
 
 | Copy From Table | Copy To Table |
 |-|-|
+| Bank Account | General Journal |
 | Customer | Sales Header |
+| | General Journal |
 | Item | Purchase Line |
-| Item | Sales Line |
+| | Sales Line |
 | Purchase Header | Purchase Line |
 | Sales Header | Sales Line |
-| Vendor | Sales Header|
+| Vendor | Sales Header |
+| | General Journal |
 
 ## See Also
 

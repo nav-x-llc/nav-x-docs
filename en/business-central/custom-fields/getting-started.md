@@ -37,6 +37,12 @@ For *Code* fields, you can define a list of custom values. If those are defined,
 
 Read more details about the [Custom Values Page](page-customfield-custom-values.md).
 
+## Custom Lookup
+
+If existing tables should be used as lookup tables for a new custom field, then the lookup can be defined using the **Custom Lookup** action.
+
+Read more details about the [Custom Fields Lookup Page](page-customfield-lookup.md).
+
 ## Copy Field Values To Different Tables
 
 When you define custom fields for master data, such as *Items*, these field values can then be copied to different transactions. The individual fields are shown in the rows and entities that the fields can be copied to are in the columns.
@@ -65,6 +71,7 @@ Some reports have configuration options to allow displaying the fields via a con
 
 - [Custom Fields Definitions page](page-customfield-definitions.md)
 - [Custom Values Page](page-customfield-custom-values.md)
+- [Custom Fields Lookup Page](page-customfield-lookup.md)
 - [Custom Fields Copy To Page](page-customfield-copy-to.md)
 - [Custom Fields Translations Page](page-customfield-translations.md)
 - [Custom Fields Visibility Page](page-customfield-visibility.md)

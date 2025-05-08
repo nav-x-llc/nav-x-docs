@@ -45,6 +45,7 @@ jobs:
           Copy-Item -Path "./_site/search-stopwords.json" -Destination "./website"
           Copy-Item -Path "./_site/sitemap.xml" -Destination "./website"
           Copy-Item -Path "./_site/*" -Destination "./website/en" -Recurse
+          Copy-Item -Path "./_site/web.config" -Destination "./website"
 
       - name: "Upload website artifact"
         uses: actions/upload-artifact@v4
