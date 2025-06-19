@@ -60,6 +60,6 @@ Here are various reasons why you cannot see the NAV-X OpSuite™ Integration fun
 4. You have to sign out and sign back in
  If you make any changes to the license or the permissions, please ensure that you log out of Business Central and log back in. When logging in, your configuration is refreshed and should then enable the Application Area that is used to show or hide the various fields. If you have not enabled credit card processing in the setup yet, you should now see a notification on the role center asking, if you want to start or complete the setup process. You can also select the Action *Setup & Extensions > Assisted Setup* and scroll down to the **NAV-X** group.
 
- If you cannot see the setup wizard, please choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Application Area**, and then choose the related link to open the related page. Please search for the application area called *NAV-X Warehouse Productivity* and validate that it has a check mark.
+ If you cannot see the setup wizard, please choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Application Area**, and then choose the related link to open the related page. Please search for the application area called *NAV-X OpSuite* and validate that it has a check mark.
 
 If you still have issues, please feel free to [contact us](https://nav-x.com/support/)
