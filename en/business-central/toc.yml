@@ -1,6 +1,9 @@
 items:
   - name: Welcome to NAV-X for Business Central
     href: index.md
+  - name: Catch Weights
+    href: catch-weights/toc.yml
+    topicHref: catch-weights/index.md
   - name: Commission Management
     href: commissions/toc.yml
     topicHref: commissions/index.md
