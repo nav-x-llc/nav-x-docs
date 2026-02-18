@@ -7,6 +7,26 @@ items:
         href: permission-setups.md
       - name: Trial Setup
         href: trial-setup.md
+  - name: How To
+    items:
+      - name: Import Excel Files
+        href: how-to-excel-import.md
+      - name: Import CSV Files
+        href: how-to-csv-import.md
+      - name: Import Flexible-Length Text
+        href: how-to-flexible-text-import.md
+      - name: Import Fixed-Length Text
+        href: how-to-fixed-length-text-import.md
+      - name: Set Up Field Mappings
+        href: how-to-field-mappings.md
+      - name: Use Field Lookups
+        href: how-to-field-value-mapping.md
+      - name: Validate Data
+        href: how-to-data-validation.md
+      - name: Handle Errors
+        href: how-to-error-handling.md
+      - name: Import Sales Documents
+        href: how-to-sales-documents.md
   - name: Pages
     items:
       - name: Integration Setup
