@@ -4,6 +4,12 @@ NAV-X provides productivity solutions for Microsoft Dynamics 365 Business Centra
 
 ## Microsoft Dynamics 365 Business Central
 
+## Catch Weights
+
+Microsoft Dynamics 365 Business Central Catch Weights allows you to manage and track inventory in dual units of measure. In addition to the standard Unit of Measure, you can track inventory with an additional unit of measure. If you sell your items by the case, but charge by the pound, for instance, you can utilize **Catch Weights** to manage this within Business CentralIf you require assistance or need setup instructions, please visit our documentation section specific to our [Catch Weights](business-central/catch-weights/index.md) solution.
+
+Navigate to our [Catch Weights](business-central/catch-weights/index.md) solution.
+
 ## Commission Management
 
 Microsoft Dynamics 365 Business Central Commission Management allows you to calculate and process commissions for your salespeople or manage royalty payments with the click of a button. If you require assistance or need setup instructions, please visit our documentation section specific to our [Commissions Management](business-central/commissions/index.md) solution.
@@ -24,7 +30,7 @@ Navigate to our [Credit Card](business-central/creditcard/index.md) solution.
 
 ## Custom Fields
 
-Microsoft Dynamics 365 Business Central Custom Fields allows you to add and utilize custom fields to various areas within Business Central without any development necessary. You can add new fields to master records and use them on transactions, as well as define validity checks.If you require assistance or need setup instructions, please visit our documentation section specific to our [Custom Fields](business-central/custom-fields/index.md) solution.
+Microsoft Dynamics 365 Business Central Custom Fields allows you to add and utilize custom fields to various areas within Business Central without any development necessary. You can add new fields to master records and use them on transactions, as well as define validity checks. If you require assistance or need setup instructions, please visit our documentation section specific to our [Custom Fields](business-central/custom-fields/index.md) solution.
 
 Navigate to our [Custom Fields](business-central/custom-fields/index.md) solution.
 

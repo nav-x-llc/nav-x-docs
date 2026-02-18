@@ -1,0 +1,37 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Trial Setup
+        href: trial-setup.md
+  - name: Pages
+    items:
+      - name: Catch Weights Setup
+        href: page-catchweight-setup.md
+      - name: Unit of Measure Setup
+        href: page-catchweight-uom-groups.md
+  - name: How To
+    items:
+      - name: Set up catch weights for an item
+        href: how-to-setup-catch-weights-item.md
+      - name: Set up UOM groups
+        href: how-to-setup-uom-groups.md
+      - name: Set up pricing for catch weight items
+        href: how-to-setup-pricing.md
+      - name: Use catch weights in sales and purchase documents
+        href: how-to-use-catch-weights-sales-purchase.md
+      - name: Manage catch weights in warehouse locations
+        href: how-to-catch-weights-warehouse-locations.md
+      - name: Manage catch weights with lot tracking
+        href: how-to-catch-weights-lot-tracking.md
+      - name: Handle catch weight variances
+        href: how-to-handle-catch-weight-variances.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md

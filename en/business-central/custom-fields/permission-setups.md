@@ -18,7 +18,7 @@ To make permission assignment easier, the permission set for users is automatica
 
 ## Permissions for Custom Fields administrators
 
-Any user involved in setting up the Custom Fields functionality requires an additional permission set configured. The permission set *NAVX CFLD SETUP* and description *NAV-X Custom Fields Setup* has to be assigned to those users. This assignment should be done before the National Accounts setup is started.
+Any user involved in setting up the Custom Fields functionality requires an additional permission set configured. The permission set *NAVX CFLD SETUP* and description *NAV-X Custom Fields Setup* has to be assigned to those users. This assignment should be done before the Custom Fields setup is started.
 
 ## See Also
 
