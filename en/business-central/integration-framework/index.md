@@ -4,11 +4,36 @@ NAV-X Integration Framework is an app for Dynamics 365 for Business Central that
 
 ## Added Functionality
 
-- Configure new integrations easily. The following integration types are currently supported:
-  - Excel import
-- Map different data structures to existing structures within Business Central
-- Works with any tables within Business Central, including ISV solutions
-- automated processing
+NAV-X Integration Framework supports a comprehensive suite of data integration capabilities:
+
+### Import Types
+
+The following import formats are currently supported:
+
+- **Excel Import** - Import data from Excel spreadsheet files (.xlsx)
+- **CSV Import** - Import comma and delimiter-separated values with customizable delimiters
+- **Flexible-Length Text Import** - Import text files with custom field delimiters and quoted field support
+- **Fixed-Length Text Import** - Import positional text files (mainframe, legacy system formats)
+
+### Core Features
+
+- **Field Mapping** - Map source data fields to Business Central tables and fields
+- **Data Lookups** - Translate source codes to Business Central codes using lookup tables
+- **Field Value Mapping** - Define constant values for records or use line number auto-generation
+- **Data Validation** - Validate imported data against Business Central field rules before creation
+- **Error Handling** - Track, review, and reprocess individual record errors
+- **Multi-Line Documents** - Create sales orders, invoices, and quotes with multiple line items
+- **Works with Any Tables** - Import to any Business Central table, including ISV solutions
+- **Automated Processing** - Schedule imports via Job Queue for hands-off operation
+- **Email Notifications** - Receive notifications when imports complete with errors
+
+### Configuration
+
+- Create unlimited integrations
+- Configure field mappings for each integration
+- Set up data validation rules
+- Define lookup table mappings
+- Enable scheduled processing
 
 ## Supported Editions and Countries
 
