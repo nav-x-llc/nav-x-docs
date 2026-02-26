@@ -19,10 +19,13 @@ The following import formats are currently supported:
 
 - **Field Mapping** - Map source data fields to Business Central tables and fields
 - **Data Lookups** - Translate source codes to Business Central codes using lookup tables
-- **Field Value Mapping** - Define constant values for records or use line number auto-generation
+- **Constant Values** - Define fixed values that apply to every imported record
 - **Data Validation** - Validate imported data against Business Central field rules before creation
 - **Error Handling** - Track, review, and reprocess individual record errors
 - **Multi-Line Documents** - Create sales orders, invoices, and quotes with multiple line items
+- **Line Number Auto-Generation** - Automatically generate line numbers for document detail lines
+- **Background Processing** - Process imports asynchronously via job queue for non-blocking workflow
+- **Post-Processing** - Define custom business logic that runs after records are created (e.g., auto-release orders)
 - **Works with Any Tables** - Import to any Business Central table, including ISV solutions
 - **Automated Processing** - Schedule imports via Job Queue for hands-off operation
 - **Email Notifications** - Receive notifications when imports complete with errors
