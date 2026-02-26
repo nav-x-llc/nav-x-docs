@@ -67,93 +67,412 @@ Result: Order SO001 with 2 lines, Order SO002 with 1 line
 
 ## Setting Up Sales Document Import
 
-### Step 1: Configure Integration for Document Creation
+### Step 1: Create and Configure the Integration
 
 1. Create new **Integration** record
-2. Set: **Integration Type** - Sales Order (or Sales Invoice, Sales Quote)
-3. Set: **Header Table** - Sales Header
-4. Set: **Create New Document** - Yes
+2. Set: **Name** - Descriptive name (e.g., "Sales Orders from Vendor A")
+3. Set: **Integration Type** - The source file format:
+   - **Excel** - Import from .xlsx files
+   - **CSV** - Import from comma/semicolon-delimited files
+   - **Text** - Import from delimited or fixed-length text files
+4. Set: **Direction** - Import (for importing sales documents)
+5. Configure file-parsing options if using Text files (delimiters, formatting, etc.)
 
-### Step 2: Map Header Fields
+### Step 2: Define Integration Fields
 
-Header fields create the document:
+Define each field from your source file (Excel columns, CSV columns, or text file fields):
 
-**Fields to map from source:**
+1. From the **NAV-X Integrations** page, click **Fields** action
+2. Add a new row for each source field
+3. Specify:
+   - **Name** - Source field name (e.g., "OrderNo", "CustomerCode")
+   - **Source Column** - Where to find the data (Excel column letter/number, CSV column number, or text position)
+   - **Column Type** - Standard (normal value) or Constant (fixed value for all records)
+   - For constants only: **Constant Value** - The fixed value to use
+
+#### Example Fields for Sales Order Import
 
 ```text
-OrderNo → Document No. (or auto-assigned)
-CustomerCode → Bill-to Customer No. (with lookup)
-OrderDate → Order Date
-DeliveryDate → Requested Delivery Date (optional)
-ShippingAgent → Shipping Agent Code (optional)
-Currency → Currency Code (optional)
+Field 1: Name = "OrderNo"
+         Source Column = "A" (or "1")
+         Column Type = Standard
+
+Field 2: Name = "CustomerCode"  
+         Source Column = "B" (or "2")
+         Column Type = Standard
+
+Field 3: Name = "OrderDate"
+         Source Column = "C" (or "3")
+         Column Type = Standard
+
+Field 4: Name = "PostingDate"
+         Source Column = "D" (or "4")
+         Column Type = Standard
+
+Field 5: Name = "ItemCode"
+         Source Column = "E" (or "5") 
+         Column Type = Standard
+
+Field 6: Name = "Quantity"
+         Source Column = "F" (or "6")
+         Column Type = Standard
+
+Field 7: Name = "UnitPrice"
+         Source Column = "G" (or "7")
+         Column Type = Standard
+
+Field 8: Name = "DocumentType"
+         Column Type = Constant
+         Constant Value = "Order"
+
+Field 9: Name = "SalesLineType"
+         Column Type = Constant
+         Constant Value = "Item"
 ```
 
-**Header Example Configuration:**
+### Step 3: Map Fields to Business Central Tables
+
+Now map your integration fields to the actual Business Central tables and fields where data will be created:
+
+1. From the **NAV-X Integrations** page, click **Mappings** action
+2. For each header field, create a mapping to **Sales Header** table:
+   - **Source Field** - Which integration field (from step 2)
+   - **Destination Table** - Sales Header
+   - **Destination Field** - Which BC field
+   - **Validate** - Enable to check field validity
+
+#### Header Field Mappings (Document Level)
+
+These mappings are created ONCE and apply to the document header:
 
 ```text
-Mapping 1: OrderNo → Document No.
+Mapping 1: OrderNo → Sales Header.No.
   Source Field: OrderNo
-  Destination: Sales Header.No.
+  Destination Table: Sales Header
+  Destination Field No.: No.
   Validate: Yes (must be unique)
+  **Create New Document: YES** (This is the grouping field!)
 
-Mapping 2: CustomerCode → Bill-to Customer No.
+Mapping 2: CustomerCode → Sales Header.Bill-to Customer No.
   Source Field: CustomerCode
+  Destination Table: Sales Header
+  Destination Field No.: Bill-to Customer No.
   Get Value From Lookup: Yes
-  Lookup Table: Customer
-  Lookup Field: Your Reference
-  Return Field: No.
+  Lookup Table No.: Customer
+  Lookup Field: Your Reference  
   Validate: Yes
 
-Mapping 3: OrderDate → Order Date
+Mapping 3: OrderDate → Sales Header.Order Date
   Source Field: OrderDate
-  Destination: Sales Header.Order Date
+  Destination Table: Sales Header
+  Destination Field No.: Order Date
+  Validate: Yes
+
+Mapping 4: PostingDate → Sales Header.Posting Date
+  Source Field: PostingDate
+  Destination Table: Sales Header
+  Destination Field No.: Posting Date
+  Validate: Yes
+
+Mapping 5: DocumentType → Sales Header.Document Type
+  Source Field: DocumentType
+  Destination Table: Sales Header
+  Destination Field No.: Document Type
   Validate: Yes
 ```
 
-### Step 3: Map Line Fields
+#### Line Field Mappings (Detail Level)
 
-Line fields populate each document line:
-
-**Fields to map for each line:**
+These mappings are created for each source row and create Sales Lines:
 
 ```text
-ItemCode → Item No. (with lookup)
-Qty → Quantity
-UnitPrice → Unit Price
-Discount → Line Discount %
-```
-
-**Line Example Configuration:**
-
-```text
-Mapping 4: ItemCode → Item No.
+Mapping 6: ItemCode → Sales Line.No.
   Source Field: ItemCode
+  Destination Table: Sales Line
+  Destination Field No.: No.
   Get Value From Lookup: Yes
-  Lookup Table: Item
+  Lookup Table No.: Item
   Lookup Field: Vendor Item Code
-  Return Field: No.
   Validate: Yes
 
-Mapping 5: Quantity → Quantity
-  Source Field: Qty
-  Destination: Sales Line.Quantity
-  Validate: Yes (must be > 0)
+Mapping 7: Quantity → Sales Line.Quantity
+  Source Field: Quantity
+  Destination Table: Sales Line
+  Destination Field No.: Quantity
+  Validate: Yes
 
-Mapping 6: Price → Unit Price
+Mapping 8: UnitPrice → Sales Line.Unit Price Excl. Tax
   Source Field: UnitPrice
-  Destination: Sales Line.Unit Price Excl. Tax
+  Destination Table: Sales Line
+  Destination Field No.: Unit Price Excl. Tax
+  Validate: Yes
+
+Mapping 9: Auto Line Numbers → Sales Line.Line No.
+  Source Field: [Leave blank - this is auto-generated]
+  Destination Table: Sales Line
+  Destination Field No.: Line No.
+  Column Type: Line Numbers
+
+Mapping 10: SalesLineType (Constant) → Sales Line.Type
+  Source Field: SalesLineType
+  Destination Table: Sales Line
+  Destination Field No.: Type
+  Value: "Item"
   Validate: Yes
 ```
 
-### Step 4: Configure Record Grouping
+### Step 4: Configure Document Grouping
 
-System needs to know how to group lines by document:
+The integration framework groups rows into documents automatically based on a **grouping field**. When this field's value changes, a new document is created.
 
-1. On Integration record: Set **Document Header Field** = "OrderNo"
-2. System groups all records with same OrderNo together
-3. First record with new OrderNo = Creates header
-4. Records with same OrderNo = Creates lines
+**How Document Grouping Works:**
+
+```text
+Source Data (sorted by OrderNo):
+OrderNo | ItemCode | Qty
+SO001   | ITEM_A   | 10
+SO001   | ITEM_B   | 5      ← Same OrderNo = Same Document
+SO002   | ITEM_A   | 8      ← New OrderNo = New Document
+```
+
+**Configuration:**
+
+1. Review the integration fields you created - one field will be the "grouping field"
+2. For this example, **OrderNo** is the grouping field
+3. When OrderNo value changes between rows:
+   - System creates a new Sales Header
+   - All rows with that OrderNo become lines on that header
+
+**Result:**
+
+```text
+Document 1: Sales Order SO001
+  - Line 1: Item ITEM_A, Qty 10
+  - Line 2: Item ITEM_B, Qty 5
+
+Document 2: Sales Order SO002
+  - Line 1: Item ITEM_A, Qty 8
+```
+
+> **Important:** The source file MUST be sorted by the grouping field (OrderNo in this example) for proper document creation.
+
+## Using Constant Values
+
+Constant values allow you to specify fixed values that apply to **every record** in the import, without requiring source data.
+
+### When to Use Constant Values
+
+**Use constants for:**
+
+- **Document Type** - All orders same type ("Order", "Invoice", "Quote")
+- **Line Type** - All lines same type ("Item", "G/L Account", etc.) - for sales lines
+- **Salesperson** - All orders from same salesperson
+- **Company Defaults** - Standard currency, payment terms, cost center, etc.
+- **Status Fields** - Initial status for all imported documents
+- **Comments** - Standard notes or descriptions
+
+**Do NOT use constants for:**
+
+- **Dates that should source from file** - Use Standard column type to pull from source
+- **Line Numbers** - Use the special "Line Numbers" column type for auto-generation (10, 20, 30...)
+- **Fields where data comes from source/lookups** - Use Standard column type instead
+
+### How to Set Up Constant Values
+
+#### Step 1: Create Integration Field as Constant
+
+1. Go to **Integrations** → Select your integration → **Fields**
+2. Add new field:
+   - **Name** - Any descriptive name (e.g., "DocumentType")
+   - **Column Type** - **Constant** (not Standard)
+   - **Constant Value** - The fixed value (e.g., "Order")
+   - Leave **Source Column** blank (no source data needed)
+
+#### Step 2: Map to Destination Field
+
+1. Go to **Mappings**
+2. Create mapping just like a normal field:
+   - **Source Field** - Your constant field from step 1
+   - **Destination Table** - The BC table (Sales Header, etc.)
+   - **Destination Field** - The field to populate (Document Type, Line Type, etc.)
+   - **Validate** - Enable to ensure value is valid before import
+
+### Example: Constant Values for Sales Orders
+
+**Source File:**
+
+```text
+OrderNo,CustomerCode,OrderDate,PostingDate,ItemCode,Qty,UnitPrice
+SO001,CUST_100,2024-01-15,2024-02-01,ITEM_A,10,100.00
+SO001,CUST_100,2024-01-15,2024-02-01,ITEM_B,5,50.00
+SO002,CUST_101,2024-01-16,2024-02-01,ITEM_C,20,75.00
+```
+
+Notice: Posting Date comes from source data now. Document Type and Line Type are constants (don't appear in source).
+
+**Integration Fields:**
+
+| Name | Column Type | Constant Value | Source Column |
+| ------ | ------------- | ----------------- | --- |
+| OrderNo | Standard | | A |
+| CustomerCode | Standard | | B |
+| OrderDate | Standard | | C |
+| PostingDate | Standard | | D |
+| ItemCode | Standard | | E |
+| Quantity | Standard | | F |
+| UnitPrice | Standard | | G |
+| DocumentType | **Constant** | Order | *(leave blank)* |
+| SalesLineType | **Constant** | Item | *(leave blank)* |
+
+**Integration Mappings:**
+
+Header mappings:
+
+```text
+Mapping: DocumentType (Constant) → Sales Header.Document Type
+  Source Field: DocumentType
+  Value: "Order"
+  Destination Table: Sales Header
+  Destination Field: Document Type
+
+Mapping: PostingDate (From Source) → Sales Header.Posting Date
+  Source Field: PostingDate
+  Destination Table: Sales Header
+  Destination Field: Posting Date
+```
+
+Line mappings:
+
+```text
+Mapping: SalesLineType (Constant) → Sales Line.Type
+  Source Field: SalesLineType
+  Value: "Item"
+  Destination Table: Sales Line
+  Destination Field: Type
+```
+
+**Result:**
+
+- Every imported sales order will have Document Type = "Order"
+- Posting Date comes from the source file (per row)
+- Every sales line will be of Type = "Item"
+
+---
+
+## Configuring the Create New Document Flag (Critical!)
+
+The **Create New Document** flag is the **most critical configuration** for multi-line document imports. Without it, the system won't know when to create a new document header.
+
+### What is the Create New Document Flag?
+
+The **Create New Document** flag is a boolean setting on each field mapping that designates:
+
+1. **Which field identifies a unique document** (Order Number, Invoice Number, etc.)
+2. **When to create a new document header** - Whenever this field's value changes
+3. **How to group lines into documents** - All lines with same field value = same document
+
+### How It Works
+
+**Example Source Data (already sorted by OrderNo):**
+
+```text
+OrderNo | ItemCode | Qty
+--------|----------|----
+SO001   | ITEM_A   | 10
+SO001   | ITEM_B   | 5      ← Same OrderNo = Same Document (SO001 header created once)
+SO002   | ITEM_C   | 20     ← Different OrderNo = New Document (SO002 header created)
+SO002   | ITEM_A   | 8      ← Back to SO002 = Same SO002 Document
+```
+
+**Processing:**
+
+1. **Row 1:** OrderNo = "SO001" → Create Sales Header SO001, Create Line 1
+2. **Row 2:** OrderNo = "SO001" (same) → Reuse SO001 header, Create Line 2
+3. **Row 3:** OrderNo = "SO002" (different) → Create Sales Header SO002, Create Line 1
+4. **Row 4:** OrderNo = "SO002" (same) → Reuse SO002 header, Create Line 2
+
+### Configuration
+
+**In Integration Mappings:**
+
+1. Navigate to your Integration record
+2. Open **Mappings** action
+3. Find the mapping for your document grouping field (e.g., OrderNo → Sales Header.No.)
+4. **Set: "Create New Document" = YES** ← This is the flag!
+
+**Example - OrderNo Mapping:**
+
+```text
+Mapping: OrderNo → Sales Header.No.
+  Source Field: OrderNo
+  Destination Table: Sales Header
+  Destination Field: No.
+  Create New Document: ***YES*** ← HERE IS THE FLAG
+  Validate: Yes
+```
+
+### Important Rules
+
+⚠️ **CRITICAL Rules:**
+
+1. **Only ONE mapping per integration** can have "Create New Document" = YES
+   - Cannot have multiple grouping fields
+   - Choose the field that identifies unique documents
+
+2. **Source file MUST be sorted** by the grouping field
+   - If not sorted, same document split across multiple headers
+   - ✅ CORRECT: All SO001 rows together, then SO002, then SO003
+   - ❌ WRONG: SO001, SO002, SO001 (SO001 split into 2 headers)
+
+3. **This field goes to the header table** (e.g., Sales Header.No., not Sales Line)
+   - Maps to primary key of header
+   - Uniquely identifies each document
+
+### What Happens Without the Flag
+
+**If you forget to set "Create New Document" = YES:**
+
+```text
+Result: Only FIRST row processed as header
+  Document 1: SO001 with Line 1 only
+  Rows 2, 3, 4: Processed as ERRORS (can't create document header for existing line)
+  
+Error Message: "Header not found" or "Document already exists"
+```
+
+### What Happens With Wrong Sorting
+
+**If source file is NOT sorted by grouping field:**
+
+```text
+File (wrong sort):
+  SO001 | ITEM_A | 10
+  SO002 | ITEM_C | 20
+  SO001 | ITEM_B | 5      ← Out of order!
+
+Result: 
+  Document 1: SO001 with Line 1 only (ITEM_A)
+  Document 2: SO002 with Line 1 only (ITEM_C)
+  Document 3: NEW SO001 with Line 1 only (ITEM_B) ← WRONG! Creates duplicate header
+  
+Now you have TWO Sales Order SO001 in the system!
+```
+
+**Solution:** Sort source file **before import** by the grouping field.
+
+### Summary Checklist
+
+Before running an import with multiple lines per document:
+
+- ✅ Identified the field that uniquely identifies documents (Order Number, Invoice No., etc.)
+- ✅ Created mapping for that field to the header table
+- ✅ **SET "Create New Document" = YES on that mapping**
+- ✅ Confirmed only ONE mapping has this flag = YES
+- ✅ Sorted source file by the grouping field
+- ✅ Created all other mappings for header and line fields
+- ✅ Tested with small sample (2-3 orders) before full import
+
+---
 
 ## Complete Sales Order Import Example
 
@@ -252,12 +571,16 @@ Result:
 
 ### Multiple Document Types
 
-Create sales orders AND invoices in same import:
+To import both sales orders AND invoices from the same source file type:
 
-1. Create **Integration Type: Sales Order**
-2. Create separate **Integration Type: Sales Invoice**
-3. Configure each with own mappings
-4. Run independently
+1. Create **Integration 1**: Name = "Sales Orders from Vendor"
+   - Integration Type = Excel (or CSV, Text, etc.)
+   - Maps to Sales Header with Document Type = "Order"
+2. Create **Integration 2**: Name = "Sales Invoices from Vendor"
+   - Integration Type = Excel (same file format)
+   - Maps to Sales Header with Document Type = "Invoice"
+3. Configure each integration with own fields and mappings
+4. Run each integration independently against the appropriate source file
 
 ## Special Considerations
 
@@ -431,6 +754,115 @@ Pricing Conversion:
   Unit Price in source currency
   BC converts per exchange rates
 ```
+
+## Processing Modes: Blocking vs Non-Blocking
+
+When you run an import, the Integration Framework can process records in two different modes. Understanding these modes helps you choose the best approach for your workflow.
+
+### Immediate (Blocking) Processing
+
+**How it works:**
+
+- Records process **during the import** in your user session
+- Your screen shows progress with a wait cursor
+- You **cannot work** until processing completes
+- After completion, you see results immediately
+
+**When to use:**
+
+- **Small imports** - Under 100-500 records
+- **Quick turnarounds** - Need results before continuing other work
+- **Testing/validation** - Want to verify immediately if import succeeded
+- **Interactive workflows** - User will wait for results
+
+**Example timeline:**
+
+```text
+10:00 AM - User starts import
+10:00-10:02 AM - System processes records (user session blocked)
+10:02 AM - Processing complete, results shown
+10:02+ AM - User can continue working
+```
+
+### Deferred Job Queue (Non-Blocking) Processing
+
+**How it works:**
+
+- Records **queue to background processing** immediately
+- Your screen returns control quickly
+- Processing happens **asynchronously** in a background session
+- You **can continue working** while processing runs
+- You receive notification when processing completes
+- You can check results anytime from Integration Records page
+
+**When to use:**
+
+- **Large imports** - 1000+ records or complex lookups
+- **Batch processing** - Scheduled imports (Job Queue)
+- **User experience** - Users shouldn't wait for long operations
+- **Non-critical timing** - Acceptable if processing takes hours
+
+**Example timeline:**
+
+```text
+10:00 AM - User starts import
+10:00:05 AM - Records queue to background, user screen returns control
+10:00+ AM - User can open other documents, create orders, etc.
+Background - System processes records (separate session)
+10:15 AM - Processing completes
+10:15 AM - User gets notification: "Import completed: 500 orders created"
+```
+
+### How to Choose Processing Mode
+
+**For Sales Document Imports:**
+
+| Scenario | Recommended | Reason |
+| ---------- | ------------- | -------- |
+| 50 orders | Immediate | Quick processing, user can verify results |
+| 500 orders | Deferred | Avoid user waiting 1-2 minutes |
+| 5000 orders | Deferred | User shouldn't wait 30+ minutes |
+| Scheduled nightly | Deferred | Run in background via Job Queue |
+| Manual ad-hoc import | Immediate | User present and can verify |
+
+### Configuring Processing Mode
+
+1. Open your **Integration** record
+2. Set: **Processing Execution Mode**
+   - **Immediate (Synchronous)** - Blocking mode
+   - **Deferred Job Queue (Asynchronous)** - Non-blocking mode
+3. Save
+
+### Running an Import with Your Chosen Mode
+
+After import completes, you'll see a dialog with options:
+
+**The dialog offers:**
+
+1. **Process now (wait for completion)** - Immediate mode
+2. **Process in background (continue working)** - Deferred mode  
+3. **Open import results** - View the Integration Records page
+
+Select based on your preference and the configured Processing Execution Mode will determine how it runs.
+
+### Monitoring Background Processing
+
+When using deferred processing:
+
+1. You can **check status anytime** by opening:
+   - **NAV-X Integration Records** page
+   - Filter by your integration and import entry
+   - View Status column: "Ready", "Processing", "Completed", "Error"
+
+2. **Notification banner** appears when background processing completes
+   - Shows success count and error count
+   - Allows you to open results immediately
+
+3. **Re-process errors** if needed:
+   - Records with Status = "Error" can be fixed and reprocessed
+   - Keep the same Entry No. to reprocess that batch
+
+---
 
 ## Workflow After Import
 

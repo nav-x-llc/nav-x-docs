@@ -27,6 +27,10 @@ items:
         href: how-to-error-handling.md
       - name: Import Sales Documents
         href: how-to-sales-documents.md
+      - name: Use Background Processing
+        href: how-to-background-processing.md
+      - name: Set Up Post-Processing
+        href: how-to-post-processing.md
   - name: Pages
     items:
       - name: Integration Setup
@@ -37,12 +41,16 @@ items:
         href: page-integration-fields.md
       - name: Integration Mappings
         href: page-integration-mappings.md
+      - name: Integration Field Value Maps
+        href: page-integration-field-value-maps.md
       - name: Integration from Business Central
         href: page-bc-intermediate.md
       - name: Integration to Business Central
         href: page-intermediate.md
       - name: Integration Records
         href: page-integration-records.md
+      - name: Post-Process Entries
+        href: page-post-process-entries.md
       - name: Integration Tables
         href: page-integration-table.md
       - name: Integration Table Fields
