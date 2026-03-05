@@ -20,6 +20,7 @@ Integration mappings connect:
 
 | Field | Purpose | Required |
 | ------- | --------- | ---------- |
+| **Field Order** | Order of the field mapping (New in v1.4.0) | Yes |
 | **Field No.** | References the Integration Field (from Fields page) | Yes |
 | **Field Name** | Integration field name (display; read-only) | No |
 | **Destination Table No.** | BC table number to receive this field value | Yes |
@@ -68,6 +69,12 @@ When importing: "ACME_A" translates to "WID-100", then looks up Item WID-100
 ```
 
 Access field value maps by clicking the action on this mapping.
+
+### Required Field Validation (New in v1.4.0)
+
+| Field | Purpose | Effect |
+| ------- | --------- | -------- |
+| **Required** | Mark field as required for import | When enabled, the import fails if the source data does not contain a value for this field |
 
 ### Validation
 
@@ -199,6 +206,10 @@ Opens value mapping configuration for this mapping.
 Only available when **Use Field Value Mapping** = Yes.
 
 See [Field Value Maps Page](page-integration-field-value-maps.md) for details.
+
+### Import with Preview (New in v1.4.0)
+
+Uploads a file and displays a preview page before importing. Lets you verify column mappings and data quality directly from the mappings page. See [How to Use Import Preview](how-to-import-preview.md) for details.
 
 ## Setting Up Mappings
 
@@ -366,3 +377,4 @@ Result: "ACME_A" → "A-100" → Looks up Item A-100 ✓
 - [Integration Records page](page-integration-records.md)
 - [How to Import Sales Documents](how-to-sales-documents.md) - Multi-line example with Create New Document
 - [How to Set Up Field Mappings](how-to-field-mappings.md) - Advanced mapping techniques
+- [How to Use Import Preview](how-to-import-preview.md) - New in v1.4.0

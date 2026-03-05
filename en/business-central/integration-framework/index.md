@@ -14,6 +14,7 @@ The following import formats are currently supported:
 - **CSV Import** - Import comma and delimiter-separated values with customizable delimiters
 - **Flexible-Length Text Import** - Import text files with custom field delimiters and quoted field support
 - **Fixed-Length Text Import** - Import positional text files (mainframe, legacy system formats)
+- **JSON Import** - Import data from JSON files with dot-notation paths, nested objects, and array flattening (New in v1.5.0)
 
 ### Core Features
 
@@ -29,6 +30,12 @@ The following import formats are currently supported:
 - **Works with Any Tables** - Import to any Business Central table, including ISV solutions
 - **Automated Processing** - Schedule imports via Job Queue for hands-off operation
 - **Email Notifications** - Receive notifications when imports complete with errors
+- **Copilot Auto Setup** - AI-powered integration configuration from uploaded sample files (New in v1.4.0)
+- **Import Preview** - Preview uploaded data before committing to import (New in v1.4.0)
+- **Import Logging** - Structured two-level logging for import diagnostics (New in v1.4.0)
+- **Pre-Parsing Transformations** - Trim, pad, case-convert, round, and replace characters before processing (New in v1.4.0)
+- **Dynamic Field Values** - Stamp records with system values like today's date, user ID, or company name (New in v1.4.0)
+- **Definition Export/Import** - Transfer integration setups between environments via XML (New in v1.4.0)
 
 ### Configuration
 

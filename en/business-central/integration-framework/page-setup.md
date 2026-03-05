@@ -5,12 +5,12 @@ The NAV-X Integration Framework has a general setup. The page **NAV-X Integratio
 The following fields are available on the page.
 
 | Field | Description |
-|-|-|
+| - | - |
 | **Local ISO Country Code** | The local country code in 3 character ISO standard. |
 | **Local ITU Country Code** | The local country code in the numeric ITU standard. |
 | **Send Email when Integration fails** | If this field is checked, an email will be sent any time an integration fails, if the integration is run automatically from a Job Queue. |
 | **Email Address for Integation Failure notifications** | If the **Send Email when Integration fails** field is checked, define one or more email addresses that will receive the email in case of the failure of an Integration. Multiple email addresses can be defined by separating the addresses via semicolon. |
-
+| **Enable Import Logging** | Enables import logging globally. When enabled, each integration can be individually configured for detailed logging via the **Enable Detailed Logging** field on the integration record. New in v1.4.0. |
 
 ## See Also
 

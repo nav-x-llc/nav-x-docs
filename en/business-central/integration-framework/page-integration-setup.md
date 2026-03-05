@@ -28,6 +28,7 @@ Typical configuration options include:
 | **Field Value Mapping Enabled** | Enable code translation/mapping feature | Yes (v1.3.0+) |
 | **Audit Trail** | Log all import/process operations | Yes |
 | **Error Notification** | Notify admin of import errors | Yes |
+| **Enable Import Logging** | Global switch for import logging (New in v1.4.0) | No |
 
 ### Advanced Settings
 
@@ -183,6 +184,19 @@ Older setups that may still exist but are superseded:
 
 Many v1.3.0 settings moved to specific configuration pages rather than centralized setup.
 
+## Version 1.4.0 Updates
+
+New in v1.4.0:
+
+| Feature | Setting | Location |
+| --------- | --------- | ---------- |
+| Import Logging | Enable Import Logging (global) | NAV-X Integration Setup |
+| Import Logging | Enable Detailed Logging (per-integration) | Integration record |
+| Import Preview | Preview Rows (1-100) | Integration record |
+| Definition Export/Import | Export/Import Setup actions | Integrations page |
+| Copy to Company | Copy to Company action | Integrations page |
+| Copilot Auto Setup | Suggest Integration Setup action | Integrations page |
+
 ## See Also
 
 - [Integrations Page](page-integrations.md) - Integration configuration
@@ -190,3 +204,4 @@ Many v1.3.0 settings moved to specific configuration pages rather than centraliz
 - [How to Configure Integrations](how-to-configure-integrations.md) - Setup walkthrough
 - [Post-Processing Framework](how-to-post-processing.md) - New in v1.3.0
 - [Background Processing Modes](how-to-background-processing.md) - New in v1.3.0
+- [How to Use Import Logging](how-to-import-logging.md) - New in v1.4.0

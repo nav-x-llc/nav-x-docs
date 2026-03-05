@@ -11,7 +11,9 @@ Integration fields represent:
 - **Columns in Excel** (A, B, C, etc.)
 - **Columns in CSV** (1, 2, 3, etc.)
 - **Fixed positions in Text files** (character offset and length)
+- **JSON paths** (dot-notation paths like `customer.address.city`)
 - **Constant values** (fixed data applied to all rows)
+- **Dynamic values** (system values resolved at import time)
 - **Auto-generated values** (line numbers, entry numbers)
 
 ## Key Fields
@@ -58,6 +60,56 @@ For **Column Type = Constant**:
 | ------- | --------- |
 | **Constant Value** | Fixed value applied to every row |
 | **Source Column** | Leave blank (not used for constants) |
+
+### JSON Configuration (New in v1.5.0)
+
+For **Integration Type = Json**:
+
+| Field | Purpose | Example |
+| ------- | --------- | --------- |
+| **JSON Path** | Dot-notation path to resolve value from JSON object | `customer.address.city` |
+| **JSON Array Mode** | How to handle array values | Flatten, Concatenate, or First |
+
+**JSON Path** supports a lookup action that discovers available paths from the stored JSON sample with sample values.
+
+**JSON Array Mode** options:
+
+- **Flatten** - Expand child array elements into separate rows with parent values duplicated
+- **Concatenate** - Join array values with a separator into a single value
+- **First** - Take only the first element from the array
+
+### Dynamic Configuration (New in v1.4.0)
+
+For **Column Type = Dynamic**:
+
+| Field | Purpose |
+| ------- | --------- |
+| **Dynamic Value Type** | System value to use: Today, Work Date, Current Time, Current Date/Time, User ID, or Company Name |
+
+### Pre-Parsing Transformations (New in v1.4.0)
+
+These fields configure data transformations applied before processing into Business Central:
+
+| Field | Purpose | Modes |
+| ------- | --------- | ------- |
+| **Default Value If Empty** | Fallback value when source is blank | Text value |
+| **Trim Start Mode** | Trim from beginning | None, Flexible (character set), Fixed (N chars) |
+| **Trim Start Characters** | Characters to trim (Flexible mode) | e.g., `0` and space to trim zeros and spaces |
+| **Trim Start Count** | Number of characters to remove (Fixed mode) | Integer |
+| **Trim End Mode** | Trim from end | None, Flexible, Fixed |
+| **Trim End Characters** | Characters to trim (Flexible mode) | Text |
+| **Trim End Count** | Number of characters to remove (Fixed mode) | Integer |
+| **Case Conversion** | Convert case | None, Upper Case, Lower Case, Title Case |
+| **Pad Direction** | Pad side | None, Left, Right |
+| **Pad Character** | Character for padding | e.g., `0` for zero-padding |
+| **Pad Length** | Target length after padding | Integer |
+| **Rounding Direction** | Rounding direction for decimals | None, Nearest, Up, Down |
+| **Rounding Precision** | Rounding precision | e.g., `0.01` for two decimals |
+| **Has Char. Replacements** | Indicates character replacement rules exist | Read-only indicator |
+
+Transformations are applied in this order: default-if-empty, trim start, trim end, character replacements, case conversion, padding. Rounding is applied after multi-record splits.
+
+See [How to Use Pre-Parsing Transformations](how-to-pre-parsing-transformations.md) for detailed configuration guidance.
 
 ### Multi-Row Configuration
 
@@ -152,6 +204,34 @@ Row 2 → Entry No. = 2
 Row 3 → Entry No. = 3
 ```
 
+### Dynamic (New in v1.4.0)
+
+**Purpose:** Resolve system values at import time without requiring them in the source file
+
+**Configuration:**
+
+- Set Dynamic Value Type to the desired system value
+- No Source Column or Constant Value needed
+
+**Dynamic Value Types:**
+
+- **Today** - Current date
+- **Work Date** - Business Central work date
+- **Current Time** - Current time
+- **Current Date/Time** - Current date and time
+- **User ID** - ID of the user running the import
+- **Company Name** - Name of the current company
+
+**Use when:** Stamping records with audit information, dates, or company context
+
+**Example:**
+
+```text
+Title: ImportDate
+Column Type: Dynamic
+Dynamic Value Type: Today
+```
+
 ### Formula (New in v1.3.0)
 
 **Purpose:** Combine and transform values using formulas
@@ -240,6 +320,16 @@ Field 3: Title=OrderDate, Column Type=Standard, Start Position=15, Field Length=
 Field 4: Title=DocumentType, Column Type=Constant, Constant Value=Order
 Field 5: Title=LineNo, Column Type=Line Numbers
 ```
+
+## Actions
+
+### Suggest Fields from Sample (JSON only, New in v1.5.0)
+
+Analyzes the stored JSON sample file and suggests fields based on discovered JSON paths. Opens a confirmation page where you can select which fields to create.
+
+### Character Replacements (New in v1.4.0)
+
+Opens the character replacement rules for the selected field. Allows you to define ordered find-and-replace rules that are applied during pre-parsing.
 
 ## Best Practices
 
