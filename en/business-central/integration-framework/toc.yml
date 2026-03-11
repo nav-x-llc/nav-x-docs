@@ -17,6 +17,8 @@ items:
         href: how-to-flexible-text-import.md
       - name: Import Fixed-Length Text
         href: how-to-fixed-length-text-import.md
+      - name: Import JSON Files
+        href: how-to-json-import.md
       - name: Set Up Field Mappings
         href: how-to-field-mappings.md
       - name: Use Field Lookups
@@ -31,6 +33,44 @@ items:
         href: how-to-background-processing.md
       - name: Set Up Post-Processing
         href: how-to-post-processing.md
+      - name: Use Import Logging
+        href: how-to-import-logging.md
+      - name: Preview Imports
+        href: how-to-import-preview.md
+      - name: Use Copilot Auto Setup
+        href: how-to-copilot-setup.md
+      - name: Export and Import Definitions
+        href: how-to-definition-export-import.md
+      - name: Use Pre-Parsing Transformations
+        href: how-to-pre-parsing-transformations.md
+      - name: Data Administration
+        href: how-to-data-administration.md
+  - name: REST API
+    items:
+      - name: Set Up REST API Import
+        href: how-to-rest-api-import.md
+      - name: Configure Authentication
+        href: how-to-rest-api-authentication.md
+      - name: Set Up Pagination
+        href: how-to-rest-api-pagination.md
+      - name: Schedule Automated Polling
+        href: how-to-rest-api-scheduled-polling.md
+      - name: Use Request Body Templates
+        href: how-to-rest-api-body-templates.md
+      - name: Configure Template Variables
+        href: how-to-rest-api-template-variables.md
+      - name: Set Up Chained API Calls
+        href: how-to-rest-api-chained-calls.md
+      - name: Aggregate Multiple Endpoints
+        href: how-to-rest-api-aggregation.md
+      - name: Set Up Webhooks
+        href: how-to-rest-api-webhooks.md
+      - name: Use GraphQL
+        href: how-to-rest-api-graphql.md
+      - name: Use Sync Protocol
+        href: how-to-rest-api-sync-protocol.md
+      - name: Use REST API Copilot
+        href: how-to-rest-api-copilot.md
   - name: Pages
     items:
       - name: Integration Setup
@@ -57,6 +97,32 @@ items:
         href: page-master-table-fields.md
       - name: Setup
         href: page-setup.md
+      - name: Import Logs
+        href: page-import-logs.md
+      - name: Import Log Card
+        href: page-import-log-card.md
+      - name: Import Preview
+        href: page-import-preview.md
+      - name: Copilot Auto Setup
+        href: page-copilot-auto-setup.md
+      - name: REST API Connections
+        href: page-rest-api-connections.md
+      - name: REST API Connection Card
+        href: page-rest-api-connection-card.md
+      - name: REST API Endpoint Card
+        href: page-rest-api-endpoint-card.md
+      - name: REST API Headers
+        href: page-rest-api-headers.md
+      - name: REST API Endpoint Headers
+        href: page-rest-api-endpoint-headers.md
+      - name: REST API Template Variables
+        href: page-rest-api-template-vars.md
+      - name: REST API Aggregations
+        href: page-rest-api-aggregations.md
+      - name: Webhook Configuration
+        href: page-webhook-config.md
+      - name: Webhook Queue
+        href: page-webhook-queue.md
   - name: Additional
     items:
       - name: Release Notes

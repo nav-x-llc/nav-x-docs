@@ -15,6 +15,7 @@ The following import formats are currently supported:
 - **Flexible-Length Text Import** - Import text files with custom field delimiters and quoted field support
 - **Fixed-Length Text Import** - Import positional text files (mainframe, legacy system formats)
 - **JSON Import** - Import data from JSON files with dot-notation paths, nested objects, and array flattening (New in v1.5.0)
+- **REST API Import** - Import data from REST APIs with configurable connections, authentication, pagination, and scheduled polling (New in v1.6.0)
 
 ### Core Features
 
@@ -36,6 +37,12 @@ The following import formats are currently supported:
 - **Pre-Parsing Transformations** - Trim, pad, case-convert, round, and replace characters before processing (New in v1.4.0)
 - **Dynamic Field Values** - Stamp records with system values like today's date, user ID, or company name (New in v1.4.0)
 - **Definition Export/Import** - Transfer integration setups between environments via XML (New in v1.4.0)
+- **REST API Connections** - Connect to external REST APIs with Bearer, API Key, and OAuth authentication (New in v1.6.0)
+- **Webhooks** - Receive push-based data from external systems via webhook endpoints (New in v1.6.0)
+- **GraphQL Support** - Query GraphQL APIs with cursor-based pagination (New in v1.6.0)
+- **Chained API Calls** - Orchestrate master/detail API patterns automatically (New in v1.6.0)
+- **Multi-Endpoint Aggregation** - Merge data from multiple API endpoints horizontally (New in v1.6.0)
+- **REST API Copilot** - AI-powered REST API integration configuration (New in v1.6.0)
 
 ### Configuration
 

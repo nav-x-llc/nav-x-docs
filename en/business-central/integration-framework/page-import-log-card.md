@@ -91,6 +91,20 @@ The bottom of the card displays the **Import Log Details** subpage, which shows 
 - Processing status
 - Error type and error message (if applicable)
 
+## Import Log Details
+
+The bottom section of the Import Log Card displays the **Import Log Details** — one entry per field per row per import. This provides full diagnostic traceability for each imported value.
+
+| Field | Description |
+| ------- | --------- |
+| **Row No.** | The source row number |
+| **Field Name** | The integration field name |
+| **Value** | The post-pre-parsing value that was imported |
+| **Column Type** | The field's column type (Standard, Constant, Dynamic) |
+| **Status** | Processing status of this field (Completed, Error) |
+| **Error Type** | Category of error if applicable |
+| **Error Message** | Detailed error description |
+
 ## See Also
 
 - [Import Logs page](page-import-logs.md) - List of all import logs

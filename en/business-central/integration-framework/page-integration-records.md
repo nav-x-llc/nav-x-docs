@@ -460,6 +460,15 @@ Step 6: Verify
   5 Sales Orders created in BC with 15 lines
 ```
 
+## Edit Cell Value
+
+Double-clicking a cell value in the Integration Records list (or selecting the **Edit Cell Value** action) opens a small dialog where you can manually edit the value of a specific field for a specific record. This is useful for correcting data before reprocessing a record that had errors.
+
+| Field | Description |
+| ------- | --------- |
+| **Field Name** | The name of the field being edited (read-only) |
+| **Value** | The current value, which you can modify |
+
 ## See Also
 
 - [Integrations Page](page-integrations.md)

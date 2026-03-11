@@ -203,3 +203,25 @@ There are various reasons why you cannot see the NAV-X Integration Framework fun
  If you cannot see the setup, please choose the ![Tell me what you want to do](/images/magnifying-glass.gif) icon, enter **Application Area**, and then choose the related link to open the related page. Please search for the application area called *NAV-X Integration Framework* and validate that it has a check mark.
 
 If you still have issues, please feel free to [contact us](https://nav-x.com/support/)
+
+## REST API
+
+### Can I connect to any REST API?
+
+Yes, the Integration Framework supports connecting to any REST API that returns JSON data. You can configure custom authentication (Bearer, API Key, or OAuth), headers, and pagination to work with virtually any API.
+
+### What authentication methods are supported for REST APIs?
+
+The framework supports Bearer Token, API Key (in header, query parameter, or request body), and OAuth Token Endpoint (client credentials flow) authentication. You can also use Basic Authentication or no authentication for open APIs.
+
+### Can I receive data pushed from external systems?
+
+Yes, you can configure webhook receivers that provide a URL for external systems to POST data to. The data is queued and processed using your integration's field mappings. See [Set Up Webhooks](how-to-rest-api-webhooks.md) for details.
+
+### Can I pull data from multiple related API endpoints?
+
+Yes, the framework supports two patterns: **Chained API Calls** for master/detail patterns (call one API, then use response data to call another), and **Multi-Endpoint Aggregation** for merging data from independent endpoints. See [Chained API Calls](how-to-rest-api-chained-calls.md) and [Aggregation](how-to-rest-api-aggregation.md).
+
+### Does Copilot work with REST API integrations?
+
+Yes, you can upload a sample API response file and Copilot will analyze the JSON structure, suggest field mappings, and generate a complete integration configuration. See [REST API Copilot Setup](how-to-rest-api-copilot.md).

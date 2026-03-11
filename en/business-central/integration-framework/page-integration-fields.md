@@ -388,6 +388,24 @@ CurrencyCode          Constant                    USD
 EntrySequence         Entry Numbers
 ```
 
+## Character Replacements
+
+The **Character Replacements** action opens a sub-page where you can define ordered find-and-replace rules for the selected field. Each rule specifies a **Find** character or string and a **Replace With** value. Rules are applied in order during pre-parsing, before any other transformations.
+
+| Field | Description |
+| ------- | --------- |
+| **Order** | The sequence in which the replacement is applied |
+| **Find** | The character or string to search for |
+| **Replace With** | The replacement value (leave empty to remove the found characters) |
+
+## JSON Path Lookup
+
+When working with JSON integrations, the **JSON Path Lookup** action opens a dialog showing all available JSON paths discovered from the stored sample file. Each path displays a sample value to help you identify the correct path. Select a path to populate the **JSON Path** field.
+
+## JSON Field Suggestions
+
+The **Suggest Fields from Sample** action for JSON integrations opens a dialog that auto-discovers the JSON structure and suggests field definitions. It detects the root array path, enumerates all leaf paths, generates human-readable field names, and creates Integration Field records. Re-running does not duplicate existing fields.
+
 ## See Also
 
 - [Integrations Page](page-integrations.md)

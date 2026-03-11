@@ -197,6 +197,18 @@ New in v1.4.0:
 | Copy to Company | Copy to Company action | Integrations page |
 | Copilot Auto Setup | Suggest Integration Setup action | Integrations page |
 
+## Flexible Integration Setup
+
+The **Flexible Integration Setup** page is a Card page that stores global configuration for the flexible integration engine. It is accessed from the Integration Framework menu or via search.
+
+### Fields
+
+| Field | Description |
+| ------- | --------- |
+| **Power Automate Base URL** | The base trigger URL for the Power Automate webhook relay flow (e.g., `https://prod-xx.logic.azure.com/.../invoke`). This is the URL up to but not including `/webhook/{token}`. Used when integrations are triggered via Power Automate webhooks. |
+
+This setup record is automatically initialized the first time the page is opened. It does not allow inserting or deleting records — only modifying the existing configuration.
+
 ## See Also
 
 - [Integrations Page](page-integrations.md) - Integration configuration

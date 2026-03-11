@@ -4,6 +4,8 @@ We release new versions of our software from time to time. Those can include fix
 
 The versions are listed below from the newest version to the earliest version.
 
+- [March 2026 Update - Version 1.6.0](release-notes/release-notes-1-6-0.md)
+
 - [March 2026 Update - Version 1.5.0](release-notes/release-notes-1-5-0.md)
 
 - [February 2026 Update - Version 1.4.0](release-notes/release-notes-1-4-0.md)
