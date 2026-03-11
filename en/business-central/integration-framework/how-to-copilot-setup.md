@@ -185,6 +185,25 @@ The AI returned an unexpected response. Try again, or modify your description to
 
 If Copilot suggests fields but no mappings, your column names may not match any known BC fields. Add a description like "Map to Customer table fields Name, Address, City, Post Code" to guide the AI.
 
+## Regenerate Suggestions
+
+If the initial suggestions don't match your needs, you can use the **Regenerate** button on the Copilot Auto Setup dialog to re-analyze the file and generate new suggestions without closing and reopening the dialog.
+
+## Constant Value Support
+
+Copilot can now suggest **Constant** fields with pre-filled values. For example, when importing sales orders, Copilot may suggest a "Document Type" constant field set to "Order". Constant values appear in the **Constant Value** column of the Suggested Fields list.
+
+## Automatic Document Field Detection
+
+For document imports (Sales Header/Line, Purchase Header/Line), Copilot automatically adds required fields that may not be present in your source file:
+
+- **Document Type** as a constant (e.g., "Order", "Invoice")
+- **Type** as a constant (e.g., "Item") for line tables
+- **Line No.** with automatic line number generation
+- **System-Created Entry** as a constant
+
+If business-critical fields like customer number, item number, or quantity are not mapped, Copilot displays warnings to alert you.
+
 ## See Also
 
 - [Integrations](page-integrations.md)

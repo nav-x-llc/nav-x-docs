@@ -170,6 +170,18 @@ You've now learned how to:
 
 Continue with the how-to guides above to explore specific import formats and advanced features.
 
+## Getting Started with REST API Imports
+
+If you want to import data from a REST API rather than a file, the setup process is slightly different:
+
+1. Navigate to the **REST API Connections** page and create a new connection with your API's base URL and authentication credentials
+2. Add one or more **endpoints** to the connection, specifying the URL path and response data path
+3. Use the **Test Connection** action to verify connectivity
+4. Create an **integration** and link it to the REST API endpoint
+5. Configure **field mappings** to map JSON response fields to Business Central table fields
+
+For detailed instructions, see [Set Up REST API Import](how-to-rest-api-import.md).
+
 ## See Also
 
 - [NAV-X Integration Setup page](page-integration-setup.md)
