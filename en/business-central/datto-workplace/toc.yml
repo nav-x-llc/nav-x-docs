@@ -1,0 +1,29 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Trial Setup
+        href: trial-setup.md
+  - name: How To
+    items:
+      - name: Set Up API Access in Datto Workplace
+        href: how-to-datto-api-setup.md
+      - name: Add a Datto Workplace Account
+        href: how-to-add-account.md
+      - name: Manage Accounts
+        href: how-to-manage-accounts.md
+  - name: Pages
+    items:
+      - name: Account Card
+        href: page-account-card.md
+      - name: Account Setup Wizard
+        href: page-account-setup-wizard.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md

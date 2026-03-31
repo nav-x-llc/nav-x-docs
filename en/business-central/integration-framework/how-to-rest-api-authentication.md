@@ -10,7 +10,7 @@ This guide walks you through configuring authentication for REST API connections
 
 ## Authentication Types Overview
 
-The Integration Framework supports five authentication types for REST API connections:
+The Integration Framework supports six authentication types for REST API connections:
 
 | Authentication Type | Description | Common Use Case |
 | --- | --- | --- |
@@ -19,6 +19,7 @@ The Integration Framework supports five authentication types for REST API connec
 | **Bearer Token** | Static token sent in the Authorization header | APIs that issue long-lived tokens |
 | **API Key** | Key sent as a header or query parameter | Third-party SaaS APIs, marketplace APIs |
 | **OAuth2 Client Credentials** | Automated token acquisition using client ID and secret | Modern enterprise APIs, Microsoft services |
+| **OAuth2 Authorization Code** | Interactive user-delegated authorization with PKCE | APIs requiring user consent, Salesforce, HubSpot |
 | **Token Endpoint** | Custom token acquisition by posting credentials to an endpoint | Custom APIs with proprietary login endpoints |
 
 ## When to Use Each Type
@@ -58,6 +59,14 @@ Use when the API supports the OAuth2 client credentials flow (machine-to-machine
 - Microsoft Graph API and Azure services
 - Modern enterprise APIs
 - APIs that require scoped access tokens
+
+### OAuth2 Authorization Code
+
+Use when the API requires a user to interactively log in and grant consent before the integration can access data on their behalf. This is the authorization code flow with PKCE (Proof Key for Code Exchange) and is distinct from OAuth2 Client Credentials, which uses machine-to-machine trust. Common for:
+
+- SaaS platforms that require user consent (Salesforce, HubSpot, QuickBooks Online)
+- APIs where data access is scoped to the authenticated user
+- Platforms that do not support client credential grants
 
 ### Token Endpoint
 
@@ -152,6 +161,58 @@ The framework automatically:
 2. Receives an access token from the identity provider
 3. Includes the token as `Authorization: Bearer <token>` in subsequent API requests
 4. Refreshes the token automatically when it expires
+
+## Configuring OAuth2 Authorization Code
+
+1. On the REST API Connection Card, set **Authentication Type** to **OAuth2 Authorization Code**
+2. The **OAuth2 Authorization Code** section appears
+3. Complete the following fields:
+
+| Field | Description |
+| --- | --- |
+| **Authorization URL** | The URL of the authorization endpoint where users are redirected to log in and grant consent (e.g., `https://login.microsoftonline.com/{tenant}/oauth2/v2.0/authorize`) |
+| **OAuth2 Token URL** | The token endpoint URL used to exchange the authorization code for an access token (e.g., `https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token`) |
+| **OAuth2 Client ID** | The client ID (application ID) registered with the identity provider |
+| **OAuth2 Scope** | The scope(s) to request, space-separated (e.g., `openid profile offline_access`). The `offline_access` scope is required to receive a refresh token |
+| **Client Secret** | The client secret for your app registration. Some providers (public clients) do not require a secret when PKCE is used |
+| **Client Secret is Set** | Read-only indicator confirming a secret has been stored |
+
+### Authorizing the Connection
+
+Unlike OAuth2 Client Credentials, the Authorization Code flow requires an interactive authorization step that a user must complete once:
+
+1. After entering the configuration fields above, choose the **Manage Authorization** action on the Connection Card
+2. The **OAuth2 Authorization Management** page opens
+3. Choose **Start Authorization** — Business Central opens the provider's login page in your browser
+4. Log in with the user account and grant consent when prompted
+5. After consent, the provider redirects back to Business Central with an authorization code
+6. The framework exchanges the code for an access token and refresh token automatically
+7. The token is stored securely in Isolated Storage
+
+### How Token Refresh Works
+
+The framework silently refreshes the access token using the stored refresh token before it expires (with a 60-second buffer). If the refresh token itself expires (which can happen after extended periods of inactivity), you must re-authorize using the **Start Authorization** action.
+
+### Managing Authorization
+
+Use the **Manage Authorization** action on the REST API Connection Card to open the **OAuth2 Authorization Management** page, which provides the following actions:
+
+| Action | Description |
+| --- | --- |
+| **Start Authorization** | Opens the identity provider's login page to begin the authorization code flow. Use this for initial setup or when re-authorization is required |
+| **Test Token** | Verifies that a valid access token is available. Confirms whether the authorization is active without making an API call |
+| **Refresh Token** | Manually triggers a token refresh using the stored refresh token. Use this to proactively renew a token before it expires |
+| **Revoke Authorization** | Revokes the stored tokens and clears the authorization from Isolated Storage. Use this to disconnect the integration from the user account |
+
+### Difference from OAuth2 Client Credentials
+
+| | OAuth2 Client Credentials | OAuth2 Authorization Code |
+| --- | --- | --- |
+| **Who authenticates** | The application (machine-to-machine) | A specific user (user-delegated) |
+| **User interaction required** | No | Yes, once during setup |
+| **Token type** | Application access token | User access token + refresh token |
+| **Best for** | Server-to-server APIs, background jobs | APIs scoped to a user account |
+| **PKCE** | Not applicable | Supported |
 
 ## Configuring Token Endpoint
 

@@ -242,6 +242,118 @@ When a webhook payload fails to process, the queue entry is set to **Error** sta
 3. Confirm the deletion when prompted
 4. All entries with **Completed** status are removed
 
+## Securing Incoming Webhooks
+
+By default, the webhook receiver accepts any POST request that carries a valid token in the URL. For production scenarios where payloads arrive from the public internet, you should enable webhook security to verify that payloads genuinely originate from the expected external system.
+
+The Integration Framework supports three independent security mechanisms that can be used in combination:
+
+### Signature Verification (HMAC)
+
+HMAC signature verification ensures that each incoming payload was signed by the external system using a shared secret. The framework computes its own HMAC signature from the raw payload and compares it against the signature sent in a header.
+
+#### Configuring Signature Verification
+
+1. Open the **Webhook Configuration Card** for the integration
+2. In the **Security** section, enable **Verify Signature**
+3. Configure the following fields:
+
+| Field | Description |
+| --- | --- |
+| **Signature Algorithm** | The HMAC algorithm to use: **HMAC-SHA256** (recommended), **HMAC-SHA1**, or **HMAC-SHA512**. Must match the algorithm used by the external system |
+| **Signature Header** | The HTTP header name that carries the signature (e.g., `X-Hub-Signature-256`, `X-Shopify-Hmac-Sha256`, `Stripe-Signature`) |
+| **Signature Secret** | The shared secret used to compute the HMAC. Stored securely in Isolated Storage and masked after saving |
+| **Signature Prefix** | Optional prefix to strip from the header value before comparing (e.g., `sha256=` for GitHub webhooks, `v1=` for Stripe). Leave empty if the header contains the raw hex digest |
+
+#### How Signature Verification Works
+
+```text
+External system computes: HMAC(secret, raw_payload)
+External system sends signature in header (e.g., X-Hub-Signature-256: sha256=<hex>)
+    |
+BC receives POST request
+    |
+Framework reads raw payload body
+Framework strips configured prefix from header value
+Framework computes: HMAC(secret, raw_payload) using configured algorithm
+Framework compares computed signature with received signature (constant-time comparison)
+    |
+Match → payload accepted and enqueued
+No match → request rejected with 400 Bad Request
+```
+
+> **Tip:** Use the **receiveSecure** action (instead of **receive**) on the webhook API endpoint when signature verification is enabled. The `receiveSecure` action validates the signature before enqueuing the payload.
+
+### Timestamp Validation
+
+Timestamp validation rejects webhook payloads that are too old, preventing replay attacks where an attacker re-sends a previously captured valid request.
+
+#### Configuring Timestamp Validation
+
+1. On the **Webhook Configuration Card**, enable **Validate Timestamp**
+2. Configure the following fields:
+
+| Field | Description |
+| --- | --- |
+| **Timestamp Header** | The HTTP header that carries the Unix timestamp of when the request was sent (e.g., `X-Timestamp`, `X-Request-Timestamp`) |
+| **Timestamp Tolerance (sec)** | The maximum age of a request in seconds before it is rejected. Default is **300** (5 minutes). Requests older than this relative to Business Central's server clock are rejected |
+
+> **Note:** This feature requires the external system to include a Unix epoch timestamp in a request header. Not all webhook providers support this. Check your provider's documentation.
+
+### IP Allowlist
+
+IP allowlisting restricts incoming webhooks to requests from specific IP addresses or CIDR ranges. Requests from any other IP are rejected before payload processing begins.
+
+#### Configuring the IP Allowlist
+
+1. On the **Webhook Configuration Card**, enable **Restrict by IP**
+2. In the **Allowed IP Ranges** field, enter one or more IP addresses or CIDR blocks, separated by semicolons:
+
+```text
+203.0.113.0/24; 198.51.100.42; 2001:db8::/32
+```
+
+| Format | Example | Matches |
+| --- | --- | --- |
+| Single IPv4 | `203.0.113.42` | Exactly that address |
+| IPv4 CIDR | `203.0.113.0/24` | All addresses in that subnet |
+| Single IPv6 | `2001:db8::1` | Exactly that address |
+| IPv6 CIDR | `2001:db8::/32` | All addresses in that subnet |
+
+> **Important:** When using the Power Automate relay, the source IP will be Power Automate's outbound IP range, not the original external system's IP. Use IP allowlisting only with direct webhook integrations, or add Power Automate's published IP ranges to your allowlist.
+
+### Using All Three Together
+
+The three mechanisms operate independently and in order:
+
+1. **IP check** — evaluated first; rejects immediately if IP is not in the allowlist
+2. **Timestamp check** — evaluated second; rejects if the timestamp is missing or too old
+3. **Signature check** — evaluated last; rejects if the HMAC signature does not match
+
+A request must pass all enabled checks to be accepted.
+
+### Webhook Security Troubleshooting
+
+#### "Signature verification failed" Error
+
+- Confirm the **Signature Algorithm** matches exactly what the external system uses
+- Confirm the **Signature Header** name matches the header the external system sends
+- Check whether a **Signature Prefix** (e.g., `sha256=`) needs to be stripped
+- Verify the **Signature Secret** matches the secret configured in the external system
+- The HMAC is computed over the raw, unmodified request body — ensure no intermediary (proxy, Power Automate) modifies the body before it reaches Business Central
+
+#### "Request timestamp is too old" Error
+
+- The external system's clock may be out of sync with Business Central's server clock
+- Increase **Timestamp Tolerance** if the external system has latency before sending
+- Verify the external system is sending a Unix epoch (seconds since 1970-01-01)
+
+#### "Source IP is not in the allowlist" Error
+
+- Check the actual source IP in the Webhook Queue **Source IP** column
+- Add the IP or its CIDR range to **Allowed IP Ranges**
+- If using Power Automate relay, use Power Automate's published service IP ranges
+
 ## Managing Webhook Tokens
 
 Each webhook configuration uses a unique token (GUID) that forms part of the webhook URL. This token acts as an identifier to route incoming requests to the correct integration.
