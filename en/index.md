@@ -34,6 +34,12 @@ Microsoft Dynamics 365 Business Central Custom Fields allows you to add and util
 
 Navigate to our [Custom Fields](business-central/custom-fields/index.md) solution.
 
+## Datto Workplace
+
+The **External File Storage - Datto Workplace Connector** for Microsoft Dynamics 365 Business Central connects Business Central to your Datto Workplace account, making Datto Workplace a native external file storage provider for all Business Central file operations. You can manage Datto Workplace accounts directly inside Business Central without switching between applications. If you require assistance or need setup instructions, please visit our documentation section specific to our [Datto Workplace](business-central/datto-workplace/index.md) solution.
+
+Navigate to our [Datto Workplace](business-central/datto-workplace/index.md) solution.
+
 ## Integration Framework
 
 The NAV-X Integration Framework for Microsoft Dynamics 365 Business Central allows you to import different data into Business Central without development necessary. You can configure new integrations or use the framework as the base for other, custom integrations. If you require assistance or need setup instructions, please visit our documentation section specific to our [Integration Framework](business-central/integration-framework/index.md) solution.
