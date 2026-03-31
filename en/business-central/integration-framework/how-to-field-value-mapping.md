@@ -214,45 +214,85 @@ Each mapping can have its own lookup configuration.
 
 ## Handling Lookup Failures
 
-### When Lookup Value Not Found
+### Lookup Fail Action
 
-If source value doesn't exist in lookup table:
+When the lookup engine cannot find a matching record, the **Lookup Fail Action** field on the field mapping controls what happens next:
 
-1. **Status:** Record marked as **Error**
-2. **Error Message:** "Value not found in lookup table: [value]"
-3. **Action:** Can be reviewed and reprocessed after fixing
+| Lookup Fail Action | Behavior |
+| --- | --- |
+| **Error** (default) | The row is rejected with an error. The import log records "Value not found in lookup: [value]". |
+| **Use Default** | The value specified in **Lookup Default Value** is written to the destination field instead. The row continues processing. |
+| **Skip Row** | The entire row is silently skipped — no record is inserted or modified for this row. Useful when missing lookup values are expected and unmatched rows should be discarded. |
+| **Keep Original** | The source value is written to the destination field as-is, without lookup translation. Useful when you want lookup as a best-effort enrichment rather than a hard requirement. |
 
-**Example:**
+To configure:
+
+1. On the **Integration Mapping** record, set **Lookup Fail Action** to the desired behavior
+2. If **Use Default** is selected, set **Lookup Default Value** to the fallback value
+
+### Lookup Default Value
+
+When **Lookup Fail Action = Use Default**, the value in **Lookup Default Value** is used in place of the lookup result whenever the lookup finds no match. This is useful when:
+
+- A large percentage of source rows map to the same fallback value
+- You want to preserve rows without requiring a perfect lookup table
+
+Example: if `"CUST_UNKNOWN"` should map to customer `"MISC"` when no specific customer is found:
 
 ```text
-Lookup for "CUST_999" in Customer."Your Reference"
-→ No matching customer found
-→ Record status: Error
-→ Error message: 'CUST_999' not found in lookup
+Lookup Fail Action: Use Default
+Lookup Default Value: MISC
 ```
+
+### Lookup Filter Field
+
+Use the **Lookup Filter Field** to narrow the lookup search to a subset of rows in the lookup table. This is useful when the same lookup field value appears in multiple rows with different contexts.
+
+The filter value can reference other source fields using the `[FieldName]` syntax — the value is substituted at runtime from the current source row:
+
+| Field | Description |
+| --- | --- |
+| **Lookup Filter Field** | The field in the lookup table to apply the filter on |
+| **Lookup Filter Value** | The value to filter by. Use `[SourceFieldName]` to substitute a value from the current source row at runtime |
+
+**Example:** Look up an item by Vendor Item Code, but only within items belonging to the current row's vendor:
+
+```text
+Lookup Table: Item
+Lookup Field: Vendor Item Code
+Return Field: No.
+Lookup Filter Field: Vendor No.
+Lookup Filter Value: [VendorCode]
+```
+
+At runtime, `[VendorCode]` is replaced with the value of the `VendorCode` column from the current source row before the lookup is executed.
+
+### Custom Lookup Logic
+
+For lookup scenarios that cannot be expressed through standard table/field configuration, subscribe to the **OnLookupValue** integration event on the Integration Framework lookup codeunit. Your event subscriber receives the source value and can return a custom result, bypassing the standard table search.
 
 ### Debugging Lookup Issues
 
 **Check 1: Does lookup table have the value?**
 
 ```text
-Open Customer list
-Search for Your Reference containing the source value
-If not found → Add to customer or fix source value
+Open the lookup table list in BC
+Search for the Lookup Field containing the source value
+If not found → Add the record or fix the source value
 ```
 
 **Check 2: Is lookup field correct?**
 
 ```text
-Verify field exists in lookup table
-Verify field contains expected values
-Try alternative field if available
+Verify the field exists in the lookup table
+Verify the field contains expected values
+Try an alternative field if available
 ```
 
 **Check 3: Is value exact match?**
 
 ```text
-Lookups are case-sensitive (usually)
+Lookups are case-sensitive by default
 Check for leading/trailing spaces
 "CUST001" ≠ "cust001" (if case-sensitive)
 ```
@@ -260,9 +300,17 @@ Check for leading/trailing spaces
 **Check 4: Is return field correct?**
 
 ```text
-Verify return field exists
-Check what values are in return field
-Ensure values compatible with destination field
+Verify the return field exists
+Check what values are in the return field
+Ensure values are compatible with the destination field type
+```
+
+**Check 5: Does a Lookup Filter Field restrict matches?**
+
+```text
+If Lookup Filter Field is set, verify the filter value resolves correctly
+Use [FieldName] syntax only for fields that exist in the source data
+Check whether the filter is excluding the intended rows
 ```
 
 ## Best Practices for Lookups

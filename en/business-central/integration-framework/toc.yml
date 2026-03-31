@@ -9,6 +9,8 @@ items:
         href: trial-setup.md
   - name: How To
     items:
+      - name: Use the Setup Wizard
+        href: how-to-setup-wizard.md
       - name: Import Excel Files
         href: how-to-excel-import.md
       - name: Import CSV Files
@@ -25,6 +27,8 @@ items:
         href: how-to-field-value-mapping.md
       - name: Validate Data
         href: how-to-data-validation.md
+      - name: Set Up Validation Rules
+        href: how-to-validation-rules.md
       - name: Handle Errors
         href: how-to-error-handling.md
       - name: Import Sales Documents
@@ -37,6 +41,8 @@ items:
         href: how-to-import-logging.md
       - name: Preview Imports
         href: how-to-import-preview.md
+      - name: Use Dry Run
+        href: how-to-dry-run.md
       - name: Use Copilot Auto Setup
         href: how-to-copilot-setup.md
       - name: Export and Import Definitions
@@ -45,6 +51,44 @@ items:
         href: how-to-pre-parsing-transformations.md
       - name: Data Administration
         href: how-to-data-administration.md
+      - name: Use the Orchestrator
+        href: how-to-orchestrator.md
+      - name: Use Integration Templates
+        href: how-to-integration-templates.md
+      - name: Set Up Alerts
+        href: how-to-alerts.md
+      - name: Set Up File Pickup and Archiving
+        href: how-to-file-pickup.md
+      - name: Set Up Export File Destinations
+        href: how-to-export-destinations.md
+      - name: Set Up Multi-Company Integration
+        href: how-to-multi-company.md
+      - name: Use Configuration Versioning
+        href: how-to-configuration-versioning.md
+      - name: Import Composite Documents
+        href: how-to-composite-documents.md
+      - name: Set Up Execution Chains
+        href: how-to-execution-chains.md
+      - name: Use Expression Fields
+        href: how-to-expression-fields.md
+      - name: Use Nested Record Expansion
+        href: how-to-nested-expansion.md
+      - name: Use Duplicate Detection
+        href: how-to-duplicate-detection.md
+      - name: Use Identity Registry
+        href: how-to-identity-registry.md
+      - name: Use Export Response Writeback
+        href: how-to-export-writeback.md
+      - name: Use Binary Fields
+        href: how-to-binary-fields.md
+      - name: Use Idempotency
+        href: how-to-idempotency.md
+      - name: Use Compression
+        href: how-to-compression.md
+      - name: Use Auto-Mapping
+        href: how-to-auto-mapping.md
+      - name: Use the Workflow Engine
+        href: how-to-workflow-engine.md
   - name: REST API
     items:
       - name: Set Up REST API Import
@@ -65,10 +109,14 @@ items:
         href: how-to-rest-api-aggregation.md
       - name: Set Up Webhooks
         href: how-to-rest-api-webhooks.md
+      - name: Set Up Webhook Subscriptions
+        href: how-to-webhook-subscriptions.md
       - name: Use GraphQL
         href: how-to-rest-api-graphql.md
       - name: Use Sync Protocol
         href: how-to-rest-api-sync-protocol.md
+      - name: Use the Bulk Import API
+        href: how-to-bulk-import-api.md
       - name: Use REST API Copilot
         href: how-to-rest-api-copilot.md
   - name: Pages
@@ -119,10 +167,38 @@ items:
         href: page-rest-api-template-vars.md
       - name: REST API Aggregations
         href: page-rest-api-aggregations.md
+      - name: Setup Wizard
+        href: page-setup-wizard.md
+      - name: Orchestrator
+        href: page-orchestrator.md
+      - name: Orchestrator Routes
+        href: page-orchestrator-routes.md
+      - name: Validation Rules
+        href: page-validation-rules.md
+      - name: Alert Configs
+        href: page-alert-configs.md
+      - name: Template Library
+        href: page-template-library.md
+      - name: File Sources
+        href: page-file-sources.md
+      - name: Company Links
+        href: page-company-links.md
+      - name: Execution Chain View
+        href: page-execution-chain.md
       - name: Webhook Configuration
         href: page-webhook-config.md
       - name: Webhook Queue
         href: page-webhook-queue.md
+      - name: Webhook Subscriptions
+        href: page-webhook-subscriptions.md
+      - name: OAuth2 Authorization Management
+        href: page-rest-api-oauth2-authorization.md
+      - name: Cross References
+        href: page-cross-references.md
+      - name: Workflows
+        href: page-workflows.md
+      - name: Workflow Instances
+        href: page-workflow-instances.md
   - name: Additional
     items:
       - name: Release Notes

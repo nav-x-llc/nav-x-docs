@@ -260,6 +260,83 @@ The framework hit the **Max Child Calls** limit for a child endpoint. Increase t
 
 You attempted to add the primary endpoint as its own aggregation source. The Source Endpoint Sorting Order must reference a different integration.
 
+## Dynamic Sync API (BC as a Data Provider)
+
+In addition to consuming external APIs, the Integration Framework can expose Business Central data as a REST API that external systems consume. The **Dynamic Sync API** lets external systems pull BC data on demand — either all records or only records that have changed since the last sync.
+
+This is the inverse of the standard REST API import: instead of BC fetching from an external system, an external system fetches from BC.
+
+### Response Modes
+
+The Sync API supports two response modes, configured on the integration:
+
+| Mode | Description | When to Use |
+| --- | --- | --- |
+| **Changes Only** | Returns only records that have been inserted, modified, or deleted since the external system's last successful sync | Incremental sync, delta feeds, high-volume datasets where only changed records matter |
+| **Full Dataset** | Returns all matching records on every call, regardless of prior sync state | Stateless integrations, initial full loads, external systems that manage their own change tracking |
+
+### Pagination
+
+All Sync API responses support **server-side pagination** using `top` and `skip` parameters on the `getChanges` action:
+
+| Parameter | Description | Example |
+| --- | --- | --- |
+| `top` | Maximum number of records to return in this response | `100` |
+| `skip` | Number of records to skip (for offset-based pagination) | `200` |
+
+An external system can page through results by incrementing `skip` until fewer records than `top` are returned, indicating the last page.
+
+### Staging Modes
+
+The Sync API supports two staging modes that control how export data is prepared:
+
+| Mode | Description | Trade-off |
+| --- | --- | --- |
+| **Database** | Export data is staged to a persistent table before being returned | Supports large datasets; data survives between requests |
+| **In-Memory** | Export data is staged in a temporary in-memory table and returned in a single response | Zero database footprint; ideal for small, fast responses |
+
+For most API scenarios, **In-Memory** mode is recommended to avoid leaving staging data in the database.
+
+### Configuring the Sync API Integration
+
+1. Open the **Integration** record of type **REST API**
+2. In the **Sync API** section, configure:
+
+| Field | Description |
+| --- | --- |
+| **Expose as Sync API** | Enable to make this integration available as a Sync API endpoint |
+| **Response Mode** | **Changes Only** or **Full Dataset** |
+| **Staging Mode** | **Database** or **In-Memory** |
+| **API Version** | The API version exposed (default: `v2.0`) |
+
+1. Configure **Integration Fields** and **Integration Mappings** as for any export integration — these define which BC fields are included in the API response
+
+### Calling the Sync API
+
+External systems call the Sync API using a standard OData-style action:
+
+```text
+POST /api/navx/integrationFramework/v2.0/integrations(<sortingOrder>)/Microsoft.NAV.getChanges
+Content-Type: application/json
+
+{
+  "top": 100,
+  "skip": 0
+}
+```
+
+The response is a JSON array of records based on the integration's field mappings and the configured response mode.
+
+### Changes Only Mode — Sync State
+
+When using **Changes Only** mode, the framework tracks which records have been delivered to each external system using a sync state record. The external system receives a **sync token** (or cursor) in the response that it must include in its next request to advance the sync window.
+
+The sync state ensures that:
+
+- Records inserted or modified since the last sync are included
+- Deleted records are reported (with a deletion marker)
+- No record is returned twice for the same external system
+
 ## See Also
 
 - [How to Set Up REST API Webhooks](how-to-rest-api-webhooks.md)
