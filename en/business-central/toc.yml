@@ -13,6 +13,12 @@ items:
   - name: Datto Workplace Connector
     href: datto-workplace/toc.yml
     topicHref: datto-workplace/index.md
+  - name: External File Storage
+    href: external-file-connector/toc.yml
+    topicHref: external-file-connector/index.md
+  - name: External File Storage - FTP Connector
+    href: ftp-connector/toc.yml
+    topicHref: ftp-connector/index.md
   - name: Credit Management
     href: credit-management/toc.yml
     topicHref: credit-management/index.md
