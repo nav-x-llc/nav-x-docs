@@ -29,6 +29,8 @@ items:
         href: item-charge-setup.md
       - name: Commission Rate Setup
         href: commission-rate-setup.md
+      - name: Commission Split Setup
+        href: commission-split-setup.md
   - name: How To
     items:
       - name: Setup default commission splits
@@ -43,12 +45,24 @@ items:
         href: how-to-manager-commission.md
       - name: Calculate Commissions on Billable Time
         href: how-to-billable-time.md
+      - name: Commission Draw
+        href: how-to-commission-draw.md
       - name: Review Commission Reports
         href: how-to-review-commission-reports.md
       - name: Manually Adjust Commissions
         href: how-to-manually-adjust-commissions.md
       - name: Import Commissions
         href: how-to-import-commissions.md
+      - name: Set Up Commission Factors
+        href: how-to-use-commission-factors.md
+      - name: Set Up Non-Commissionable Items
+        href: how-to-setup-non-commissionable-items.md
+      - name: Multi-Company Commissions
+        href: how-to-multi-company-commissions.md
+      - name: Use Copilot for Commission Rates
+        href: how-to-use-copilot-commission-rates.md
+      - name: Send Commission Statements by Email
+        href: how-to-send-salesperson-email.md
       - name: Product Tour
         href: how-to-product-tour.md
   - name: Pages
@@ -61,6 +75,16 @@ items:
         href: page-commission-rates.md
       - name: Commission Types
         href: page-commission-types.md
+      - name: Commission Periods
+        href: page-commission-periods.md
+      - name: Commission Factors
+        href: page-commission-factors.md
+      - name: Non-Commissionable Mapping
+        href: page-non-commissionable-mapping.md
+      - name: Commission Companies
+        href: page-commission-companies.md
+      - name: Commission Team Manager
+        href: page-commission-team-manager.md
       - name: Sales Commission
         href: page-commission-sales-commission.md
       - name: Posted Sales Commission
@@ -91,10 +115,20 @@ items:
     items:
       - name: Commissions by Salesperson
         href: report-commission.md
+      - name: Commissions by Resource
+        href: report-commissions-by-resource.md
       - name: Post Commission to G/L
         href: report-post-commission-to-gl.md
       - name: Process Commission
         href: report-process-commission.md
+      - name: Process Manager Commissions
+        href: report-manager-commissions.md
+      - name: Process Commissions for All Companies
+        href: report-process-commission-all-companies.md
+      - name: Update Commission Hold
+        href: report-commission-hold.md
+      - name: Send Salesperson Email
+        href: report-send-salesperson-email.md
       - name: Recalculate Sales Document Commissions
         href: report-recalculate-sales-document-commissions.md
       - name: Recalculate Posted Sales Document Commissions

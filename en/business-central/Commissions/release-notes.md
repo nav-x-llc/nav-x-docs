@@ -4,6 +4,24 @@ We release new versions of our software from time to time. Those can include fix
 
 The versions are listed below from the newest version to the earliest version. We have not listed any versions that have been published before December 2019.
 
+- [March 2026 Update - Version 3.0.290](release-notes/release-notes-3-0-290.md)
+
+- [March 2026 Update - Version 3.0.289](release-notes/release-notes-3-0-289.md)
+
+- [March 2026 Update - Version 3.0.288](release-notes/release-notes-3-0-288.md)
+
+- [November 2025 Update - Version 2.6.284](release-notes/release-notes-2-6-284.md)
+
+- [October 2025 Update - Version 2.6.282](release-notes/release-notes-2-6-282.md)
+
+- [October 2025 Update - Version 2.6.280](release-notes/release-notes-2-6-280.md)
+
+- [September 2025 Update - Version 2.6.277](release-notes/release-notes-2-6-277.md)
+
+- [September 2025 Update - Version 2.6.276](release-notes/release-notes-2-6-276.md)
+
+- [May 2025 Update - Version 2.6.272](release-notes/release-notes-2-6-272.md)
+
 - [March 2025 Update - Version 2.6.269](release-notes/release-notes-2-6-269.md)
 
 - [November 2024 Update - Version 2.5.249](release-notes/release-notes-2-5-249.md)
