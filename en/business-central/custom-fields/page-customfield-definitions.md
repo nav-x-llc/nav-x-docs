@@ -10,36 +10,62 @@ Here you can setup the custom fields you want to use and where you want to use t
 
 The following tables are currently supported:
 
+- Allocation Account
 - Bank Account
 - Customer
-- General Journal
+- Extended Text
+- Extended Text Line
+- Fixed Asset
+- G/L Account
+- Gen. Journal Line
 - Item
+- Item Charge
+- Item Journal Line
 - Purchase Header
 - Purchase Line
+- Resource
 - Sales Header
 - Sales Line
+- Standard Text
 - Vendor
 
 ## Supported Field Types
 
 The following field types are currently supported:
 
-- Code
 - Boolean
+- Code
+- Date
+- DateTime
 - Decimal
+- Integer
 - Text
+- Time
 
 ## Maximum Length
 
 The maximum length is only possible to be configured for Code and Text fields. If the **Max. Length** is 0, then the maximum length of the field is defined as follows:
 
 | Field Type | Field No. | Max. Length |
-|-|-|-|
-| Code | 1 | 20 |
-| Code | 2 | 20 |
-| Code | 3 | 50 |
-| Code | 4 | 50 |
-| Code | 5 | 50 |
+| ---------- | --------- | ----------- |
+| Code       | 1         | 20          |
+| Code       | 2         | 20          |
+| Code       | 3         | 50          |
+| Code       | 4         | 50          |
+| Code       | 5         | 50          |
+| Code       | 6         | 20          |
+| Code       | 7         | 20          |
+| Code       | 8         | 50          |
+| Code       | 9         | 50          |
+| Code       | 10        | 50          |
+| Code       | 11        | 20          |
+| Code       | 12        | 20          |
+| Code       | 13        | 50          |
+| Code       | 14        | 50          |
+| Code       | 15        | 50          |
+
+> [!NOTE]
+> Field numbers 6–10 require [Custom Fields Extension Pack 1](extension-packages.md) and field numbers 11–15 require [Custom Fields Extension Pack 2](extension-packages.md).
 
 ## Actions
 
@@ -53,9 +79,9 @@ Please see more details on the [Custom Values Page](page-customfield-custom-valu
 
 When you define fields, you can also define that those fields are copied to other pages. When you select the *Copy To* action, the page opens filtered on the **Table** of the current record and will allow you to define the tables the fields should be copied to for the entire table. The page will only show allowed actions, for instance:
 
-| Copy From | Copy To |
-|-|-|
-| Item | Sales Line |
+| Copy From | Copy To    |
+| --------- | ---------- |
+| Item      | Sales Line |
 
 Please see more details on the [Custom Fields Copy To Page](page-customfield-copy-to.md).
 

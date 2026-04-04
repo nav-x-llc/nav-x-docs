@@ -1,0 +1,27 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Trial Setup
+        href: trial-setup.md
+  - name: How To
+    items:
+      - name: Add an FTP/SFTP Account
+        href: how-to-add-account.md
+      - name: Manage Accounts
+        href: how-to-manage-accounts.md
+  - name: Pages
+    items:
+      - name: FTP Account Card
+        href: page-ftp-account-card.md
+      - name: FTP Account Setup Wizard
+        href: page-ftp-account-wizard.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md
