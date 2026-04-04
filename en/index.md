@@ -34,11 +34,23 @@ Microsoft Dynamics 365 Business Central Custom Fields allows you to add and util
 
 Navigate to our [Custom Fields](business-central/custom-fields/index.md) solution.
 
-## Datto Workplace
+## External File Storage - Datto Workplace
 
-The **External File Storage - Datto Workplace Connector** for Microsoft Dynamics 365 Business Central connects Business Central to your Datto Workplace account, making Datto Workplace a native external file storage provider for all Business Central file operations. You can manage Datto Workplace accounts directly inside Business Central without switching between applications. If you require assistance or need setup instructions, please visit our documentation section specific to our [Datto Workplace](business-central/datto-workplace/index.md) solution.
+The **External File Storage - Datto Workplace Connector** for Microsoft Dynamics 365 Business Central connects Business Central to your Datto Workplace account, making Datto Workplace a native external file storage provider for all Business Central file operations. You can manage Datto Workplace accounts directly inside Business Central without switching between applications. If you require assistance or need setup instructions, please visit our documentation section specific to our [External File Storage - Datto Workplace](business-central/datto-workplace/index.md) solution.
 
-Navigate to our [Datto Workplace](business-central/datto-workplace/index.md) solution.
+Navigate to our [External File Storage - Datto Workplace](business-central/datto-workplace/index.md) solution.
+
+## External File Storage
+
+The **External File Storage** app for Microsoft Dynamics 365 Business Central redirects document attachments from the Business Central database to an external storage provider of your choice. Files are stored and retrieved transparently through Business Central's standard attachment workflows — your users work the same way they always have, but the files live in your external storage system. If you require assistance or need setup instructions, please visit our documentation section specific to our [External File Storage](business-central/external-file-connector/index.md) solution.
+
+Navigate to our [External File Storage](business-central/external-file-connector/index.md) solution.
+
+## External File Storage - FTP Connector
+
+The **External File Storage - FTP Connector** for Microsoft Dynamics 365 Business Central connects Business Central to FTP, FTPS, and SFTP servers, making them available as native external file storage providers for all Business Central file operations. You can manage FTP/SFTP accounts directly inside Business Central without switching between applications. If you require assistance or need setup instructions, please visit our documentation section specific to our [External File Storage - FTP Connector](business-central/ftp-connector/index.md) solution.
+
+Navigate to our [External File Storage - FTP Connector](business-central/ftp-connector/index.md) solution.
 
 ## Integration Framework
 

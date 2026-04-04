@@ -10,21 +10,21 @@ items:
   - name: Credit Card
     href: creditcard/toc.yml
     topicHref: creditcard/index.md
-  - name: External File Storage - Datto Workplace
-    href: datto-workplace/toc.yml
-    topicHref: datto-workplace/index.md
-  - name: External File Storage
-    href: external-file-connector/toc.yml
-    topicHref: external-file-connector/index.md
-  - name: External File Storage - FTP Connector
-    href: ftp-connector/toc.yml
-    topicHref: ftp-connector/index.md
   - name: Credit Management
     href: credit-management/toc.yml
     topicHref: credit-management/index.md
   - name: Custom Fields
     href: custom-fields/toc.yml
     topicHref: custom-fields/index.md
+  - name: External File Storage
+    href: external-file-connector/toc.yml
+    topicHref: external-file-connector/index.md
+  - name: External File Storage - Datto Workplace
+    href: datto-workplace/toc.yml
+    topicHref: datto-workplace/index.md
+  - name: External File Storage - FTP Connector
+    href: ftp-connector/toc.yml
+    topicHref: ftp-connector/index.md
   - name: Integration Framework
     href: integration-framework/toc.yml
     topicHref: integration-framework/index.md
