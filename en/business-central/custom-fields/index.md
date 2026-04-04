@@ -5,16 +5,25 @@ Custom Fields by NAV-X is an app for Dynamics 365 for Business Central that enha
 ## Added Functionality
 
 - Define Custom Fields on Master Records. Currently, the following master records are supported:
-  - Customers
+  - Allocation Accounts
   - Bank Accounts
+  - Customers
+  - Extended Texts
+  - Fixed Assets
+  - G/L Accounts
+  - Item Charges
   - Items
+  - Resources
+  - Standard Texts
   - Vendors
-- Define Custom Fields on Documents and Journals. Currently, the following documents are supported:
+- Define Custom Fields on Documents and Journals. Currently, the following documents and journals are supported:
   - General Journals
+  - Item Journals
   - All Sales Documents
   - All Purchase Documents
-- Copy Custom Fields from Master records to documents.
+- Copy Custom Fields from master records to documents.
 - Automatically post the custom fields on documents to the posted documents.
+- Expand the number of available custom fields per table using [Extension Packages](extension-packages.md). The base app provides 5 fields per table per type. Extension Pack 1 adds fields 6–10, and Extension Pack 2 adds fields 11–15.
 
 ## Supported Editions and Countries
 

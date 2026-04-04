@@ -6,13 +6,13 @@ The report fields functionality allows you to change the report layout to be use
 
 The page contains the following fields. The majority of those fields are not editable and you cannot add additional reports to the page.
 
-| Field | Description |
-|-|-|
-| **Report Name** | Name of the report we enabled for this functionality |
-| **Table** | The table the custom field comes from that is enabled for this functionality |
-| **Type** | The type of the custom field that is enabled for this functionality |
-| **Field No.** | The field number that is enabled for this functionality |
-| **Visible** | A checkmark that allows you to turn on or off this field on the report. You must use our layout or a copy of our layout for this functionality to work |
+| Field           | Description                                                                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Report Name** | Name of the report we enabled for this functionality                                                                                                   |
+| **Table**       | The table the custom field comes from that is enabled for this functionality                                                                           |
+| **Type**        | The type of the custom field that is enabled for this functionality                                                                                    |
+| **Field No.**   | The field number that is enabled for this functionality                                                                                                |
+| **Visible**     | A checkmark that allows you to turn on or off this field on the report. You must use our layout or a copy of our layout for this functionality to work |
 
 ## Report Layouts
 
@@ -22,9 +22,24 @@ If you review the report layouts on the **Report Layouts** page, which can be ac
 
 The following reports are currently supported:
 
-- [Report Sales Order Status](report-sales-order-status.md)
+Sales reports:
+
+- [Sales Order Status](report-sales-order-status.md)
+- [Standard Sales - Order Conf.](report-standard-sales-order-confirmation.md)
+- [Standard Sales - Invoice](report-standard-sales-invoice.md)
+- [Standard Sales - Credit Memo](report-standard-sales-credit-memo.md)
+
+Purchase reports:
+
+- [Purchase Order](report-purchase-order.md)
+- [Purchase - Invoice](report-purchase-invoice.md)
+- [Purchase - Credit Memo](report-purchase-credit-memo.md)
+
+Finance reports:
+
+- [General Journal - Test](report-general-journal-test.md)
 
 ## See Also
 
 - [Custom Fields Definitions Page](page-customfield-definitions.md)
-- [Report Sales Order Status](report-sales-order-status.md)
+- [How to Configure Custom Fields on Reports](how-to-configure-report-fields.md)

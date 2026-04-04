@@ -30,10 +30,10 @@ Once this is defined, the initial setup is completed and the fields can be used.
 
 For *Code* fields, you can define a list of custom values. If those are defined, those values are the only values that can be used and entering other values will display an error message. The following fields can be configured:
 
-| | |
-|-|-|
-| Value | The value that will be entered or shown in the custom field when it is used. |
-| Description | The description of the code. |
+| Field           | Description                                                                   |
+| --------------- | ----------------------------------------------------------------------------- |
+| Value           | The value that will be entered or shown in the custom field when it is used.  |
+| Description     | The description of the code.                                                  |
 
 Read more details about the [Custom Values Page](page-customfield-custom-values.md).
 
@@ -63,9 +63,33 @@ Read more details about the [Custom Fields Visibility Page](page-customfield-vis
 
 ## Report Visibility
 
-Some reports have configuration options to allow displaying the fields via a configuration. Read more details about the [Custom Fields Report Visibility Page](page-customfield-report-visibility.md). Following is a list of different reports that can display fields:
+Some reports have configuration options to allow displaying custom fields via configuration. Read more details about the [Custom Fields Report Visibility Page](page-customfield-report-visibility.md). Following is a list of different reports that can display fields:
+
+Sales reports:
 
 - [Sales Order Status](report-sales-order-status.md)
+- [Standard Sales - Order Conf.](report-standard-sales-order-confirmation.md)
+- [Standard Sales - Invoice](report-standard-sales-invoice.md)
+- [Standard Sales - Credit Memo](report-standard-sales-credit-memo.md)
+
+Purchase reports:
+
+- [Purchase Order](report-purchase-order.md)
+- [Purchase - Invoice](report-purchase-invoice.md)
+- [Purchase - Credit Memo](report-purchase-credit-memo.md)
+
+Finance reports:
+
+- [General Journal - Test](report-general-journal-test.md)
+
+## Extension Packages
+
+The base app supports up to 5 custom fields per table per type. If you need more fields, you can install one or both extension packages:
+
+- **Custom Fields Extension Pack 1** — adds field numbers 6–10
+- **Custom Fields Extension Pack 2** — adds field numbers 11–15
+
+Read more about [Extension Packages](extension-packages.md).
 
 ## See Also
 

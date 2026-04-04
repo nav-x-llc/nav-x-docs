@@ -7,6 +7,8 @@ items:
         href: permission-setups.md
       - name: Trial Setup
         href: trial-setup.md
+      - name: Extension Packages
+        href: extension-packages.md
   - name: Pages
     items:
       - name: Custom Fields Definitions
@@ -17,6 +19,8 @@ items:
         href: page-customfield-lookup.md
       - name: Custom Fields Report Fields
         href: page-customfield-report-fields.md
+      - name: Custom Fields Report Visibility
+        href: page-customfield-report-visibility.md
       - name: Custom Fields Setup
         href: page-customfield-setup.md
       - name: Custom Fields Translations
@@ -29,6 +33,32 @@ items:
     items:
       - name: Sales Order Status
         href: report-sales-order-status.md
+      - name: Standard Sales - Order Conf.
+        href: report-standard-sales-order-confirmation.md
+      - name: Standard Sales - Invoice
+        href: report-standard-sales-invoice.md
+      - name: Standard Sales - Credit Memo
+        href: report-standard-sales-credit-memo.md
+      - name: Purchase Order
+        href: report-purchase-order.md
+      - name: Purchase - Invoice
+        href: report-purchase-invoice.md
+      - name: Purchase - Credit Memo
+        href: report-purchase-credit-memo.md
+      - name: General Journal - Test
+        href: report-general-journal-test.md
+  - name: How To
+    items:
+      - name: Add More Than 5 Custom Fields
+        href: how-to-add-more-fields.md
+      - name: Configure Custom Fields on Reports
+        href: how-to-configure-report-fields.md
+      - name: Control Which Pages Show Custom Fields
+        href: how-to-control-field-visibility.md
+      - name: Set Up a Custom Lookup
+        href: how-to-setup-custom-lookup.md
+      - name: Use Set Dimensions with Custom Fields
+        href: how-to-set-dimensions.md
   - name: Additional
     items:
       - name: Release Notes

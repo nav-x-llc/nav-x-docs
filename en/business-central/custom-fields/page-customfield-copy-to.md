@@ -6,26 +6,38 @@ When you open the **Custom Fields Copy To** page from the **Custom Fields Defini
 
 The following fields are available on the page. The fields are non editable.
 
-| Field | Description |
-|-|-|
-| **Table** | The table the field is configured for |
-| **Type** | The field type |
-| **Field No.** | The number of the custom field |
-| **Field Name** | The name of the field as defined in the *Custom Fields Definitions* |
+| Field          | Description                                                          |
+| -------------- | -------------------------------------------------------------------- |
+| **Table**      | The table the field is configured for                                |
+| **Type**       | The field type                                                       |
+| **Field No.**  | The number of the custom field                                       |
+| **Field Name** | The name of the field as defined in the *Custom Fields Definitions*  |
 
 The remaining fields define which tables you want to copy the individual field to. The table below shows the different combinations that fields can be copied to.
 
-| Copy From Table | Copy To Table |
-|-|-|
-| Bank Account | General Journal |
-| Customer | Sales Header |
-| | General Journal |
-| Item | Purchase Line |
-| | Sales Line |
-| Purchase Header | Purchase Line |
-| Sales Header | Sales Line |
-| Vendor | Sales Header |
-| | General Journal |
+| Copy From Table    | Copy To Table      |
+| ------------------ | ------------------ |
+| Allocation Account | Purchase Line      |
+|                    | Sales Line         |
+| Bank Account       | Gen. Journal Line  |
+| Customer           | Sales Header       |
+|                    | Gen. Journal Line  |
+| Fixed Asset        | Purchase Line      |
+|                    | Sales Line         |
+| G/L Account        | Purchase Line      |
+|                    | Sales Line         |
+| Item               | Purchase Line      |
+|                    | Sales Line         |
+| Item Charge        | Purchase Line      |
+|                    | Sales Line         |
+| Purchase Header    | Purchase Line      |
+| Resource           | Purchase Line      |
+|                    | Sales Line         |
+| Sales Header       | Sales Line         |
+| Standard Text      | Purchase Line      |
+|                    | Sales Line         |
+| Vendor             | Purchase Header    |
+|                    | Gen. Journal Line  |
 
 ## See Also
 
