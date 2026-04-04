@@ -10,7 +10,7 @@ items:
   - name: Credit Card
     href: creditcard/toc.yml
     topicHref: creditcard/index.md
-  - name: Datto Workplace Connector
+  - name: External File Storage - Datto Workplace
     href: datto-workplace/toc.yml
     topicHref: datto-workplace/index.md
   - name: External File Storage
