@@ -1,0 +1,21 @@
+items:
+  - name: Setup
+    items:
+      - name: Getting Started
+        href: getting-started.md
+      - name: Permission Setups
+        href: permission-setups.md
+      - name: Trial Setup
+        href: trial-setup.md
+  - name: Pages
+    items:
+      - name: Document Attachment Merge Setup
+        href: page-document-attachment-merge-setup.md
+      - name: Document Attachment Merge Reports
+        href: page-document-attachment-merge-reports.md
+  - name: Additional
+    items:
+      - name: Release Notes
+        href: release-notes.md
+  - name: FAQ
+    href: faq-index.md

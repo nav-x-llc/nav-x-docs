@@ -16,6 +16,9 @@ items:
   - name: Custom Fields
     href: custom-fields/toc.yml
     topicHref: custom-fields/index.md
+  - name: Document Attachment Merge
+    href: document-attachment-merge/toc.yml
+    topicHref: document-attachment-merge/index.md
   - name: External File Storage
     href: external-file-connector/toc.yml
     topicHref: external-file-connector/index.md
