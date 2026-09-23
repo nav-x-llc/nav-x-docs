@@ -34,6 +34,12 @@ Microsoft Dynamics 365 Business Central Custom Fields allows you to add and util
 
 Navigate to our [Custom Fields](business-central/custom-fields/index.md) solution.
 
+## Document Attachment Merge
+
+The **Document Attachment Merge** app for Microsoft Dynamics 365 Business Central automatically merges PDF attachments from Sales and Purchase document lines into the printed, previewed, saved, and emailed output of your Sales and Purchase reports — no manual attachment handling, no bolt-on button. If you require assistance or need setup instructions, please visit our documentation section specific to our [Document Attachment Merge](business-central/document-attachment-merge/index.md) solution.
+
+Navigate to our [Document Attachment Merge](business-central/document-attachment-merge/index.md) solution.
+
 ## External File Storage - Datto Workplace
 
 The **External File Storage - Datto Workplace Connector** for Microsoft Dynamics 365 Business Central connects Business Central to your Datto Workplace account, making Datto Workplace a native external file storage provider for all Business Central file operations. You can manage Datto Workplace accounts directly inside Business Central without switching between applications. If you require assistance or need setup instructions, please visit our documentation section specific to our [External File Storage - Datto Workplace](business-central/datto-workplace/index.md) solution.
