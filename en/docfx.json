@@ -52,8 +52,7 @@
       {
         "files": [
           "images/**",
-          "**/images/**",
-          "web.config"
+          "**/images/**"
         ]
       }
     ],
